@@ -6,26 +6,26 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Index</title>
+  <title>Folio Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../resources/img/favicon.png" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../resources/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../resources/css/boxicons.min.css" rel="stylesheet">
+  <link href="../resources/css/glightbox.min.css" rel="stylesheet">
+  <link href="../resources/css/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../resources/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Folio
@@ -42,7 +42,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo"><img src="./img/logo.png" alt="" class="img-fluid"></a>
       <!-- Uncomment below if you prefer to use an text logo -->
       <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
 
@@ -52,6 +52,23 @@
           <li><a class="nav-link  scrollto" href="#portfolio">project</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link  scrollto" href="#journal">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -81,7 +98,10 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
- 
+    
+
+   
+
     <!-- ======= Portfolio Section ======= -->
     <div id="portfolio" class="paddsection">
 
@@ -107,65 +127,67 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/port1.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>쇼핑몰</p>
-              <a href="assets/img/portfolio/port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="../resources/img/portfolio/port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/port2.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>팀 프로젝트</h4>
               <p>???</p>
-              <a href="assets/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="../resources/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/port3.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>???</p>
-              <a href="assets/img/portfolio/port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="../resources/img/portfolio/port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/port4.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>관리자</h4>
-              <p>관리자 페이지</p>
-              <a href="assets/img/portfolio/port4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <p>관리자 UI</p>
+              <a href="../resources/img/portfolio/port4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/port5.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>팀 프로젝트</h4>
               <p>???</p>
-              <a href="assets/img/portfolio/port5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="../resources/img/portfolio/port5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/port6.jpg" class="img-fluid" alt="">
+            <img src="../resources/img/portfolio/port6.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>????</p>
-              <a href="assets/img/portfolio/port6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="../resources/img/portfolio/port6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
+
         </div>
+
       </div>
 
     </div><!-- End Portfolio Section -->
@@ -176,15 +198,19 @@
           <div class="col-lg-4 ">
             <div class="div-img-bg">
               <div class="about-img">
-                <img src="assets/img/me.jpg" class="img-responsive" alt="me">
+                <img src="../resources/img/me.jpg" class="img-responsive" alt="me">
               </div>
             </div>
           </div>
+
           <div class="col-lg-7">
             <div class="about-descr">
+
               <p class="p-heading">안녕하세요</p>
               <p class="separator">안녕하세요</p>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -271,7 +297,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="assets/img/blog-post-1.jpg" class="img-responsive" alt="img"></a>
+                <a href="blog-single.html"><img src="../resources/img/blog-post-1.jpg" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
@@ -287,7 +313,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="assets/img/blog-post-2.jpg" class="img-responsive" alt="img"></a>
+                <a href="blog-single.html"><img src="../resources/img/blog-post-2.jpg" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
@@ -303,7 +329,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="assets/img/blog-post-3.jpg" class="img-responsive" alt="img"></a>
+                <a href="blog-single.html"><img src="../resources/img/blog-post-3.jpg" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
@@ -423,15 +449,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="../resources/js/bootstrap.bundle.min.js"></script>
+  <script src="../resources/js/glightbox.min.js"></script>
+  <script src="../resources/js/isotope.pkgd.min.js"></script>
+  <script src="../resources/js/swiper-bundle.min.js"></script>
+  <script src="../resources/js/typed.umd.js"></script>
+  <script src="../resources/js/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../resources/js/main.js"></script>
 
 </body>
 
