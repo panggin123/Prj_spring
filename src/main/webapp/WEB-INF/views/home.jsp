@@ -23,7 +23,7 @@
   <link href="../resources/css/boxicons.min.css" rel="stylesheet">
   <link href="../resources/css/glightbox.min.css" rel="stylesheet">
   <link href="../resources/css/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Template Main CSS File -->
   <link href="../resources/css/style.css" rel="stylesheet">
 
@@ -48,14 +48,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link  scrollto" href="#portfolio">project</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link  scrollto" href="#journal">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">메인화면</a></li>
+          <li><a class="nav-link  scrollto" href="#portfolio">프로젝트</a></li>
+          <li><a class="nav-link scrollto" href="#about">더보기</a></li>
+          <li><a class="nav-link  scrollto" href="#journal">블로그</a></li>
+          <li class="dropdown"><a href="#"><span>카테고리</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -69,7 +69,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="http://localhost/login">로그인</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -131,8 +131,8 @@
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>쇼핑몰</p>
-              <a href="../resources/img/portfolio/port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
@@ -141,8 +141,8 @@
             <div class="portfolio-info">
               <h4>팀 프로젝트</h4>
               <p>???</p>
-              <a href="../resources/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
@@ -151,8 +151,8 @@
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>???</p>
-              <a href="../resources/img/portfolio/port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
@@ -161,8 +161,8 @@
             <div class="portfolio-info">
               <h4>관리자</h4>
               <p>관리자 UI</p>
-              <a href="../resources/img/portfolio/port4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
@@ -171,8 +171,8 @@
             <div class="portfolio-info">
               <h4>팀 프로젝트</h4>
               <p>???</p>
-              <a href="../resources/img/portfolio/port5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
@@ -181,8 +181,8 @@
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>????</p>
-              <a href="../resources/img/portfolio/port6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="../resources/img/portfolio/port6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
 
