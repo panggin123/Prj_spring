@@ -22,6 +22,10 @@ public class HomeController {
 		return "app/home/login";
 	}
 
+	@RequestMapping(value="/index_admin")
+	public String admin() {
+		return "app/home/admin";
+	}
 	
 	
 //	@RequestMapping(value= "/home2")

@@ -7,14 +7,12 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="../../../../resources/css/style_login.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"><!-- 부트스트렙 아이콘 -->
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <a href="../../home.jsp" class="logo"  id="back_house">
 	<i class="bi bi-house-fill"></i>
 	</a>
-
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
@@ -67,7 +65,6 @@
 												<i class="bi bi-telephone-fill name_login"></i>
 											</div>
 											<a href="#" class="btn mt-4">회원가입</a>
-										
 				      					</div>
 			      					</div>
 			      				</div>
@@ -80,6 +77,5 @@
 	</div>
 <!-- partial -->
   <script  src="./script.js../"></script>
-
 </body>
 </html>
