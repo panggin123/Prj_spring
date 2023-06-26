@@ -21,12 +21,21 @@
    		--> 
    			<!-- name like LIKE CONAT('%',#(shKeyword),'%')  -->
    			
-   			<select id="selectList" resultMap="resultMapObj">
-   		SELECT *
-   		FROM
-   			infrCodeGroup
-   		WHERE
-   			ifgName LIKE CONAT('%',#{shKeyword},'%')
-   </select>
+		<select id="selectList" resultMap="resultMapObj">
+		SELECT *
+		FROM
+			codeGroup
+		WHERE
+			name  LIKE CONCAT('%',#{shKeyword},'%')
+		</select>
    
+
+ <select id="selectOne" resultMap="resultMapObj">
+		SELECT *
+		FROM
+			codeGroup
+		WHERE
+			seq = #{seq}
+					
+		</select> 
 </mapper>    

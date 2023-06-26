@@ -21,8 +21,6 @@
 	<button type="button" id="button"><i class="bi bi-search"></i></button>
 </form>
 
-<br>
-
 <c:choose>
 	<c:when test="${fn:length(list) eq 0}">
 		<tr>
@@ -32,19 +30,7 @@
 	<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
 		<c:forEach items="${list}" var="list" varStatus="status">
 			<c:out value="${list.seq }"></c:out>
-			<a herf="codeGroup"><c:out value="${list.name }"></c:out></a><br>
+			<c:out value="${list.name }"></c:out><br>
 		</c:forEach>
 	</c:otherwise>
 </c:choose>	 
-
-<script>
-
-
-
-$("#button").on("click",function(){
-	// 자기 자신을 다시 한번 호출 해 준다.
-	$("form[name=formList]").attr("action","/codeGroupList").submit();
-	//alert("asdfasdf");
-	
-});
-</script>

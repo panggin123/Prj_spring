@@ -4,6 +4,15 @@ public class CodeGroupVo {
 
 	private Integer shOption;
 	private String shKeyword;
+	private String seq;
+
+	
+	public String getSeq() {
+		return seq;
+	}
+	public void setSeq(String seq) {
+		this.seq = seq;
+	}
 	public Integer getShOption() {
 		return shOption;
 	}
