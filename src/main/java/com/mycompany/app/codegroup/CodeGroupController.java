@@ -23,4 +23,20 @@ public class CodeGroupController {
 		
 		return "codeGroupList";
 	}
+	
+//	@Controller
+//	public class CodeGroupController{
+//		
+//		@Autowired
+//		CodeGroupServiceImpl service;
+//		
+//		@RequsestMapping("/codeGroupList")
+//		public String codeGroupList(Model model) {
+//			List<codeGroup>  list = service.selectList();
+//			
+//			model.addAttribute("list",list);
+//			
+//			return"codeGroupList;
+//		}
+//	}
 }
