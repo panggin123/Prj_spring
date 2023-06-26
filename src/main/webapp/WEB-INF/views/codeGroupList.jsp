@@ -43,6 +43,7 @@
 
 $("#button").on("click",function(){
 	// 자기 자신을 다시 한번 호출 해 준다.
+	$("form[name=formList]").attr("action","get").submit();
 	$("form[name=formList]").attr("action","/codeGroupList").submit();
 	//alert("asdfasdf");
 	
