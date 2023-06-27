@@ -16,9 +16,9 @@
 		<option value="2">정보</option>
 	</select>
 	
-	<input type="text" name="shKeyword">
+	<input type="text" name="shKeyword" >
 	
-	<button type="button" id="button"><i class="bi bi-search"></i></button>
+	<button type="button" id="btn" ><i class="bi bi-search"></i></button>
 </form>
 
 <br>
@@ -32,20 +32,16 @@
 	<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
 		<c:forEach items="${list}" var="list" varStatus="status">
 			<c:out value="${list.seq }"></c:out>
-			<c:out value="${list.name }"></c:out>><br>
+			<a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a><br>
 		</c:forEach>
 	</c:otherwise>
 </c:choose>	 
 
-<script>
-
-
-
-$("#button").on("click",function(){
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+$("#btn").on("click",function(){
 	// 자기 자신을 다시 한번 호출 해 준다.
-	$("form[name=formList]").attr("action","get").submit();
-	$("form[name=formList]").attr("action","/codeGroupList").submit();
 	//alert("asdfasdf");
-	
+	$("form[name=formList]").attr("action","/codeGroupList").submit();
 });
 </script>

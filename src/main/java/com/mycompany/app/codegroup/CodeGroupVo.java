@@ -5,6 +5,7 @@ public class CodeGroupVo {
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
+	private String name;
 
 	
 	public String getSeq() {
@@ -13,6 +14,13 @@ public class CodeGroupVo {
 	public void setSeq(String seq) {
 		this.seq = seq;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public Integer getShOption() {
 		return shOption;
 	}

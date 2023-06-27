@@ -9,28 +9,34 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
-<form name="formList" method="post">
-	<select name="shOption">
-		<option value="0">--선택해주세요--</option>
-		<option value="1">이름</option>
-		<option value="2">정보</option>
-	</select>
+<form name="form" method="get">
+
 	
-	<input type="text" name="shKeyword">
+	<input type="text" name="seq" id="seq" value="<c:out value="${item.seq}"/>">
+	<input type="text" name="name" id="name" value="<c:out value="${item.name}"/>">
 	
 	<button type="button" id="button"><i class="bi bi-search"></i></button>
+	<button type="button" id="buttonSave">save</button>
+	<button type="button" id="btn">delete</button>
 </form>
 
-<c:choose>
-	<c:when test="${fn:length(list) eq 0}">
-		<tr>
-			<td class="text-center" colspan="9">There is no data!</td>
-		</tr>	
-	</c:when>
-	<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
-		<c:forEach items="${list}" var="list" varStatus="status">
-			<c:out value="${list.seq }"></c:out>
-			<a href="codeGroup"><c:out value="${list.name }"></c:out></a><br>
-		</c:forEach>
-	</c:otherwise>
-</c:choose>	 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$("#button").on("click",function(){
+	
+	$("form[name=form]").attr("action","/codeGroupinsert").submit();
+});
+
+$("#buttonSave").on("click",function(){
+	
+	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
+});
+
+$("#btn").on("click",function(){
+	
+	$("form[name=form]").attr("action","/codeGroupDelete").submit();
+});
+</script>

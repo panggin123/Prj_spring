@@ -6,36 +6,54 @@
 <!-- 전체 메퍼중에서 유일한 값을 사용하여야 한다.
 	 해서 관계적으로 해당 파일의 패스와 파일이름(확장자 제외)
 	 그리고 dao 에서 namespace와 일치하여야 한다. -->
-	 
+	               
 <mapper namespace="com.mycompany.app.codegroup.CodeGroupMapper"> 
 
 
 								<!-- select 결과를 받을 객체 -->
-    <resultMap id="resultMapObj" type="com.mycompany.app.codegroup.CodeGroup"></resultMap>
-    
- <!--  <select id="selectList" resultMap="resultMapObj">
-   		SELECT *
-   		FROM
-   			codeGroup
-   		WHERE
-   		--> 
-   			<!-- name like LIKE CONAT('%',#(shKeyword),'%')  -->
-   			
-		<select id="selectList" resultMap="resultMapObj">
-		SELECT *
-		FROM
-			codeGroup
-		WHERE
-			name  LIKE CONCAT('%',#{shKeyword},'%')
-		</select>
-   
+  <resultMap id="resultMapObj" type="com.mycompany.app.codegroup.CodeGroup"></resultMap>
+  
+<select id="selectList" resultMap="resultMapObj">
+	SELECT *
+	FROM
+		codeGroup
 
- <select id="selectOne" resultMap="resultMapObj">
-		SELECT *
-		FROM
-			codeGroup
-		WHERE
-			seq = #{seq}
-					
-		</select> 
+</select>
+ 
+<select id="selectOne" resultMap="resultMapObj">
+	SELECT *
+	FROM
+		codeGroup
+	WHERE
+		seq = #{seq}
+				
+</select> 
+
+ <update id="update">
+UPDATE codeGroup
+SET
+	name = #{name}
+WHERE
+	seq = #{seq}
+</update> 
+
+<delete id="delete">
+DELETE 
+from 
+	`codeGroup`
+WHERE 
+	seq = #{seq}
+</delete>
+
+<insert id="insert" >
+insert into `codeGroup`(
+seq
+,name
+)values(
+seq
+,name
+)
+;
+</insert>
+
 </mapper>    
