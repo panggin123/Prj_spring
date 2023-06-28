@@ -64,7 +64,7 @@ public class CodeGroupController {
 		System.out.println("dto.getName(): " + dto.getName());
 		System.out.println("dto.getSeq(): " + dto.getSeq());
 		
-		service.update(dto);
+		service.delete(dto);
 		
 		return "redirect:/codeGroupList";
 	}
@@ -80,6 +80,7 @@ public class CodeGroupController {
 		service.insert(dto);
 		
 		return "redirect:/codeGroupList";
+		// redirect 보여줄 화면이 없을 때 사용
 	}
 	
 //	@Controller
