@@ -15,7 +15,7 @@ public class CodeGroupDao {
 	@Resource(name = "sqlSession")
 	private SqlSession sqlSession;
 	
-	private static String namespace = "com.mycompany.app.codegroup.CodeGroupMapper";
+	private static String namespace = "com.mycompany.app.infra.codeGroup.CodeGroupMapper";
 	
 	public List<CodeGroup> selectList(CodeGroupVo vo){
 		System.out.println("dao: vo.getShKeyword(): " + vo.getShKeyword());

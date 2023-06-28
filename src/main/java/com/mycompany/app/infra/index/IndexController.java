@@ -6,7 +6,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
+
+	@RequestMapping(value="/biographyUsrView")
+	public String biographyUsrView() {
+		return "/usr/infra/biography/biographyUsrView";
+	}
 	
+	
+	@RequestMapping(value="/loginView")
+	public String loginView() {
+		return "/usr/infra/biography/loginView";
+	}
+			
+	@RequestMapping(value="/indexUsrView")
+	public String indexUsrView() {
+		return "usr/infra/index/indexUsrView";
+	}
+
 
 @RequestMapping(value= "/")
 public String home() {
@@ -20,10 +36,7 @@ public String home() {
 }
 
 
-@RequestMapping(value="/login")
-public String login() {
-	return "app/home/login";
-}
+
 
 @RequestMapping(value="/index_admin")
 public String admin() {

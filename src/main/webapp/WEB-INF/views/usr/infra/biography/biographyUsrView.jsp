@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,14 +22,14 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../resources/css/bootstrap-icons.css" rel="stylesheet">
-  <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../resources/css/boxicons.min.css" rel="stylesheet">
-  <link href="../resources/css/glightbox.min.css" rel="stylesheet">
-  <link href="../resources/css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/resources/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/resources/css/boxicons.min.css" rel="stylesheet">
+  <link href="/resources/css/glightbox.min.css" rel="stylesheet">
+  <link href="/resources/css/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Template Main CSS File -->
-  <link href="../resources/css/style.css" rel="stylesheet">
+  <link href="/resources/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Folio
@@ -52,25 +56,7 @@
           <li><a class="nav-link  scrollto" href="#portfolio">프로젝트</a></li>
           <li><a class="nav-link scrollto" href="#about">더보기</a></li>
           <li><a class="nav-link  scrollto" href="#journal">블로그</a></li>
-          <li class="dropdown"><a href="#"><span>카테고리</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="http://localhost/login">로그인</a></li>
-        </ul>
+          <li><a class="nav-link scrollto" href="loginView">로그인</a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -127,7 +113,7 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../resources/img/portfolio/port1.jpg" class="img-fluid" alt="">
+            <a href="loginView"><img src="../resources/img/portfolio/port1.jpg" class="img-fluid" alt=""></a>
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>쇼핑몰</p>
