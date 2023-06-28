@@ -266,15 +266,13 @@
                         <a href="">Show All</a>
                     </div>
                     <div class="table-responsive">
-                    <form name="formList" method="post">
-                    	<select name="shOption">
-								<option value="0">--선택해주세요--</option>
-								<option value="1">이름</option>
-								<option value="2">정보</option>
-							</select>
-								<input type="text" name="shKeyword" >
-								<button type="button" id="btn" ><i class="bi bi-search"></i></button>
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                   <form name="form" method="post">
+						<input type="text" name="seq" id ="seq" readonly value="<c:out value="${item.seq }"/>">
+						<input type="text" name="name" id ="name" value="<c:out value="${item.name}"/>">
+						<button type="button" id="btnDelete">삭제</button>
+						<button type="button" id="btnUpdate">수정</button>
+						<button type="button" id="btn">등록</button>
+                  <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
@@ -283,19 +281,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-						        <c:choose>
-									<c:when test="${fn:length(list) eq 0}">
-										<tr>
-											<td class="text-center" colspan="9">There is no data!</td>
-										</tr>
-									</c:when>
-									<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
+							        <c:choose>
+										<c:when test="${fn:length(list) eq 0}">
+											<tr>
+												<td class="text-center" colspan="9">There is no data!</td>
+											</tr>	
+										</c:when>
+										<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
 											<c:forEach items="${list}" var="list" varStatus="status">
 											<tr>
 												<td><input class="form-check-input" type="checkbox"></td>
 												<td><c:out value="${list.seq }"></c:out></td>
-												<td><a href="indexXdmViewForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
-											</tr>
+												<td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
+											  </tr>
 											</c:forEach>
 										</c:otherwise>
 									</c:choose>	
@@ -346,10 +344,20 @@
     <!-- Template Javascript -->
     <script src="/resources/js/admin.js"></script>
 <script type="text/javascript">
+
 $("#btn").on("click",function(){
-	// 자기 자신을 다시 한번 호출 해 준다.
-	//alert("asdfasdf");
-	$("form[name=formList]").attr("action","/indexXdmViewForm").submit();
+	
+	$("form[name=form]").attr("action","/codeGroupinsert").submit();
+});
+
+$("#btnUpdate").on("click",function(){
+	
+	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
+});
+
+$("#btnDelete").on("click",function(){
+	
+	$("form[name=form]").attr("action","/codeGroupDelete").submit();
 });
 
 </script>

@@ -39,7 +39,7 @@
 												<input type="password" name="logpass" class="form-style" placeholder="비밀번호를 입력해주세요" id="logpass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="../../home.jsp" class="btn mt-4">로그인</a>
+											<a href="indexXdmView" class="btn mt-4">로그인</a>
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">비밀번호 찾기</a></p>
 				      					</div>
 			      					</div>

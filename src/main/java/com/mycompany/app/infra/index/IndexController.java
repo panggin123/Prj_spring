@@ -22,6 +22,7 @@ public class IndexController {
 	public String indexUsrView() {
 		return "usr/infra/index/indexUsrView";
 	}
+	
 
 
 @RequestMapping(value= "/")

@@ -19,9 +19,6 @@
 	<input type="text" name="shKeyword" >
 	
 	<button type="button" id="btn" ><i class="bi bi-search"></i></button>
-</form>
-
-<br>
 
 <c:choose>
 	<c:when test="${fn:length(list) eq 0}">
@@ -36,12 +33,12 @@
 		</c:forEach>
 	</c:otherwise>
 </c:choose>	 
-
+</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script type="text/javascript">
 $("#btn").on("click",function(){
 	// 자기 자신을 다시 한번 호출 해 준다.
 	//alert("asdfasdf");
-	$("form[name=formList]").attr("action","/codeGroupList").submit();
+	$("form[name=formList]").attr("action","/indexXdmView").submit();
 });
 </script>

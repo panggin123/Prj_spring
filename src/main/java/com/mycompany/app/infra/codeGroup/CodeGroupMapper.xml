@@ -62,15 +62,15 @@ WHERE
 </delete>
 
 <insert id="insert" >
-insert into `codeGroup`(
-seq
-,name
-)values(
-seq
-,name
-)
+insert into 
+	`codeGroup`
+	(name)
+	values
+	(#{name})
 ;
 </insert>
+
+
 
 <!--  
 SELECT 

@@ -13,8 +13,8 @@ public class CodeGroupController {
 	@Autowired
 	CodeGroupServiceImpl service;
 	
-	@RequestMapping("/codeGroupList")
-	public String codeGroupList(CodeGroupVo vo,Model model) {
+	@RequestMapping("/indexXdmView")
+	public String indexXdmView(CodeGroupVo vo,Model model) {
 		
 		System.out.println("vo.getShOption(): " + vo.getShOption());
 		System.out.println("vo.getShKeyword(): " + vo.getShKeyword());
@@ -26,20 +26,19 @@ public class CodeGroupController {
 		// 왼쪽의 list는 jsp에서 사용할 변수명
 		model.addAttribute("list",list);
 		
-		return "codeGroupList";
+		return "/xdm/infra/index/indexXdmView";
 	}
 	
 	
-	@RequestMapping("/codeGroupForm")
-	public String codeGroupForm(CodeGroupVo vo, Model model) {
+	@RequestMapping(value="/indexXdmViewForm")
+	public String indexXdmViewForm(CodeGroupVo vo, Model model) {
 		
+		model.addAttribute("item", service.selectOne(vo));
+		
+		return"xdm/infra/index/indexXdmViewForm";
+	}
 	
-	CodeGroup codeGroup = service.selectOne(vo);
-	
-	model.addAttribute("item", codeGroup);
-	
-	return "codeGroupForm";
-}
+
 	
 	
 	@RequestMapping("/codeGroupUpdate")
@@ -54,7 +53,7 @@ public class CodeGroupController {
 		service.update(dto);
 		
 		
-		return "redirect:/codeGroupList";
+		return "redirect:/indexXdmView";
 	}
 	@RequestMapping("/codeGroupDelete")
 	
@@ -66,7 +65,7 @@ public class CodeGroupController {
 		
 		service.delete(dto);
 		
-		return "redirect:/codeGroupList";
+		return "redirect:/indexXdmView";
 	}
 	
 	@RequestMapping("/codeGroupinsert")
@@ -79,7 +78,7 @@ public class CodeGroupController {
 		
 		service.insert(dto);
 		
-		return "redirect:/codeGroupList";
+		return "redirect:/indexXdmView";
 		// redirect 보여줄 화면이 없을 때 사용
 	}
 	
