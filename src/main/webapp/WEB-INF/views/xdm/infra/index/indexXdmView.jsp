@@ -295,6 +295,7 @@
 												<td><input class="form-check-input" type="checkbox"></td>
 												<td><c:out value="${list.seq }"></c:out></td>
 												<td><a href="indexXdmViewForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
+												<td><c:out value="${list.delNy }"></c:out></td>
 											</tr>
 											</c:forEach>
 										</c:otherwise>

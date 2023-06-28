@@ -32,8 +32,8 @@
 <select id="selectList" resultMap="resultMapObj">
 	SELECT *
 	FROM
-		codeGroup
-
+		codeGroup,
+		delNy
 </select>
  
 <select id="selectOne" resultMap="resultMapObj">
@@ -52,25 +52,35 @@ SET
 WHERE
 	seq = #{seq}
 </update> 
-
+<!-- 
 <delete id="delete">
-DELETE 
-from 
-	`codeGroup`
+UPDATE codeGroup
+SET
+	name,
+	delNy
 WHERE 
-	seq = #{seq}
+	 #{name}
+	 ,1
 </delete>
-
+ --> 
+ 
+ 
 <insert id="insert" >
 insert into 
 	`codeGroup`
-	(name)
+	(delNy,name)
 	values
-	(#{name})
+	(1,#{name})
 ;
 </insert>
 
-
+ <delete id="delete">
+UPDATE codeGroup
+SET
+	delNy = 0
+WHERE
+	name = #{name}
+</delete> 
 
 <!--  
 SELECT 
