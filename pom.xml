@@ -107,6 +107,14 @@
 			<version>1.2</version>
 		</dependency>
 		
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+		
 		<!-- mybatis s 2023.06.23 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -158,14 +166,27 @@
 			<version>2.7.4</version>
 		</dependency>
 		<!-- mariadb s 2022.02.13 -->
-	
-		<!-- Test -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
+			
+	<!-- mysql, mariadb log s 2022.02.26 -->
+<dependency>
+	<groupId>org.apache.logging.log4j</groupId>
+	<artifactId>log4j-core</artifactId>
+<version>2.17.1</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.logging.log4j</groupId>
+	<artifactId>log4j-api</artifactId>
+<version>2.17.1</version>
+</dependency>
+
+<dependency>
+	<groupId>org.bgee.log4jdbc-log4j2</groupId>
+	<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+	<version>1.16</version>
+</dependency>
+<!-- mysql, mariadb log s 2022.02.26 -->
+		
 	</dependencies>
     <build>
         <plugins>
