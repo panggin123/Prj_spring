@@ -154,7 +154,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -162,7 +162,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">수건</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /></a>
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/1.jpg" alt="..." /></a>
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -179,7 +179,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -187,7 +187,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">신발</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="" /></a>
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/2.jpg" alt="" /></a>
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -204,7 +204,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -212,7 +212,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">치약</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." /></a>
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/3.jpg" alt="..." /></a>
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -229,7 +229,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -237,7 +237,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">슬리퍼</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." /></a>                               
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/4.jpg" alt="..." /></a>                               
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -254,7 +254,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -262,7 +262,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">샴푸</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." /></a>
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/5.jpg" alt="..." /></a>
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br>  <br>                                  
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -279,7 +279,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg" alt="Close modal"></i></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -287,7 +287,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">옷</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." /></a>
+                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/6.jpg" alt="..." /></a>
                                     <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
