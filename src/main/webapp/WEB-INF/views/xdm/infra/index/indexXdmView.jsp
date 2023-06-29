@@ -280,6 +280,7 @@
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">seq</th>
                                     <th scope="col">name</th>
+                                    <th scope="col">delNy<th>
                                 </tr>
                             </thead>
                             <tbody>

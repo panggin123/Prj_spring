@@ -269,6 +269,7 @@
                    <form name="form" method="post">
 						<input type="text" name="seq" id ="seq" readonly value="<c:out value="${item.seq }"/>">
 						<input type="text" name="name" id ="name" value="<c:out value="${item.name}"/>">
+						<input type="text" name="delNy" id = "delNy" value="<c:out value= "${item.delNy}"/>">
 						<button type="button" id="btnDelete">삭제</button>
 						<button type="button" id="btnUpdate">수정</button>
 						<button type="button" id="btn">등록</button>
@@ -278,6 +279,7 @@
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">seq</th>
                                     <th scope="col">name</th>
+                                    <th scope="col">delNy</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -293,6 +295,7 @@
 												<td><input class="form-check-input" type="checkbox"></td>
 												<td><c:out value="${list.seq }"></c:out></td>
 												<td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
+												<td><c:out value="${list.delNy }"></c:out></td>
 											  </tr>
 											</c:forEach>
 										</c:otherwise>

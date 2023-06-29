@@ -30,10 +30,13 @@
   -->
   
 <select id="selectList" resultMap="resultMapObj">
-	SELECT *
+	SELECT 
+		seq
+		,name
+		,delNy
 	FROM
-		codeGroup,
-		delNy
+		codeGroup
+		
 </select>
  
 <select id="selectOne" resultMap="resultMapObj">
