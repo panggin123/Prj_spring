@@ -23,7 +23,10 @@ public class IndexController {
 		return "usr/infra/index/indexUsrView";
 	}
 	
-
+	@RequestMapping(value="/indexXdmViewMain")
+	public String indexXdmViewMain() {
+		return "/xdm/infra/index/indexXdmViewMain";
+	}
 
 @RequestMapping(value= "/")
 public String home() {
