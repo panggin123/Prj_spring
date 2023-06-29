@@ -113,7 +113,7 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <a href="loginView"><img src="../resources/img/portfolio/port1.jpg" class="img-fluid" alt=""></a>
+            <a href="indexUsrView"><img src="../resources/img/portfolio/port1.jpg" class="img-fluid" alt=""></a>
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>쇼핑몰</p>

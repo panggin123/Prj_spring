@@ -10949,14 +10949,13 @@ p {
   }
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
-  }
-}
+  } 
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/dog-gc0f2511a8_640.jpg");
+  background-image: url("/resources/img/assets/img/dog-gc0f2511a8_640.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11322,4 +11321,5 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 }
