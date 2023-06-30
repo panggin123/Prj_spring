@@ -58,4 +58,12 @@ public class CodeXdmController {
 		
 		return "redirect:/codeXdmList";
 	}
+	
+	@RequestMapping(value="/codeXdminsert")
+	public String codeXdminsert(CodeXdmVo vo, Model model) {
+		
+		model.addAttribute("item", service.selectOne(vo));
+		
+		return"xdm/infra/index/codeXdmList";
+	}
 }

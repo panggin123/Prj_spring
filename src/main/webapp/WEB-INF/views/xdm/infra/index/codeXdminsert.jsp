@@ -94,6 +94,10 @@
                                     <label for="exampleInputPassword1" class="form-label">delNy</label>
                                     <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">codeGroup_seq</label>
+                                    <input type="text" class="form-control" id="codeGroup_seq" name="codeGroup_seq" value="<c:out value= "${item.codeGroup_seq}"/>">
+                                </div>
                                 <button type="button" class="btn btn-primary"  id="btninsert">추가</button>
                             </form>
                         </div>
@@ -107,6 +111,7 @@
                                     <th scope="col">seq</th>
                                     <th scope="col">name</th>
                                     <th scope="col">delNy</th>
+                                    <th scope="col">codeGroup_seq</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -121,6 +126,7 @@
 												<td><c:out value="${list.seq }"></c:out></td>
 												<td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
 												<td><c:out value="${list.delNy }"></c:out></td>
+												<td><c:out value="${list.codeGroup_seq }"></c:out></td>
 											  </tr>
 											</c:forEach>
 										</c:otherwise>
@@ -173,7 +179,7 @@
 
 $("#btninsert").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupinsert").submit();
+	$("form[name=form]").attr("action","/codeXdmList").submit();
 });
 
 

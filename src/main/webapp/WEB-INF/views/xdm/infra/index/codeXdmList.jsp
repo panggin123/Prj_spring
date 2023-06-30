@@ -172,7 +172,7 @@ $("#btn").on("click",function(){
 });
 $("#btninsert").on("click",function(){
 	
-	$("form[name=formList]").attr("action","/indexXdmViewInsert").submit();
+	$("form[name=formList]").attr("action","/codeXdminsert").submit();
 });
 
 
