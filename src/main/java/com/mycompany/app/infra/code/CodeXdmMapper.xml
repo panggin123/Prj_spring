@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<!-- 전체 메퍼중에서 유일한 값을 사용하여야 한다.
+	 해서 관계적으로 해당 파일의 패스와 파일이름(확장자 제외)
+	 그리고 dao 에서 namespace와 일치하여야 한다. -->
+	               
+<mapper namespace="com.mycompany.app.infra.code.CodeXdmMapper"> 
+
+
+								<!-- select 결과를 받을 객체 -->
+  <resultMap id="resultMapObj" type="com.mycompany.app.infra.code.CodeXdm"></resultMap>
+  <!--  
+  <sql id = "abc">
+  	seq
+  	,name
+  	,delNy
+  </sql>
+  
+  <select id="selectList" resultMap="resultMapObj">
+  	SELECT
+  		<include refid="abc"/> 
+  	FROM
+  		codeGroup
+  	WHRE 1=1
+  			<if test="shkeyword != nuLL and !shkeyword.equals('')">AND name LIKE CONCAT('%',#"(shKeyword)",'%')</if> 		
+  		 </select>
+  -->
+  
+<select id="selectList" resultMap="resultMapObj">
+	SELECT 
+		seq
+		,name
+		,delNy
+		,codeGroup_seq
+	FROM
+		code
+</select>
+ 
+<select id="selectOne" resultMap="resultMapObj">
+	SELECT *
+	FROM
+		code
+	WHERE
+		seq = #{seq}
+				
+</select> 
+
+ <update id="update">
+UPDATE code
+SET
+	name = #{name}
+WHERE
+	seq = #{seq}
+</update> 
+<!-- 
+<delete id="delete">
+UPDATE codeGroup
+SET
+	name,
+	delNy
+WHERE 
+	 #{name}
+	 ,1
+</delete>
+ --> 
+ 
+ 
+<insert id="insert" >
+insert into 
+	`code`
+	(delNy,name,codeGroup_seq)
+	values
+	(1,#{name},#{codeGroup_seq})
+;
+</insert>
+
+ <delete id="delete">
+UPDATE code
+SET
+	delNy = 0
+WHERE
+	name = #{name}
+</delete> 
+
+<!--  
+SELECT 
+seq
+,name
+,delny
+FROM
+codeGroup
+where 1=1
+-->
+
+<!-- 
+ !동적 쿼리 많이 연습
+<if test="shkeyword != nuLL and !shkeyword.equals('') 동적 쿼리
+ 
+ !추상화 include
+
+ -->
+
+</mapper>    

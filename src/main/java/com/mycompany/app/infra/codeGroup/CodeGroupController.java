@@ -55,6 +55,13 @@ public class CodeGroupController {
 	}
 	
 	
+//	@RequestMapping(value="/codeXdmForm")
+//	public String codeXdmForm(CodeGroupVo vo, Model model) {
+//		
+//		model.addAttribute("item", service.selectOne(vo));
+//		
+//		return"xdm/infra/index/indexXdmViewInsert";
+//	}
 
 	
 	@RequestMapping("/codeGroupUpdate")

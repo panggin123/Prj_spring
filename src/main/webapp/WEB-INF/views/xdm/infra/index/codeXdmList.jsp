@@ -34,7 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/resources/css/admin/style.css" rel="stylesheet">
-
+ <link href="/resources/css/admin/footer_bot.css" rel="stylesheet">
 
 </head>
 
@@ -50,62 +50,86 @@
 
 
         <!-- Sidebar Start -->
-			<%@include file="includeSideBar.jsp"%>
+      <%@include file="includeSideBar.jsp"%>
         <!-- Sidebar End -->
 
 
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-           <%@include file="includeNavbar.jsp"%>
+            <%@include file="includeNavbar.jsp"%>
             <!-- Navbar End -->
 
 
             <!-- Sale & Revenue Start -->
-          
+           
             <!-- Sale & Revenue End -->
 
 
             <!-- Sales Chart Start -->
-          
+           
             <!-- Sales Chart End -->
 
 
 
             <!-- Recent Sales Start -->
-             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4" id="Email_si">
-                    <div class="col-sm-12 col-xl-12">
-                    <!-- <div class="col-sm-12 col-xl-6"> -->
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Basic Form</h6>
-                            <form name="form" method="post">
-                               <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">seq</label>
-                                    <input type="email" class="form-control" id="seq" name="seq" aria-describedby="emailHelp"readonly value="<c:out value="${item.seq }"/>">
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">name</label>
-                                    <input type="text" class="form-control" id="name" name="name" value="<c:out value="${item.name}"/>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">delNy</label>
-                                    <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
-                                </div>
-                                <button type="button" class="btn btn-primary"  id="btnDelete">삭제</button>
-								<button type="button" class="btn btn-primary"  id="btnUpdate">수정</button>
-                            </form>
-                        </div>
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Recent Salse</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="table-responsive">
+                    <form name="formList" method="post">
+                    	<select name="shOption">
+								<option value="0">--선택해주세요--</option>
+								<option value="1">이름</option>
+								<option value="2">정보</option>
+							</select>
+							
+								<input type="text"   name="seq"  placeholder="seq">
+								<input type="text"   name="name" placeholder="name" >
+								<button type="button" id="btn" ><i class="bi bi-search"></i></button>
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                    <th scope="col">seq</th>
+                                    <th scope="col">name</th>
+                                    <th scope="col">delNy</th>
+									<th scope="col">codeGroup_seq</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+						        <c:choose>
+									<c:when test="${fn:length(list) eq 0}">
+										<tr>
+									
+										</tr>
+									</c:when>
+									<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
+											<c:forEach items="${list}" var="list" varStatus="status">
+											<tr>
+												<td><input class="form-check-input" type="checkbox"></td>
+												<td><c:out value="${list.seq}"></c:out></td>
+												<td><a href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
+												<td><c:out value="${list.delNy}"></c:out></td>
+												<td><c:out value="${list.codeGroup_seq}"></c:out><br></td>
+											</tr>
+											</c:forEach>
+										</c:otherwise>
+									</c:choose>	
+                            </tbody>
+                        </table>
+                        <button type="button" id="btninsert">추가</button>
+                        </form>
                     </div>
                 </div>
             </div>
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary rounded-top p-4">
+                <div class="bg-secondary rounded-top p-4" id="footer_bot">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
                             &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
@@ -141,18 +165,16 @@
     <!-- Template Javascript -->
     <script src="/resources/js/admin.js"></script>
 <script type="text/javascript">
-
-
-
-$("#btnUpdate").on("click",function(){
+$("#btn").on("click",function(){
+	// 자기 자신을 다시 한번 호출 해 준다.
+	//alert("asdfasdf");
+	$("form[name=formList]").attr("action","/codeXdmForm").submit();
+});
+$("#btninsert").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
+	$("form[name=formList]").attr("action","/indexXdmViewInsert").submit();
 });
 
-$("#btnDelete").on("click",function(){
-	
-	$("form[name=form]").attr("action","/codeGroupDelete").submit();
-});
 
 </script>
 </body>

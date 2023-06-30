@@ -94,6 +94,10 @@
                                     <label for="exampleInputPassword1" class="form-label">delNy</label>
                                     <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">codeGroup_seq</label>
+                                    <input type="text" class="form-control" id="codeGroup_seq" name="codeGroup_seq" value="<c:out value= "${item.codeGroup_seq}"/>">
+                                </div>
                                 <button type="button" class="btn btn-primary"  id="btnDelete">삭제</button>
 								<button type="button" class="btn btn-primary"  id="btnUpdate">수정</button>
                             </form>
@@ -101,6 +105,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <!-- Footer Start -->
@@ -146,12 +151,12 @@
 
 $("#btnUpdate").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
+	$("form[name=form]").attr("action","/codeXdmUpdate").submit();
 });
 
 $("#btnDelete").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupDelete").submit();
+	$("form[name=form]").attr("action","/codeXdmDelete").submit();
 });
 
 </script>
