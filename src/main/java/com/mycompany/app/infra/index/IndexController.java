@@ -27,6 +27,7 @@ public class IndexController {
 	public String indexXdmViewMain() {
 		return "/xdm/infra/index/indexXdmViewMain";
 	}
+	
 
 @RequestMapping(value= "/")
 public String home() {

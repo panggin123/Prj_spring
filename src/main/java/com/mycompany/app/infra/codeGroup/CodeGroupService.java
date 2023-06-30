@@ -14,6 +14,8 @@ public interface CodeGroupService {
 	
 	public int insert(CodeGroup dto);
 	
+	public int uelete(CodeGroup dto);
+	
 	
 //	public List<CodeGroup> selectOne(CodeGroupVo vo);
 	

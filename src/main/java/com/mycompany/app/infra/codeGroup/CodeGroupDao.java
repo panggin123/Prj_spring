@@ -32,6 +32,8 @@ public class CodeGroupDao {
 	public int delete(CodeGroup dto) { return sqlSession.delete(namespace + ".delete",dto);}
 	
 	public int insert(CodeGroup dto) { return sqlSession.insert(namespace + ".insert",dto);}
+	
+	public int uelete(CodeGroup dto) {return sqlSession.insert(namespace + ".insert",dto);} 
 
 	
 	

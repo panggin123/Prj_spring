@@ -13,8 +13,8 @@ public class CodeGroupController {
 	@Autowired
 	CodeGroupServiceImpl service;
 	
-	@RequestMapping("/indexXdmView")
-	public String indexXdmView(CodeGroupVo vo,Model model) {
+	@RequestMapping("/codeGroupXdmList")
+	public String codeGroupXdmList(CodeGroupVo vo,Model model) {
 		
 		System.out.println("vo.getShOption(): " + vo.getShOption());
 		System.out.println("vo.getShKeyword(): " + vo.getShKeyword());
@@ -26,17 +26,34 @@ public class CodeGroupController {
 		// 왼쪽의 list는 jsp에서 사용할 변수명
 		model.addAttribute("list",list);
 		
-		return "/xdm/infra/index/indexXdmView";
+		return "/xdm/infra/index/codeGroupXdmList";
+	}
+	
+	@RequestMapping(value="/indexXdmView")
+	public String indexXdmView(CodeGroupVo vo, Model model) {
+		
+		model.addAttribute("item", service.selectOne(vo));
+		
+		return"xdm/infra/index/indexXdmView";
 	}
 	
 	
-	@RequestMapping(value="/indexXdmViewForm")
+	@RequestMapping(value="/codeGroupXdmForm")
 	public String indexXdmViewForm(CodeGroupVo vo, Model model) {
 		
 		model.addAttribute("item", service.selectOne(vo));
 		
-		return"xdm/infra/index/indexXdmViewForm";
+		return"xdm/infra/index/codeGroupXdmForm";
 	}
+	
+	@RequestMapping(value="/indexXdmViewInsert")
+	public String indexXdmViewInsert(CodeGroupVo vo, Model model) {
+		
+		model.addAttribute("item", service.selectOne(vo));
+		
+		return"xdm/infra/index/indexXdmViewInsert";
+	}
+	
 	
 
 	
@@ -52,7 +69,7 @@ public class CodeGroupController {
 		service.update(dto);
 		
 		
-		return "redirect:/indexXdmView";
+		return "redirect:/codeGroupXdmList";
 	}
 	@RequestMapping("/codeGroupDelete")
 	
@@ -64,7 +81,7 @@ public class CodeGroupController {
 		
 		service.delete(dto);
 		
-		return "redirect:/indexXdmView";
+		return "redirect:/codeGroupXdmList";
 	}
 	
 	@RequestMapping("/codeGroupinsert")
@@ -77,9 +94,19 @@ public class CodeGroupController {
 		
 		service.insert(dto);
 		
-		return "redirect:/indexXdmView";
-		// redirect 보여줄 화면이 없을 때 사용
+		return "redirect:/codeGroupXdmList";
 	}
+		
+	@RequestMapping("/codeGroupuelete")
+	
+	public String codeGroupUele(CodeGroup dto) {
+		
+
+		service.uelete(dto);
+		
+		return "redirect:/codeGroupXdmList";
+	}
+		// redirect 보여줄 화면이 없을 때 사용
 	
 //	@Controller
 //	public class CodeGroupController{
