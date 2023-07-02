@@ -36,6 +36,15 @@ public class CodeXdmController {
 		return"xdm/infra/index/codeXdmForm";
 	}
 	
+	@RequestMapping(value="/codeXdminsert")
+	public String codeXdminsert(CodeXdmVo vo, Model model) {
+		
+		model.addAttribute("item", service.selectOne(vo));
+		
+		return"xdm/infra/index/codeXdminsert";
+	}
+	
+	
 	@RequestMapping("/codeXdmUpdate")
 	public String codeXdmUpdate(CodeXdm dto) {
 		
@@ -59,11 +68,20 @@ public class CodeXdmController {
 		return "redirect:/codeXdmList";
 }
 	
-	@RequestMapping(value="/codeXdminsert")
-	public String codeXdminsert(CodeXdmVo vo, Model model) {
+	
+	@RequestMapping("/codeXdminsertbtn")
+	public String codeXdminsertbtn(CodeXdm dto) {
 		
-		model.addAttribute("item", service.selectOne(vo));
+	System.out.println("codeXdminsertbtn");
 		
-		return"xdm/infra/index/codeXdmList";
-	}
+		System.out.println("dto.getName(): " + dto.getName());
+		System.out.println("dto.getSeq(): " + dto.getSeq());
+		
+	
+		service.insert(dto);
+		
+		return "redirect:/codeXdmList";
+}
+	
+	
 }
