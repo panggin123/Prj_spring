@@ -52,6 +52,7 @@
 UPDATE code
 SET
 	name = #{name}
+	,codeGroup_seq = #{codeGroup_seq}
 WHERE
 	seq = #{seq}
 </update> 
