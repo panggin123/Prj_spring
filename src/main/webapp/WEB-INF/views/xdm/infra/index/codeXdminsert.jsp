@@ -72,75 +72,62 @@
 
 
 
-            <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4" id="Email_si">
-                    <div class="col-sm-12 col-xl-12">
-                    <!-- <div class="col-sm-12 col-xl-6"> -->
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Basic Form</h6>
-                            <form name="form" method="post">
-                               <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">seq</label>
-                                    <input type="email" class="form-control" id="seq" name="seq" aria-describedby="emailHelp"readonly value="<c:out value="${item.seq }"/>">
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">name</label>
-                                    <input type="text" class="form-control" id="name" name="name" value="<c:out value="${item.name}"/>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">delNy</label>
-                                    <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">codeGroup_seq</label>
-                                    <input type="text" class="form-control" id="codeGroup_seq" name="codeGroup_seq" value="<c:out value= "${item.codeGroup_seq}"/>">
-                                </div>
-                                <button type="button" class="btn btn-primary"  id="btninsert">추가</button>
-                            </form>
-                        </div>
+                   <!-- Recent Sales Start -->
+          <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Basic Form</h6>
+                        <a href="">Show All</a>
                     </div>
-                </div>
-            </div>
-                  <table class="table text-start align-middle table-bordered table-hover mb-0">
+                    <div class="table-responsive">
+                    <form name="form" method="post">
+                    	
+							
+								<input type="text"   name="seq"  placeholder="seq">
+								<input type="text"   name="name" placeholder="name" >
+								<button type="button" id="btn" ><i class="bi bi-search"></i></button>
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">seq</th>
                                     <th scope="col">name</th>
                                     <th scope="col">delNy</th>
-                                    <th scope="col">codeGroup_seq</th>
+									<th scope="col">codeGroup_seq</th>
                                 </tr>
                             </thead>
                             <tbody>
-							        <c:choose>
-																				
-		<c:when test="${fn:length(list) eq 0}">
-										</c:when>
-										<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
+						        <c:choose>
+									<c:when test="${fn:length(list) eq 0}">
+										<tr>
+									
+										</tr>
+									</c:when>
+									<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
 											<c:forEach items="${list}" var="list" varStatus="status">
 											<tr>
 												<td><input class="form-check-input" type="checkbox"></td>
-												<td><c:out value="${list.seq }"></c:out></td>
-												<td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
-												<td><c:out value="${list.delNy }"></c:out></td>
-												<td><c:out value="${list.codeGroup_seq }"></c:out></td>
-											  </tr>
+												<td><c:out value="${list.seq}"></c:out></td>
+												<td><a href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
+												<td><c:out value="${list.delNy}"></c:out></td>
+												<td><c:out value="${list.codeGroup_seq}"></c:out><br></td>
+											</tr>
 											</c:forEach>
 										</c:otherwise>
 									</c:choose>	
                             </tbody>
                         </table>
+                        <button type="button" id="btninsert">추가</button>
                         </form>
                     </div>
                 </div>
             </div>
 
 
+
             <!-- Footer Start -->
-                <div class="bg-secondary rounded-top p-4" id="footer_bot">
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
                             &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
@@ -154,7 +141,6 @@
                 </div>
             <!-- Footer End -->
         </div>
-        <!-- Content End -->
 
 
         <!-- Back to Top -->

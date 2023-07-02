@@ -52,12 +52,12 @@ public class CodeXdmController {
 
 	@RequestMapping("/codeXdmDelete")
 	public String codeXdmUele(CodeXdm dto) {
-		
+	
 	
 		service.delete(dto);
 		
 		return "redirect:/codeXdmList";
-	}
+}
 	
 	@RequestMapping(value="/codeXdminsert")
 	public String codeXdminsert(CodeXdmVo vo, Model model) {
