@@ -84,9 +84,9 @@
                     	
 							
 								<input type="text"   name="seq"  placeholder="seq">
-								<input type="text"   name="name" placeholder="name" >
-								<button type="button" id="btn" ><i class="bi bi-search"></i></button>
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+								<input type="text"   name="shKeyword" placeholder="shKeyword" value="<c:out value="${vo.shKeyword }"/>" >
+								<button type="button" class="btn btn-primary" id="btn" ><i class="bi bi-search"></i></button>
+                        <table class="table table table-dark">
                             <thead>
                                 <tr class="text-white">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
@@ -117,7 +117,7 @@
 									</c:choose>	
                             </tbody>
                         </table>
-                        <button type="button" id="btninsert">추가</button>
+                        <button type="button" class="btn btn-primary"  id="btninsert">추가</button>
                         </form>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
 $("#btn").on("click",function(){
 	// 자기 자신을 다시 한번 호출 해 준다.
 	//alert("asdfasdf");
-	$("form[name=formList]").attr("action","/codeXdmForm").submit();
+	$("form[name=formList]").attr("action","/codeXdmList").submit();
 });
 $("#btninsert").on("click",function(){
 	

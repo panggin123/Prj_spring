@@ -21,9 +21,12 @@ public class CodeXdmController {
 	@RequestMapping(value="/codeXdmList")
 	public String codeXdmList(CodeXdmVo vo ,Model model) {
 		
+		vo.setShKeyword(vo.getShKeyword() == null ? "회원" : vo.getShKeyword());
+		
 		List<CodeXdm> list = service.selectList(vo);
 		
 		model.addAttribute("list",list);
+		model.addAttribute("vo",vo);
 		
 		return "/xdm/infra/index/codeXdmList";
 	}

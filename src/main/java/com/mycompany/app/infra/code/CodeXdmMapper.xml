@@ -37,6 +37,8 @@
 		,codeGroup_seq
 	FROM
 		code
+		WHERE 1=1  
+		<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
 </select>
  
 <select id="selectOne" resultMap="resultMapObj">

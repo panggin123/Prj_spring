@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,6 +16,12 @@ public class CodeGroupController {
 	
 	@RequestMapping("/codeGroupXdmList")
 	public String codeGroupXdmList(CodeGroupVo vo,Model model) {
+//		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {
+		// jsp로 바로 던져주는 것
+		
+//		vo.setShKeyword("회원");
+		vo.setShKeyword(vo.getShKeyword() == null ? "회원" : vo.getShKeyword()); //초기화 세팅에 많이 사용하는 것
+		
 		
 		System.out.println("vo.getShOption(): " + vo.getShOption());
 		System.out.println("vo.getShKeyword(): " + vo.getShKeyword());
@@ -25,6 +32,7 @@ public class CodeGroupController {
 		
 		// 왼쪽의 list는 jsp에서 사용할 변수명
 		model.addAttribute("list",list);
+		model.addAttribute("vo",vo); // jsp로 바로 던져주는 것
 		
 		return "/xdm/infra/index/codeGroupXdmList";
 	}

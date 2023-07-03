@@ -67,10 +67,8 @@
                     <div class="nav-item dropdown">
                     <a href="codeGroupXdmList" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Tables</a>
                     <div class="dropdown-menu bg-transparent border-0">
-                            <a href="codeGroupXdmList" class="dropdown-item">codeGroupList</a>
-                            <a href="codeGroupXdmForm" class="dropdown-item">codeGroupForm</a>
-                            <a href="codeXdmList" class="dropdown-item"> codeList</a>
-                            <a href="codeXdmForm" class="dropdown-item">codeForm</a>
+                            <a href="codeGroupXdmList" class="dropdown-item">codeGroup관리</a>
+                            <a href="codeXdmList" class="dropdown-item"> code관리</a>
                        </div>
                      </div>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
