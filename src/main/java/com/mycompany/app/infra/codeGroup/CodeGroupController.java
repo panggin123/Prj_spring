@@ -34,7 +34,7 @@ public class CodeGroupController {
 		model.addAttribute("list",list);
 		model.addAttribute("vo",vo); // jsp로 바로 던져주는 것
 		
-		return "/xdm/infra/index/codeGroupXdmList";
+		return "/xdm/infra/codeGroup/codeGroupXdmList";
 	}
 	
 	@RequestMapping(value="/indexXdmView")
@@ -51,15 +51,15 @@ public class CodeGroupController {
 		
 		model.addAttribute("item", service.selectOne(vo));
 		
-		return"xdm/infra/index/codeGroupXdmForm";
+		return"xdm/infra/codeGroup/codeGroupXdmForm";
 	}
 	
-	@RequestMapping(value="/indexXdmViewInsert")
+	@RequestMapping(value="/codeGroupXdminsert")
 	public String indexXdmViewInsert(CodeGroupVo vo, Model model) {
 		
 		model.addAttribute("item", service.selectOne(vo));
 		
-		return"xdm/infra/index/indexXdmViewInsert";
+		return"xdm/infra/codeGroup/codeGroupXdminsert";
 	}
 	
 	

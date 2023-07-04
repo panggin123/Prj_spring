@@ -62,7 +62,7 @@
 
 
 		<!-- Sidebar Start -->
-		<%@include file="includeSideBar.jsp"%>
+		<%@include file="../include/includeSideBar.jsp"%>
 		<!-- Sidebar End -->
 
 
@@ -71,7 +71,7 @@
 		<!-- Content Start -->
 		<div class="content">
 			<!-- Navbar Start -->
-			<%@include file="includeNavbar.jsp"%>
+			<%@include file="../include/includeNavbar.jsp"%>
 			<!-- Navbar End -->
 
 
@@ -213,7 +213,7 @@
 				function() {
 
 					$("form[name=formList]").attr("action",
-							"/indexXdmViewInsert").submit();
+							"/codeGroupXdminsert").submit();
 				});
 	</script>
 </body>
