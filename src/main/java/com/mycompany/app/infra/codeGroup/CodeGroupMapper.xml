@@ -13,19 +13,33 @@
 								<!-- select 결과를 받을 객체 -->
   <resultMap id="resultMapObj" type="com.mycompany.app.infra.codeGroup.CodeGroup"></resultMap>
   
-  <sql id="abc">
+ <!--  <sql id="abc">
   		seq
   		,name
   		,delNy
   </sql>
-
-
+  
 <sql id = "selectCommon">
 	FROM    
 	    	codeGroup
 		WHERE 1=1
 			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
 </sql>
+
+  	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (   	
+	   		SELECT
+				<include refid="abc" />
+	   			<include refid="selectCommon" />
+		) aa
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select> -->
+
   <!--  
   <sql id = "abc">
   	seq
@@ -103,20 +117,7 @@ WHERE
 </delete> 
 
 
-   	<select id="selectOneCount" resultType="Integer">
-		SELECT count(*)
-		<include refid="selectCommon" />
-	</select>
-
-   	<select id="selectList" resultMap="resultMapObj">
-		SELECT aa.* FROM (   	
-	   		SELECT
-				<include refid="abc" />
-	   			<include refid="selectCommon" />
-		) aa
-		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
-   	</select>
-
+ 
 
 
 <!--  

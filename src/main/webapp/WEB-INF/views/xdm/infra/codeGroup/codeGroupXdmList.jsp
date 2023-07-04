@@ -81,9 +81,9 @@
 					<div class="table-responsive">
 						<form name="formList" method="post">
 						
-								<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+								<%-- <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 								<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
-								
+							 --%>	
 							<input type="text" name="seq" placeholder="seq"> <input type="text" name="shKeyword" placeholder="shKeyword" value="<c:out value="${vo.shKeyword }"/>">
 							<button type="button" class="btn btn-primary" id="btn"><i class="bi bi-search"></i></button>
 							<table class="table table table-dark">
@@ -166,16 +166,17 @@
 			// 자기 자신을 다시 한번 호출 해 준다.
 			//alert("asdfasdf");
 			$("form[name=formList]").attr("action", "/codeGroupXdmList").submit();
+			
 		});
 		$("#btninsert").on("click", function() {
 
 			$("form[name=formList]").attr("action", "/codeGroupXdminsert").submit();
 		});
 		
-		goList = function(thisPage) {
+		/* goList = function(thisPage) {
 			$("input:hidden[name=thisPage]").val(thisPage);
 			$("form[name=formList]").attr("action", "codeGroupXdmList").submit();
-		}
+		} */
 	</script>
 </body>
 
