@@ -174,7 +174,7 @@
 		
 		goList = function(thisPage) {
 			$("input:hidden[name=thisPage]").val(thisPage);
-			$("form[name=formList]").attr("action", "codeGroupList").submit();
+			$("form[name=formList]").attr("action", "codeGroupXdmList").submit();
 		}
 	</script>
 </body>

@@ -103,13 +103,6 @@ WHERE
 </delete> 
 
 
- <sql id ="selectCommon">
-   		FROM    
-	    	infrCodeGroup
-		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND ifcgName LIKE CONCAT('%',#{shKeyword},'%')</if>
-    </sql>
-
    	<select id="selectOneCount" resultType="Integer">
 		SELECT count(*)
 		<include refid="selectCommon" />
@@ -123,8 +116,6 @@ WHERE
 		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
-
-
 
 
 

@@ -58,7 +58,7 @@ public class CodeGroupController {
 	
 	
 	@RequestMapping(value="/codeGroupXdmForm")
-	public String indexXdmViewForm(CodeGroupVo vo, Model model) {
+	public String codeGroupXdmForm(CodeGroupVo vo, Model model) {
 		
 		model.addAttribute("item", service.selectOne(vo));
 		
@@ -66,7 +66,7 @@ public class CodeGroupController {
 	}
 	
 	@RequestMapping(value="/codeGroupXdminsert")
-	public String indexXdmViewInsert(CodeGroupVo vo, Model model) {
+	public String codeGroupXdminsert(CodeGroupVo vo, Model model) {
 		
 		model.addAttribute("item", service.selectOne(vo));
 		
