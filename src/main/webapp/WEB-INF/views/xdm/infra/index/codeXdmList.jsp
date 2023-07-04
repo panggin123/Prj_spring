@@ -33,18 +33,18 @@
 	rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="/resources/lib/owlcarousel/assets/owl.carousel.min.css"
+<link href="/resources/css/adminXdm/owl.carousel.min.css"
 	rel="stylesheet">
 <link
-	href="/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+	href="/resources/css/adminXdm/tempusdominus-bootstrap-4.min.css"
 	rel="stylesheet" />
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="/resources/css/admin/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="/resources/css/admin/style.css" rel="stylesheet">
-<link href="/resources/css/admin/footer_bot.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/style.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/footer_bot.css" rel="stylesheet">
 
 </head>
 
@@ -185,18 +185,18 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="/resources/lib/chart/chart.min.js"></script>
-	<script src="/resources/lib/easing/easing.min.js"></script>
-	<script src="/resources/lib/waypoints/waypoints.min.js"></script>
-	<script src="/resources/lib/owlcarousel/owl.carousel.min.js"></script>
-	<script src="/resources/lib/tempusdominus/js/moment.min.js"></script>
-	<script src="/resources/lib/tempusdominus/js/moment-timezone.min.js"></script>
+	<script src="/resources/js/adminXdm/chart.min.js"></script>
+	<script src="/resources/js/adminXdm/easing.min.js"></script>
+	<script src="/resources/js/adminXdm/waypoints.min.js"></script>
+	<script src="/resources/js/adminXdm/owl.carousel.min.js"></script>
+	<script src="/resources/js/adminXdm/moment.min.js"></script>
+	<script src="/resources/js/adminXdm/moment-timezone.min.js"></script>
 	<script
 		src="/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
 
 	<!-- Template Javascript -->
-	<script src="/resources/js/admin.js"></script>
+	<script src="/resources/js/adminXdm/admin.js"></script>
 	<script type="text/javascript">
 		$("#btn").on("click", function() {
 			// 자기 자신을 다시 한번 호출 해 준다.

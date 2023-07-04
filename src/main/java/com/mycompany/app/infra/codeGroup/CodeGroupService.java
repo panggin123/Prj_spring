@@ -8,6 +8,8 @@ public interface CodeGroupService {
 	
 	public CodeGroup selectOne(CodeGroupVo vo);
 	
+	public int selectOneCount(CodeGroupVo vo);
+	
 	public int update(CodeGroup dto);
 	
 	public int delete(CodeGroup dto);

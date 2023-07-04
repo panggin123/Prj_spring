@@ -33,18 +33,18 @@
 	rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="/resources/lib/owlcarousel/assets/owl.carousel.min.css"
+<link href="/resources/css/adminXdm/owl.carousel.min.css"
 	rel="stylesheet">
 <link
-	href="/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+	href="/resources/css/adminXdm/tempusdominus-bootstrap-4.min.css"
 	rel="stylesheet" />
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="/resources/css/admin/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="/resources/css/admin/style.css" rel="stylesheet">
-<link href="/resources/css/admin/footer_bot.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/style.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/footer_bot.css" rel="stylesheet">
 
 </head>
 
@@ -95,9 +95,11 @@
 					</div>
 					<div class="table-responsive">
 						<form name="formList" method="post">
-							<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
-							<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
-							<select name="shOption">
+							<input type="hidden" name="thisPage"
+								value="<c:out value="${vo.thisPage}" default="1"/>"> <input
+								type="hidden" name="rowNumToShow"
+								value="<c:out value="${vo.rowNumToShow}"/>"> <select
+								name="shOption">
 								<option value="0">--선택해주세요--</option>
 								<option value="1">이름</option>
 								<option value="2">정보</option>
@@ -133,7 +135,8 @@
 													<td><c:out value="${list.seq }"></c:out></td>
 													<td><a
 														href="codeGroupXdmForm?seq=<c:out value="${list.seq }"/>">
-														<c:out value="${list.name }"></c:out></a></td>
+															<c:out value="${list.name }"></c:out>
+													</a></td>
 													<td><c:out value="${list.delNy }"></c:out></td>
 												</tr>
 											</c:forEach>
@@ -141,19 +144,39 @@
 									</c:choose>
 								</tbody>
 							</table>
-							<div class="d-flex justify-content-center">
-								<ul class="pagination">
-									<li class='page-item ${paging.first ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage-1}">Prev</a></li>
-									<c:forEach var="num" begin="${paging.startPageNum}"
-										end="${paging.lastPageNum}" step="1">
-										<li
-											class='page-item ${paging.currentPage == num-1 ? "active" : ""}'><a
-											class="page-link" href="?page=${num-1}">${num}</a></li>
-									</c:forEach>
-									<li class='page-item ${paging.last ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage+1}">Next</a></li>
-								</ul>
+							<div class="container-fluid px-0 mt-2">
+								<div class="row">
+									<div class="col">
+										<!-- <ul class="pagination pagination-sm justify-content-center mb-0"> -->
+										<ul class="pagination justify-content-center mb-0">
+											<!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li> -->
+											<c:if test="${vo.startPage gt vo.pageNumToShow}">
+												<li class="page-item"><a class="page-link"
+													href="javascript:goList(${vo.startPage - 1})"><i
+														class="fa-solid fa-angle-left"></i></a></li>
+											</c:if>
+											<c:forEach begin="${vo.startPage}" end="${vo.endPage}"
+												varStatus="i">
+												<c:choose>
+													<c:when test="${i.index eq vo.thisPage}">
+														<li class="page-item active"><a class="page-link"
+															href="javascript:goList(${i.index})">${i.index}</a></li>
+													</c:when>
+													<c:otherwise>
+														<li class="page-item"><a class="page-link"
+															href="javascript:goList(${i.index})">${i.index}</a></li>
+													</c:otherwise>
+												</c:choose>
+											</c:forEach>
+											<c:if test="${vo.endPage ne vo.totalPages}">
+												<li class="page-item"><a class="page-link"
+													href="javascript:goList(${vo.endPage + 1})"><i
+														class="fa-solid fa-angle-right"></i></a></li>
+											</c:if>
+											<!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li> -->
+										</ul>
+									</div>
+								</div>
 							</div>
 							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
 						</form>
@@ -189,18 +212,17 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="/resources/lib/chart/chart.min.js"></script>
-	<script src="/resources/lib/easing/easing.min.js"></script>
-	<script src="/resources/lib/waypoints/waypoints.min.js"></script>
-	<script src="/resources/lib/owlcarousel/owl.carousel.min.js"></script>
-	<script src="/resources/lib/tempusdominus/js/moment.min.js"></script>
-	<script src="/resources/lib/tempusdominus/js/moment-timezone.min.js"></script>
-	<script
-		src="/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="/resources/js/adminXdm/chart.min.js"></script>
+	<script src="/resources/js/adminXdm/easing.min.js"></script>
+	<script src="/resources/js/adminXdm/waypoints.min.js"></script>
+	<script src="/resources/js/adminXdm/owl.carousel.min.js"></script>
+	<script src="/resources/js/adminXdm/moment.min.js"></script>
+	<script src="/resources/js/adminXdm/moment-timezone.min.js"></script>
+	<script src="/resources/js/adminXdm/tempusdominus-bootstrap-4.min.js"></script>
 
 
 	<!-- Template Javascript -->
-	<script src="/resources/js/admin.js"></script>
+	<script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">
 		$("#btn").on(
 				"click",
@@ -217,6 +239,11 @@
 					$("form[name=formList]").attr("action",
 							"/codeGroupXdminsert").submit();
 				});
+
+		goList = function(thisPage) {
+			$("input:hidden[name=thisPage]").val(thisPage);
+			$("form[name=formList]").attr("action", "codeGroupList").submit();
+		}
 	</script>
 </body>
 

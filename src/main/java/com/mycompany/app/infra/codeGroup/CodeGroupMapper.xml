@@ -28,6 +28,12 @@
   			<if test="shkeyword != nuLL and !shkeyword.equals('')">AND name LIKE CONCAT('%',#"(shKeyword)",'%')</if> 		
   		 </select>
   -->
+<!--   <sql id="abc">
+  		seq
+  		,name
+  		,delNy
+  </sql>
+   -->
   
 <select id="selectList" resultMap="resultMapObj">
 	SELECT 
@@ -98,15 +104,18 @@ WHERE
 		SELECT count(*)
 		<include refid="selectCommon" />
 	</select>
-
+	
+<!--  
    	<select id="selectList" resultMap="resultMapObj">
 		SELECT aa.* FROM (   	
 	   		SELECT
-				<include refid="abc" />
+				<include refid="selectList" />
 	   			<include refid="selectCommon" />
 		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
+-->
+
 
 <!--  
 SELECT 
