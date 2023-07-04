@@ -19,7 +19,7 @@ public class CodeXdmController {
 	@RequestMapping(value = "/codeXdmList")
 	public String codeXdmList(CodeXdmVo vo, Model model) {
 
-		vo.setShKeyword(vo.getShKeyword() == null ? "회원" : vo.getShKeyword());
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
 
 		List<CodeXdm> list = service.selectList(vo);
 

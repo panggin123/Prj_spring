@@ -15,7 +15,21 @@ public class CodeGroupController {
 	CodeGroupServiceImpl service;
 	
 	@RequestMapping("/codeGroupXdmList")
-	public String codeGroupXdmList(CodeGroupVo vo,Model model) {
+	public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
+		
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	
+		vo.setParamsPaging(service.selectOneCount(vo));
+		
+		if(vo.getTotalRows() > 0) {
+			List<CodeGroup> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
+		
+		return "xdm/infra/codeGroup/codeGroupXdmList";
 //		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {
 		// jsp로 바로 던져주는 것
 		
@@ -32,23 +46,6 @@ public class CodeGroupController {
 //		}
 		
 //		return "/xdm/infra/codeGroup/codeGroupXdmList";
-		
-		vo.setShKeyword("회원");
-		vo.setShKeyword(vo.getShKeyword() == null ? "회원" : vo.getShKeyword()); //초기화 세팅에 많이 사용하는 것
-		
-		
-		System.out.println("vo.getShOption(): " + vo.getShOption());
-		System.out.println("vo.getShKeyword(): " + vo.getShKeyword());
-		
-		List<CodeGroup> list = service.selectList(vo);
-		
-		System.out.println("list.size(): " + list.size());
-		
-		// 왼쪽의 list는 jsp에서 사용할 변수명
-		model.addAttribute("list",list);
-		model.addAttribute("vo",vo); // jsp로 바로 던져주는 것
-		
-		return "/xdm/infra/codeGroup/codeGroupXdmList";
 	}
 	
 	@RequestMapping(value="/indexXdmView")

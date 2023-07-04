@@ -12,6 +12,20 @@
 
 								<!-- select 결과를 받을 객체 -->
   <resultMap id="resultMapObj" type="com.mycompany.app.infra.codeGroup.CodeGroup"></resultMap>
+  
+  <sql id="abc">
+  		seq
+  		,name
+  		,delNy
+  </sql>
+
+
+<sql id = "selectCommon">
+	FROM    
+	    	codeGroup
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+</sql>
   <!--  
   <sql id = "abc">
   	seq
@@ -28,12 +42,7 @@
   			<if test="shkeyword != nuLL and !shkeyword.equals('')">AND name LIKE CONCAT('%',#"(shKeyword)",'%')</if> 		
   		 </select>
   -->
-<!--   <sql id="abc">
-  		seq
-  		,name
-  		,delNy
-  </sql>
-   -->
+
   
 <select id="selectList" resultMap="resultMapObj">
 	SELECT 
@@ -76,12 +85,13 @@ WHERE
  
  
 <insert id="insert" >
-insert into 
-	`codeGroup`
-	(delNy,name)
-	values
-	(1,#{name})
-;
+	insert into codeGroup (
+		delNy
+		,name
+	) values (
+		1
+		,#{name}
+	)
 </insert>
 
  <delete id="delete">
@@ -93,28 +103,29 @@ WHERE
 </delete> 
 
 
-<!-- <sql id = "selectCommon">
-	FROM    
-	    	codeGroup
+ <sql id ="selectCommon">
+   		FROM    
+	    	infrCodeGroup
 		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
-</sql>
+			<if test="shKeyword != null and !shKeyword.equals('')">AND ifcgName LIKE CONCAT('%',#{shKeyword},'%')</if>
+    </sql>
 
-<select id="selectOneCount" resultType="Integer">
+   	<select id="selectOneCount" resultType="Integer">
 		SELECT count(*)
 		<include refid="selectCommon" />
-	</select> -->
-	
-<!--  
+	</select>
+
    	<select id="selectList" resultMap="resultMapObj">
 		SELECT aa.* FROM (   	
 	   		SELECT
-				<include refid="selectList" />
+				<include refid="abc" />
 	   			<include refid="selectCommon" />
 		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
--->
+
+
+
 
 
 <!--  
@@ -124,8 +135,8 @@ seq
 ,delny
 FROM
 codeGroup
-where 1=1
--->
+where 1=1 -->
+
 
 <!-- 
  !동적 쿼리 많이 연습

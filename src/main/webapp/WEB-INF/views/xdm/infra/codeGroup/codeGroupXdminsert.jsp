@@ -147,7 +147,7 @@
 
 $("#btninsertbtn").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupXdminsert").submit();
+	$("form[name=form]").attr("action","/codeGroupinsert").submit();
 });
 
 

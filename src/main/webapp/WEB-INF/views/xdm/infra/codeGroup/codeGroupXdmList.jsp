@@ -80,8 +80,10 @@
 					</div>
 					<div class="table-responsive">
 						<form name="formList" method="post">
-
-
+						
+								<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+								<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
+								
 							<input type="text" name="seq" placeholder="seq"> <input type="text" name="shKeyword" placeholder="shKeyword" value="<c:out value="${vo.shKeyword }"/>">
 							<button type="button" class="btn btn-primary" id="btn"><i class="bi bi-search"></i></button>
 							<table class="table table table-dark">
@@ -107,7 +109,7 @@
 												<tr>
 													<td><input class="form-check-input" type="checkbox"></td>
 													<td><c:out value="${list.seq}"></c:out></td>
-													<td><a href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
+													<td><a href="codeGroupXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
 													<td><c:out value="${list.delNy}"></c:out></td>
 												</tr>
 											</c:forEach>
@@ -115,20 +117,6 @@
 									</c:choose>
 								</tbody>
 							</table>
-							<div class="d-flex justify-content-center">
-								<ul class="pagination">
-									<li class='page-item ${paging.first ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage-1}">Prev</a></li>
-									<c:forEach var="num" begin="${paging.startPageNum}"
-										end="${paging.lastPageNum}" step="1">
-										<li
-											class='page-item ${paging.currentPage == num-1 ? "active" : ""}'><a
-											class="page-link" href="?page=${num-1}">${num}</a></li>
-									</c:forEach>
-									<li class='page-item ${paging.last ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage+1}">Next</a></li>
-								</ul>
-							</div>
 							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
 						</form>
 					</div>
@@ -155,8 +143,7 @@
 
 
 		<!-- Back to Top -->
-		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
-			class="bi bi-arrow-up"></i></a>
+		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 	</div>
 
 	<!-- JavaScript Libraries -->
@@ -184,6 +171,11 @@
 
 			$("form[name=formList]").attr("action", "/codeGroupXdminsert").submit();
 		});
+		
+		goList = function(thisPage) {
+			$("input:hidden[name=thisPage]").val(thisPage);
+			$("form[name=formList]").attr("action", "codeGroupList").submit();
+		}
 	</script>
 </body>
 
