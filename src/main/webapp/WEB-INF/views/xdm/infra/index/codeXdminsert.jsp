@@ -98,7 +98,7 @@
                                     <label for="exampleInputPassword1" class="form-label">codeGroup_seq</label>
                                     <input type="text" class="form-control" id="codeGroup_seq" name="codeGroup_seq" value="<c:out value= "${item.codeGroup_seq}"/>">
                                 </div>
-								<button type="button" class="btn btn-primary"  id="btninsert">추가</button>
+								<button type="button" class="btn btn-primary"  id="btninsertbtn">추가</button>
                             </form>
                         </div>
                     </div>
@@ -144,12 +144,12 @@
 
 
     <!-- Template Javascript -->
-    <script src="/resources/js/adminXdm/admin.js"></script>
+    <script src="/resources/js/adminXdm/main.js"></script>
 <script type="text/javascript">
 
 
 
-$("#btninsert").on("click",function(){
+$("#btninsertbtn").on("click",function(){
 	
 	$("form[name=form]").attr("action","/codeXdminsertbtn").submit();
 });

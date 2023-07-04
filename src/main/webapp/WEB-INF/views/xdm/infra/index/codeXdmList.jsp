@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -126,9 +125,7 @@
 												<tr>
 													<td><input class="form-check-input" type="checkbox"></td>
 													<td><c:out value="${list.seq}"></c:out></td>
-													<td><a
-														href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out
-																value="${list.name}"></c:out></a></td>
+													<td><a href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
 													<td><c:out value="${list.delNy}"></c:out></td>
 													<td><c:out value="${list.codeGroup_seq}"></c:out><br></td>
 												</tr>
@@ -191,12 +188,11 @@
 	<script src="/resources/js/adminXdm/owl.carousel.min.js"></script>
 	<script src="/resources/js/adminXdm/moment.min.js"></script>
 	<script src="/resources/js/adminXdm/moment-timezone.min.js"></script>
-	<script
-		src="/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="/resources/js/adminXdm/tempusdominus-bootstrap-4.min.js"></script>
 
 
 	<!-- Template Javascript -->
-	<script src="/resources/js/adminXdm/admin.js"></script>
+	<script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">
 		$("#btn").on("click", function() {
 			// 자기 자신을 다시 한번 호출 해 준다.

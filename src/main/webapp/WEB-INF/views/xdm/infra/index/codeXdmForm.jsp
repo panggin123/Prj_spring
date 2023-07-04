@@ -145,7 +145,7 @@
 
 
     <!-- Template Javascript -->
-    <script src="/resources/js/adminXdm/admin.js"></script>
+    <script src="/resources/js/adminXdm/main.js"></script>
 <script type="text/javascript">
 
 

@@ -93,7 +93,7 @@ WHERE
 </delete> 
 
 
-<sql id = "selectCommon">
+<!-- <sql id = "selectCommon">
 	FROM    
 	    	codeGroup
 		WHERE 1=1
@@ -103,7 +103,7 @@ WHERE
 <select id="selectOneCount" resultType="Integer">
 		SELECT count(*)
 		<include refid="selectCommon" />
-	</select>
+	</select> -->
 	
 <!--  
    	<select id="selectList" resultMap="resultMapObj">

@@ -34,7 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/resources/css/adminXdm/style.css" rel="stylesheet">
-    <link href="/resources/css/adminXdm/footer_bot.css" rel="stylesheet">
+
 
 </head>
 
@@ -57,23 +57,23 @@
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-        <%@include file="../include/includeNavbar.jsp"%>
+           <%@include file="../include/includeNavbar.jsp"%>
             <!-- Navbar End -->
 
 
             <!-- Sale & Revenue Start -->
-           
+          
             <!-- Sale & Revenue End -->
 
 
             <!-- Sales Chart Start -->
-            
+          
             <!-- Sales Chart End -->
 
 
 
             <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
+             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4" id="Email_si">
                     <div class="col-sm-12 col-xl-12">
                     <!-- <div class="col-sm-12 col-xl-6"> -->
@@ -94,45 +94,18 @@
                                     <label for="exampleInputPassword1" class="form-label">delNy</label>
                                     <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
                                 </div>
-                                <button type="button" class="btn btn-primary"  id="btninsert">추가</button>
+								<button type="button" class="btn btn-primary"  id="btninsertbtn">추가</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-                  <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">seq</th>
-                                    <th scope="col">name</th>
-                                    <th scope="col">delNy</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-							        <c:choose>
-																				
-		<c:when test="${fn:length(list) eq 0}">
-										</c:when>
-										<c:otherwise><!-- ${list} 자바에서 넘겨준 객체 이름 --><!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
-											<c:forEach items="${list}" var="list" varStatus="status">
-											<tr>
-												<td><input class="form-check-input" type="checkbox"></td>
-												<td><c:out value="${list.seq }"></c:out></td>
-												<td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"></c:out></a></td>
-												<td><c:out value="${list.delNy }"></c:out></td>
-											  </tr>
-											</c:forEach>
-										</c:otherwise>
-									</c:choose>	
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+
 
 
             <!-- Footer Start -->
-                <div class="bg-secondary rounded-top p-4" id="footer_bot">
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
                             &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
@@ -145,11 +118,14 @@
                     </div>
                 </div>
             <!-- Footer End -->
+        </div>
         <!-- Content End -->
 
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+ </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -167,12 +143,12 @@
     <script src="/resources/js/adminXdm/main.js"></script>
 <script type="text/javascript">
 
-$("#btninsert").on("click",function(){
+
+
+$("#btninsertbtn").on("click",function(){
 	
-	$("form[name=form]").attr("action","/codeGroupinsert").submit();
+	$("form[name=form]").attr("action","/codeGroupXdminsert").submit();
 });
-
-
 
 
 </script>
