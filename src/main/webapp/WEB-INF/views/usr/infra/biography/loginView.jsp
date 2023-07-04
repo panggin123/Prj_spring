@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <title>CodePen - Log In / Sign Up - pure css - #12</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="../../../../../resources/css/style_login.css">
+<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="/resources/loginXdm/css/style_login.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"><!-- 부트스트렙 아이콘 -->
 </head>
 <body>

@@ -95,6 +95,8 @@
 					</div>
 					<div class="table-responsive">
 						<form name="formList" method="post">
+							<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+							<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
 							<select name="shOption">
 								<option value="0">--선택해주세요--</option>
 								<option value="1">이름</option>
@@ -130,8 +132,8 @@
 													<td><input class="form-check-input" type="checkbox"></td>
 													<td><c:out value="${list.seq }"></c:out></td>
 													<td><a
-														href="codeGroupXdmForm?seq=<c:out value="${list.seq }"/>"><c:out
-																value="${list.name }"></c:out></a></td>
+														href="codeGroupXdmForm?seq=<c:out value="${list.seq }"/>">
+														<c:out value="${list.name }"></c:out></a></td>
 													<td><c:out value="${list.delNy }"></c:out></td>
 												</tr>
 											</c:forEach>
