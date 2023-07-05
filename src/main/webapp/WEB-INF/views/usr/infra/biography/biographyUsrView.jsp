@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Folio Bootstrap Template - Index</title>
+  <title></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -112,22 +112,22 @@
 
         <div class="row portfolio-container">
 
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+           <a href="loginView"><img src="/resources/img/portfolio/port2.jpg" class="img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4>팀 프로젝트</h4>
+              <p>???</p>
+              <a href="/resources/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <a href="indexUsrView"><img src="/resources/img/portfolio/port1.jpg" class="img-fluid" alt=""></a>
             <div class="portfolio-info">
               <h4>개인 프로젝트</h4>
               <p>쇼핑몰</p>
               <a href="/resources/img/portfolio/port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="/resources/img/portfolio/port2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>팀 프로젝트</h4>
-              <p>???</p>
-              <a href="/resources/img/portfolio/port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>

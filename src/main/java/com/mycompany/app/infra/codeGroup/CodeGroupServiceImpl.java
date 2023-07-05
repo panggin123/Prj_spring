@@ -36,8 +36,7 @@ public class CodeGroupServiceImpl implements CodeGroupService {
 
 	@Override
 	public int selectOneCount(CodeGroupVo vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.selectOneCount(vo);
 	}
 	
 //	public List<CodeGroup> selectOne(CodeGroupVo vo){

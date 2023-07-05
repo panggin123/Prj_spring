@@ -19,24 +19,15 @@
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
 <!-- Icon Font Stylesheet -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-	rel="stylesheet">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-	rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="/resources/css/adminXdm/owl.carousel.min.css"
-	rel="stylesheet">
-<link
-	href="/resources/css/adminXdm/tempusdominus-bootstrap-4.min.css"
-	rel="stylesheet" />
+<link href="/resources/css/adminXdm/owl.carousel.min.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
 <!-- Customized Bootstrap Stylesheet -->
 <link href="/resources/css/adminXdm/bootstrap.min.css" rel="stylesheet">
@@ -90,21 +81,18 @@
 						<h6 class="mb-0">Basic Form</h6>
 						<a href="">Show All</a>
 					</div>
-					<div class="table-responsive">
+					<div>
 						<form name="formList" method="post">
-
-
-							<input type="text" name="seq" placeholder="seq"> <input
-								type="text" name="shKeyword" placeholder="shKeyword"
-								value="<c:out value="${vo.shKeyword }"/>">
+ 								<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+								<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
+							<input type="text" name="seq" placeholder="seq"> <input type="text" name="shKeyword" placeholder="shKeyword"value="<c:out value="${vo.shKeyword }"/>">
 							<button type="button" class="btn btn-primary" id="btn">
 								<i class="bi bi-search"></i>
 							</button>
 							<table class="table table table-dark">
 								<thead>
 									<tr class="text-white">
-										<th scope="col"><input class="form-check-input"
-											type="checkbox"></th>
+										<th scope="col"><input class="form-check-input" type="checkbox"></th>
 										<th scope="col">seq</th>
 										<th scope="col">name</th>
 										<th scope="col">delNy</th>
@@ -134,20 +122,9 @@
 									</c:choose>
 								</tbody>
 							</table>
-							<div class="d-flex justify-content-center">
-								<ul class="pagination">
-									<li class='page-item ${paging.first ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage-1}">Prev</a></li>
-									<c:forEach var="num" begin="${paging.startPageNum}"
-										end="${paging.lastPageNum}" step="1">
-										<li
-											class='page-item ${paging.currentPage == num-1 ? "active" : ""}'><a
-											class="page-link" href="?page=${num-1}">${num}</a></li>
-									</c:forEach>
-									<li class='page-item ${paging.last ? "disabled" : ""}'><a
-										class="page-link" href="?page=${paging.currentPage+1}">Next</a></li>
-								</ul>
-							</div>
+							
+							<%@include file="../include/includepaging.jsp"%>
+							<br>
 							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
 						</form>
 					</div>
@@ -203,6 +180,11 @@
 
 			$("form[name=formList]").attr("action", "/codeXdminsert").submit();
 		});
+		
+		goList = function(thisPage) {
+			$("input:hidden[name=thisPage]").val(thisPage);
+			$("form[name=formList]").attr("action", "codeXdmList").submit();
+		} 
 	</script>
 </body>
 

@@ -21,13 +21,13 @@ public class CodeGroupController {
 	
 		vo.setParamsPaging(service.selectOneCount(vo));
 		
-		/* if(vo.getTotalRows() > 0) { */
+		if(vo.getTotalRows() > 0) {
 			List<CodeGroup> list = service.selectList(vo);
 			model.addAttribute("list", list);
-			model.addAttribute("vo", vo);
-			/*
-			 * } else { // by pass }
-			 */
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
 		
 		return "xdm/infra/codeGroup/codeGroupXdmList";
 //		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {

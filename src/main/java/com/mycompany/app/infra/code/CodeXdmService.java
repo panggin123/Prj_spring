@@ -8,6 +8,8 @@ public interface CodeXdmService {
 	
 	public CodeXdm selectOne(CodeXdmVo vo);
 	
+	public int selectOneCount(CodeXdmVo vo);
+	
 	public int update(CodeXdm dto);
 	
 	public int delete(CodeXdm dto);
@@ -15,4 +17,5 @@ public interface CodeXdmService {
 	public int insert(CodeXdm dto);
 	
 	public int uelete(CodeXdm dto);
+
 }

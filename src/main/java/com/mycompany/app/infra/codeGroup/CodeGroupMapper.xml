@@ -13,7 +13,7 @@
 								<!-- select 결과를 받을 객체 -->
   <resultMap id="resultMapObj" type="com.mycompany.app.infra.codeGroup.CodeGroup"></resultMap>
   
- <!--  <sql id="abc">
+  <sql id="abc">
   		seq
   		,name
   		,delNy
@@ -38,7 +38,7 @@
 	   			<include refid="selectCommon" />
 		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
-   	</select> -->
+   	</select>  
 
   <!--  
   <sql id = "abc">
@@ -58,7 +58,7 @@
   -->
 
   
-<select id="selectList" resultMap="resultMapObj">
+<!-- <select id="selectList" resultMap="resultMapObj">
 	SELECT 
 		seq
 		,name
@@ -67,7 +67,8 @@
 		codeGroup
 	WHERE 1=1  
 		<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
-</select>
+</select> -->
+ 
  
 <select id="selectOne" resultMap="resultMapObj">
 	SELECT *

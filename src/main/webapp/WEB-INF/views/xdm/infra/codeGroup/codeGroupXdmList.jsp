@@ -78,12 +78,11 @@
 						<h6 class="mb-0">Basic Form</h6>
 						<a href="">Show All</a>
 					</div>
-					<div class="table-responsive">
+					 <div > 
 						<form name="formList" method="post">
 						
-								<%-- <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+								 <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 								<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
-							 --%>	
 							<input type="text" name="seq" placeholder="seq"> <input type="text" name="shKeyword" placeholder="shKeyword" value="<c:out value="${vo.shKeyword }"/>">
 							<button type="button" class="btn btn-primary" id="btn"><i class="bi bi-search"></i></button>
 							<table class="table table table-dark">
@@ -117,6 +116,8 @@
 									</c:choose>
 								</tbody>
 							</table>
+							<%@include file="../include/includepaging.jsp"%>
+							<br>
 							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
 						</form>
 					</div>
@@ -173,10 +174,10 @@
 			$("form[name=formList]").attr("action", "/codeGroupXdminsert").submit();
 		});
 		
-		/* goList = function(thisPage) {
+		 goList = function(thisPage) {
 			$("input:hidden[name=thisPage]").val(thisPage);
 			$("form[name=formList]").attr("action", "codeGroupXdmList").submit();
-		} */
+		} 
 	</script>
 </body>
 

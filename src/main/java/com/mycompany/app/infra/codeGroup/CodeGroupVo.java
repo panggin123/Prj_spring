@@ -7,6 +7,7 @@ public class CodeGroupVo {
 	private String seq;
 	private String name;
 	private String delNy;
+	
 //	paging
 	private int thisPage = 1;									// 현재 페이지
 //	private int rowNumToShow = Constants.ROW_NUM_TO_SHOW;		// 화면에 보여줄 데이터 줄 갯수
@@ -136,7 +137,7 @@ public void setParamsPaging(int totalRows) {
 		
 //		setThisPage(3);
 
-		this.setTotalRows(totalRows);
+		setTotalRows(totalRows);
 
 		if (getTotalRows() == 0) {
 			setTotalPages(1);

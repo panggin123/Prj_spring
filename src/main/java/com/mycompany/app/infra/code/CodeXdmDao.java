@@ -27,6 +27,8 @@ public class CodeXdmDao {
 		return codeXdm;
 	}
 	
+	public int selectOneCount(CodeXdmVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
+	
 	public int update(CodeXdm dto) { return sqlSession.update(namespace + ".update",dto);}
 	
 	public int delete(CodeXdm dto) { return sqlSession.delete(namespace + ".delete",dto);}

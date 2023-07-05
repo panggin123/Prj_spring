@@ -5,10 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mycompany.app.infra.codeGroup.CodeGroup;
-import com.mycompany.app.infra.codeGroup.CodeGroupVo;
 
 @Controller
 public class CodeXdmController {
@@ -16,17 +15,22 @@ public class CodeXdmController {
 	@Autowired
 	CodeXdmServiceImpl service;
 
-	@RequestMapping(value = "/codeXdmList")
-	public String codeXdmList(CodeXdmVo vo, Model model) {
-
+	@RequestMapping("/codeXdmList")
+	public String codeXdmList(@ModelAttribute("vo") CodeXdmVo vo, Model model) {
+		
 		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
-
-		List<CodeXdm> list = service.selectList(vo);
-
-		model.addAttribute("list", list);
-		model.addAttribute("vo", vo);
-
-		return "/xdm/infra/index/codeXdmList";
+	
+		vo.setParamsPaging(service.selectOneCount(vo));
+		
+		if(vo.getTotalRows() > 0) {
+			List<CodeXdm> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
+		
+		return "xdm/infra/index/codeXdmList";
 	}
 
 	@RequestMapping(value = "/codeXdmForm")

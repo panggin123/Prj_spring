@@ -33,4 +33,11 @@ public class CodeXdmServiceImpl implements CodeXdmService {
 	
 	@Override
 	public int uelete(CodeXdm dto) {return dao.uelete(dto);}
-}
+
+	@Override
+	public int selectOneCount(CodeXdmVo vo) {
+		return dao.selectOneCount(vo);
+	}
+	
+
+	}
