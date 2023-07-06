@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.codeGroup;
+package com.mycompany.app.infra.member;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CodeGroupDao {
+public class MemberDao {
 	
 	@Inject
 	@Resource(name = "sqlSession")
@@ -17,25 +17,25 @@ public class CodeGroupDao {
 	
 	private static String namespace = "com.mycompany.app.infra.member.MemberMapper";
 	
-	public List<CodeGroup> selectList(CodeGroupVo vo){
+	public List<Member> selectList(MemberVo vo){
 		System.out.println("dao: vo.getShKeyword(): " + vo.getShKeyword());
 		return sqlSession.selectList(namespace + ".selectList", vo);
 		}
 	
-	public CodeGroup selectOne(CodeGroupVo vo) {
-		CodeGroup codeGroup = sqlSession.selectOne(namespace + ".selectOne",vo);
-		return codeGroup;
+	public Member selectOne(MemberVo vo) {
+		Member member = sqlSession.selectOne(namespace + ".selectOne",vo);
+		return member;
 	}
 	
-	public int selectOneCount(CodeGroupVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
+	public int selectOneCount(MemberVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	
-	public int update(CodeGroup dto) { return sqlSession.update(namespace + ".update",dto);}
+	public int update(Member dto) { return sqlSession.update(namespace + ".update",dto);}
 	
-	public int delete(CodeGroup dto) { return sqlSession.delete(namespace + ".delete",dto);}
+	public int delete(Member dto) { return sqlSession.delete(namespace + ".delete",dto);}
 	
-	public int insert(CodeGroup dto) { return sqlSession.insert(namespace + ".insert",dto);}
+	public int insert(Member dto) { return sqlSession.insert(namespace + ".insert",dto);}
 	
-	public int uelete(CodeGroup dto) {return sqlSession.insert(namespace + ".insert",dto);} 
+	public int uelete(Member dto) {return sqlSession.insert(namespace + ".insert",dto);} 
 
 	
 	

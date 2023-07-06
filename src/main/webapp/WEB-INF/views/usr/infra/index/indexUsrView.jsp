@@ -37,7 +37,7 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">카테고리</a></li>
                         <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shop-grid.html">상품</a></li>
                         <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shoping-cart.html"><i class="bi bi-cart-fill"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/index_login.html">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link" href="indexUsrLogin">로그인</a></li>
                     </ul>
                 </div>
             </div>

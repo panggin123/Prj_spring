@@ -22,12 +22,7 @@ public class IndexController {
 	public String indexUsrView() {
 		return "usr/infra/index/indexUsrView";
 	}
-	
-	@RequestMapping(value="/indexXdmViewMain")
-	public String indexXdmViewMain() {
-		return "/xdm/infra/index/indexXdmViewMain";
-	}
-	
+
 
 @RequestMapping(value= "/")
 public String home() {
@@ -40,12 +35,14 @@ public String home() {
 	return "home";
 }
 
+@RequestMapping(value="/indexUsrLogin")
+public String indexUsrLogin() {
+	return "usr/infra/index/indexUsrLogin";
+}
 
-
-
-@RequestMapping(value="/index_admin")
-public String admin() {
-	return "app/home/admin";
+@RequestMapping(value="/indexUsrSignup")
+public String indexUsrSignup() {
+	return "usr/infra/index/indexUsrSignup";
 }
 
 

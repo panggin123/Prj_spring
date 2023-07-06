@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+body {
+    color: #fff;}
+a {color: #edff00;}
+#signUp_back{background-image: url("../../img/portfolio/northern-lights-g2a3861b11_640.jpg");
+background-size: cover;}
+#signUp_sback{background-image: url("../../img/portfolio/triangles-g891e98108_1280.png");}
