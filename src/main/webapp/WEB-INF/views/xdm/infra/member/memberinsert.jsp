@@ -87,12 +87,16 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">name</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="<c:out value="${item.name}"/>">
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">defaultNy</label>
                                     <input type="text" class="form-control" id="defaultNy" name="defaultNy" value="<c:out value= "${item.defaultNy}"/>">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">name</label>
-                                    <input type="text" class="form-control" id="name" name="name" value="<c:out value="${item.name}"/>">
+                                    <label for="exampleInputPassword1" class="form-label">email</label>
+                                    <input type="text" class="form-control" id="email" name="email" value="<c:out value= "${item.email}"/>">
                                 </div>
                                  <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">id</label>
@@ -164,6 +168,7 @@
 $("#btninsertbtn").on("click",function(){
 	
 	$("form[name=form]").attr("action","/memberinsertbtn").submit();
+	
 });
 
 

@@ -96,6 +96,7 @@
 										<th scope="col">seq</th>
 										<th scope="col">name</th>
 										<th scope="col">defaultNy</th>
+										<th scope="col">email</th>
 										<th scope="col">id</th>
 										<th scope="col">pass</th>
 										<th scope="col">adderss</th>
@@ -118,6 +119,7 @@
 													<td><c:out value="${list.seq}"></c:out></td>
 													<td><a href="memberForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
 													<td><c:out value="${list.defaultNy}"></c:out></td>
+													<td><c:out value="${list.email}"></c:out></td>
 													<td><c:out value="${list.id}"></c:out><br></td>
 													<td><c:out value="${list.pass}"></c:out><br></td>
 													<td><c:out value="${list.adderss}"></c:out><br></td>

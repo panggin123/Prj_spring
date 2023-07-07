@@ -21,6 +21,13 @@
   		,defaultNy
   		,adderss
   		,tel
+	  		,(select 
+	  			email
+	  		from 
+	  			memberEmail as email
+	  		where 
+	  			email.memberShip_seq = memberShip.seq 
+	  		)as email
   </sql>
   
 <sql id = "selectCommon">
@@ -74,6 +81,7 @@
 </select> -->
  
  
+ 
 <select id="selectOne" resultMap="resultMapObj">
 	SELECT *
 	FROM
@@ -95,6 +103,8 @@ SET
 WHERE
 	seq= #{seq}
 </update> 
+
+
 <!-- 
 <delete id="delete">
 UPDATE codeGroup
@@ -123,6 +133,19 @@ WHERE
 		,#{id}
 		,#{pass}
 		,#{adderss}
+	)
+	<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		 </selectKey>
+</insert>
+
+<insert id="insertEmail">
+	insert into memberEmail(
+	email
+	,memberShip_seq
+	) values (
+	#{email}
+	,#{seq}
 	)
 </insert>
 

@@ -29,7 +29,10 @@ public class MemberServiceImpl implements MemberService {
 	public int delete(Member dto) {return dao.delete(dto);}
 	
 	@Override
-	public int insert(Member dto) {return dao.insert(dto);}
+	public int insert(Member dto) {
+		dao.insert(dto);
+		dao.insertEmail(dto);
+		return 1;}
 	
 	@Override
 	public int uelete(Member dto) {return dao.uelete(dto);}
@@ -38,8 +41,7 @@ public class MemberServiceImpl implements MemberService {
 	public int selectOneCount(MemberVo vo) {
 		return dao.selectOneCount(vo);
 	}
+
+
 	
-//	public List<CodeGroup> selectOne(CodeGroupVo vo){
-//		return dao.selectList(vo);
-//	}
 }

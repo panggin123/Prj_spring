@@ -95,20 +95,24 @@
                                     <input type="text" class="form-control" id="defaultNy" name="defaultNy" value="<c:out value= "${item.defaultNy}"/>">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">tel</label>
-                                    <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>">
-                                </div>
-                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">pass</label>
-                                    <input type="text" class="form-control" id="pass" name="pass" value="<c:out value= "${item.pass}"/>">
+                                    <label for="exampleInputPassword1" class="form-label">email</label>
+                                    <input type="text" class="form-control" id="email" name="email" value="<c:out value="${item.email}"/>">
                                 </div>
                                  <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">id</label>
                                     <input type="text" class="form-control" id="id" name="id" value="<c:out value= "${item.id}"/>">
                                 </div>
                                  <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">pass</label>
+                                    <input type="text" class="form-control" id="pass" name="pass" value="<c:out value= "${item.pass}"/>">
+                                </div>
+                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">adderss</label>
                                     <input type="text" class="form-control" id="adderss" name="adderss" value="<c:out value= "${item.adderss}"/>">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">tel</label>
+                                    <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>">
                                 </div>
                                 <button type="button" class="btn btn-primary"  id="btnDelete">삭제</button>
 								<button type="button" class="btn btn-primary"  id="btnUpdate">수정</button>

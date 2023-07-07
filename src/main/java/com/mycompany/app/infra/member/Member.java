@@ -10,9 +10,17 @@ public class Member {
 	private String adderss;
 	private String pass;
 	private String id;
+	private String email;
 
 
 
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	// 디비컬럼명 첫 글자는 소문자로 해야 한다.
 	// seq는 편의상 디비에는 int지만 String으로 사용한다.
 	// 주로 테이블의 컬럼명과 일치

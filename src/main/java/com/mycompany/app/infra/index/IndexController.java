@@ -40,10 +40,6 @@ public String indexUsrLogin() {
 	return "usr/infra/index/indexUsrLogin";
 }
 
-@RequestMapping(value="/indexUsrSignup")
-public String indexUsrSignup() {
-	return "usr/infra/index/indexUsrSignup";
-}
 
 
 //		@RequestMapping(value= "/home2")

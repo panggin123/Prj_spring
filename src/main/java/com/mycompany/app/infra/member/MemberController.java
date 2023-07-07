@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 public class MemberController {
 
@@ -66,6 +67,14 @@ public class MemberController {
 		return"xdm/infra/member/memberinsert";
 	}
 	
+	@RequestMapping(value="/indexUsrSignup")
+	public String indexUsrSingup(MemberVo vo,Model model) {
+		
+	model.addAttribute("item", service.selectOne(vo));
+	
+		return "usr/infra/index/indexUsrSignup";
+	}
+
 	
 //	@RequestMapping(value="/codeXdmForm")
 //	public String codeXdmForm(CodeGroupVo vo, Model model) {
@@ -113,8 +122,10 @@ public class MemberController {
 		
 		service.insert(dto);
 		
-		return "redirect:/memberList";
+		return "redirect:/indexUsrView";
 	}
+	
+
 		
 	@RequestMapping("/memberuelete")
 	

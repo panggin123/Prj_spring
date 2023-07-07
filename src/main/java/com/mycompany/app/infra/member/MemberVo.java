@@ -10,11 +10,19 @@ public class MemberVo {
 	private String id;
 	private String pass;
 	private String adderss;
+	private String email;
 	
 	
+
 public String getDefaultNy() {
 		return defaultNy;
 	}
+	public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
 	public void setDefaultNy(String defaultNy) {
 		this.defaultNy = defaultNy;
 	}

@@ -56,40 +56,42 @@
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h3>회원가입</h3>
                         </div>
+                        <form name="form" method="post">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+                            <input type="text" class="form-control" id="name" name="name" value="<c:out value= "${item.name}"/>">
                             <label for="floatingText">이름</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="email" name="email"value="<c:out value= "${item.email}"/>" >
                             <label for="floatingInput">이메일</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="text" class="form-control" id="id" name="id" value="<c:out value= "${item.id}"/>" >
                             <label for="floatingPassword">아이디</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="pass" name="pass"value="<c:out value= "${item.pass}"/>"  >
                             <label for="floatingPassword">비밀번호</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="text" class="form-control" id="adderss" name="adderss" value="<c:out value= "${item.adderss}"/>">
                             <label for="floatingPassword">주소</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>" >
                             <label for="floatingPassword">전화번호</label>
                         </div>
 
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" class="form-check-input" id="check">
                                 <label class="form-check-label" for="exampleCheck1">비밀번호 확인</label>
                             </div>
                             <a href="">비밀번호 찾기</a>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">회원가입</button>
+                        <button type="button" class="btn btn-primary py-3 w-100 mb-4" id="btninsert">회원가입</button>
                         <p class="text-center mb-0">이미 계정이 있습니까?<a href="">로그인</a></p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -114,7 +116,7 @@
 
  	$("#btninsert").on("click", function() {
 
-			$("form[name=formList]").attr("action", "/memberinsert").submit();
+			$("form[name=form]").attr("action", "/memberinsertbtn").submit();
 		}); 
  	</script></body>
 
