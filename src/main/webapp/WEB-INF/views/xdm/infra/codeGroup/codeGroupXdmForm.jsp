@@ -140,11 +140,17 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
+    
 <script type="text/javascript">
 
 
 
+
 $("#btnUpdate").on("click",function(){
+	
+/* 	if(validationUpdt() == false) return false; */
+	if(check($.trim($("#name").val())) == false) return false;
 	
 	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
 });
@@ -153,6 +159,9 @@ $("#btnDelete").on("click",function(){
 	
 	$("form[name=form]").attr("action","/codeGroupDelete").submit();
 });
+
+
+
 
 </script>
 </body>

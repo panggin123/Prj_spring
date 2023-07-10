@@ -50,40 +50,12 @@
 		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>  
-
-  <!--  
-  <sql id = "abc">
-  	seq
-  	,name
-  	,delNy
-  </sql>
-  
-  <select id="selectList" resultMap="resultMapObj">
-  	SELECT
-  		<include refid="abc"/> 
-  	FROM
-  		codeGroup
-  	WHRE 1=1
-  			<if test="shkeyword != nuLL and !shkeyword.equals('')">AND name LIKE CONCAT('%',#"(shKeyword)",'%')</if> 		
-  		 </select>
-  -->
-
-  
-<!-- <select id="selectList" resultMap="resultMapObj">
-	SELECT 
-		seq
-		,name
-		,delNy
-	FROM
-		codeGroup
-	WHERE 1=1  
-		<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
-</select> -->
+   	
  
  
  
 <select id="selectOne" resultMap="resultMapObj">
-	SELECT *
+	SELECT * 
 	FROM
 		memberShip
 	WHERE
@@ -105,17 +77,7 @@ WHERE
 </update> 
 
 
-<!-- 
-<delete id="delete">
-UPDATE codeGroup
-SET
-	name,
-	delNy
-WHERE 
-	 #{name}
-	 ,1
-</delete>
- --> 
+
  
  
 <insert id="insert" >
@@ -156,27 +118,5 @@ SET
 WHERE
 	name = #{name}
 </delete> 
-
-
- 
-
-
-<!--  
-SELECT 
-seq
-,name
-,delny
-FROM
-codeGroup
-where 1=1 -->
-
-
-<!-- 
- !동적 쿼리 많이 연습
-<if test="shkeyword != nuLL and !shkeyword.equals('') 동적 쿼리
- 
- !추상화 include
-
- -->
 
 </mapper>    

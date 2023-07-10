@@ -23,7 +23,9 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public int update(Member dto) {return dao.update(dto);}
+	public int update(Member dto) {
+		return dao.update(dto);
+		}
 	
 	@Override
 	public int delete(Member dto) {return dao.delete(dto);}

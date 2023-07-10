@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="rb" uri="http://www.springframework.org/tags"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -13,7 +13,8 @@
 <meta content="" name="keywords">
 <meta content="" name="description">
 
-<!-- Favicon -->
+
+<!-- Google Web Fonts -->
 <link href="img/favicon.ico" rel="icon">
 
 <!-- Google Web Fonts -->
@@ -34,6 +35,8 @@
 
 <!-- Template Stylesheet -->
 <link href="/resources/css/adminXdm/style.css" rel="stylesheet">
+<link href="/resources/css/adminXdm/footer_bot.css" rel="stylesheet">
+
 
 </head>
 
@@ -44,11 +47,11 @@
 			<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
 				<span class="sr-only">Loading...</span>
 			</div>
-		</div>
+		</div> 
 		<!-- Spinner End -->
 
 
-		<!-- Sidebar Start -->
+			<!-- Sidebar Start -->
 		<%@include file="../include/includeSideBar.jsp"%>
 		<!-- Sidebar End -->
 
@@ -116,6 +119,7 @@
 									</c:choose>
 								</tbody>
 							</table>
+							
 							<%@include file="../include/includepaging.jsp"%>
 							<br>
 							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
@@ -147,7 +151,7 @@
 		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 	</div>
 
-	<!-- JavaScript Libraries -->
+<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -159,7 +163,7 @@
 	<script src="/resources/js/adminXdm/moment-timezone.min.js"></script>
 	<script src="/resources/js/adminXdm/tempusdominus-bootstrap-4.min.js"></script>
 
-
+ 
 	<!-- Template Javascript -->
 	<script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">

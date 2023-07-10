@@ -166,12 +166,14 @@
 
 
 $("#btninsertbtn").on("click",function(){
-	
-	$("form[name=form]").attr("action","/memberinsertbtn").submit();
+		 if($.trim($("#name").val()) == "" || $.trim($("#name").val()) == null){
+				alert("값을 입력해 주세요.");
+				$("#name").focus();
+			} else {
+				$("form[name=form]").attr("action","/memberinsertbtn").submit();
+		} 
 	
 });
-
-
 </script>
 </body>
 

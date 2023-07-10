@@ -113,11 +113,26 @@
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">
+	
+	validationUpdt = function(){
+//			공백없는 숫자와 한글
+			myRe =  /^[ㄱ-ㅎ가-힣0-9_-]{2,10}$/;
+			
+			 if(myRe.test($.trim($("#name").val())) == false){
+			 	alert("공백없는 숫자와 대소문자만 입력 가능합니다.");
+			 	$("#name").focus();
+			 	return false;
+			 } else {
+				 // by pass
+			 }
+		}
 
+	
  	$("#btninsert").on("click", function() {
-
-			$("form[name=form]").attr("action", "/memberinsertbtn").submit();
+ 		if(validationUpdt() == false) return false;
+				$("form[name=form]").attr("action","/memberinsertbtn").submit();
 		}); 
+
  	</script></body>
 
 </html>

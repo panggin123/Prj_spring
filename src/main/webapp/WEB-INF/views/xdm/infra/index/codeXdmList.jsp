@@ -178,7 +178,8 @@
 		});
 		$("#btninsert").on("click", function() {
 
-			$("form[name=formList]").attr("action", "/codeXdminsert").submit();
+		$("form[name=formList]").attr("action", "/codeXdminsert").submit();
+			
 		});
 		
 		goList = function(thisPage) {
