@@ -25,11 +25,11 @@
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
 						<h6 class="mb-0 pb-3"><span>로그인 </span><a href="indexUsrSignup"><span>회원가입</span></a></h6>
-			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">
 									<div class="center-wrap">
+									 <form name="form" method="post">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">로그인</h4>
 											<div class="form-group">
@@ -40,9 +40,10 @@
 												<input type="password" name="logpass" class="form-style" placeholder="비밀번호를 입력해주세요" id="logpass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="../startbootstrap-agency-gh-pages/index.html" class="btn mt-4">로그인</a>
-                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">비밀번호 찾기</a></p>
+											<button type="button" class= "btn mt-4" id="btn">로그인</button>                            				
+											<p class="mb-0 mt-4 text-center"><a href="#0" class="link">비밀번호 찾기</a></p>
 				      					</div>
+				      					</form>
 			      					</div>
 			      				</div>
 			      			</div>
@@ -53,6 +54,23 @@
 	    </div>
 	</div>
 <!-- partial -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+    <script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
+	<script type="text/javascript">
+	var objemail = $("#email");
+	var objpass = $("#pass");
+	
+	validationinsert = function(){
+		if(checkemail(objemail) == false) return false;
+		if(checkpass(objpass) == false) return false;
+	}
+ 	$("#btn").on("click", function() {
+ 		if(validationinsert() == false) return false;
+				$("form[name=form]").attr("action","/indexUsrView").submit();
+		}); 
+
+	</script>
 </body>
 </html>

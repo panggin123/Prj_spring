@@ -115,18 +115,18 @@
     <script src="/resources/js/validation/validation.js"></script>
 	<script type="text/javascript">
 
-	var objname = $("#name").val();
-	var objid = $("#id").val();
-	var objpass = $("#pass").val();
-	var objemail = $("#email").val();
-	var objadderss = $("#adderss").val();
-	var objtel = $("#tel").val();
+	var objname = $("#name");
+	var objemail = $("#email");
+	var objid = $("#id");
+	var objpass = $("#pass");
+	var objadderss = $("#adderss");
+	var objtel = $("#tel");
 
 	validationinsert = function(){
  		if(check(objname) == false) return false;
+ 		if(checkemail(objemail) == false) return false;
  		if(checkid(objid) == false) return false;
  		if(checkpass(objpass) == false) return false;
- 		if(checkemail(objemail) == false) return false;
  		if(checkadderss(objadderss) == false) return false;
  		if(checktel(objtel) == false) return false;
 	}	
@@ -135,6 +135,6 @@
 				$("form[name=form]").attr("action","/memberinsertbtn").submit();
 		}); 
 
- 	</script></body>
-
+ 	</script>
+ 	</body>
 </html>
