@@ -112,24 +112,26 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
 	<script type="text/javascript">
-	
-	validationUpdt = function(){
-//			공백없는 숫자와 한글
-			myRe =  /^[ㄱ-ㅎ가-힣0-9_-]{2,10}$/;
-			
-			 if(myRe.test($.trim($("#name").val())) == false){
-			 	alert("공백없는 숫자와 대소문자만 입력 가능합니다.");
-			 	$("#name").focus();
-			 	return false;
-			 } else {
-				 // by pass
-			 }
-		}
 
-	
+	var objname = $("#name").val();
+	var objid = $("#id").val();
+	var objpass = $("#pass").val();
+	var objemail = $("#email").val();
+	var objadderss = $("#adderss").val();
+	var objtel = $("#tel").val();
+
+	validationinsert = function(){
+ 		if(check(objname) == false) return false;
+ 		if(checkid(objid) == false) return false;
+ 		if(checkpass(objpass) == false) return false;
+ 		if(checkemail(objemail) == false) return false;
+ 		if(checkadderss(objadderss) == false) return false;
+ 		if(checktel(objtel) == false) return false;
+	}	
  	$("#btninsert").on("click", function() {
- 		if(validationUpdt() == false) return false;
+ 		if(validationinsert() == false) return false;
 				$("form[name=form]").attr("action","/memberinsertbtn").submit();
 		}); 
 

@@ -144,7 +144,7 @@
     
 <script type="text/javascript">
 
-
+var objName = $("#name").val();
 
 
 $("#btnUpdate").on("click",function(){
