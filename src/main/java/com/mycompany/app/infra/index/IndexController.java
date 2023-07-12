@@ -21,8 +21,10 @@ public class IndexController {
 
 	
 	
-	  @RequestMapping(value="/loginView") public String loginView() {
-	  return"/usr/infra/biography/loginView"; }
+	  @RequestMapping(value="/loginView") 
+  		public String loginView() {
+		  return"/usr/infra/biography/loginView";
+	  }
 	 
 	 
 	@RequestMapping(value="/indexUsrView")
@@ -30,6 +32,11 @@ public class IndexController {
 		return "usr/infra/index/indexUsrView";
 	}
 
+	 @RequestMapping(value="/indexUsrLogin") 
+		public String indexUsrLogin() {
+		  return"/usr/infra/index/indexUsrLogin";
+	  }
+	 
 
 @RequestMapping(value= "/")
 public String home() {

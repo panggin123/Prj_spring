@@ -33,11 +33,11 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">로그인</h4>
 											<div class="form-group">
-												<input type="email" name="email" class="form-style" placeholder="이메일을 입력해주세요" id="email" autocomplete="off" value= "asdf1234@naver.com">
+												<input type="text" name="id" class="form-style" placeholder="아이디 입력해주세요" id="id" autocomplete="off" value= "usr12345">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="pass" class="form-style" placeholder="비밀번호를 입력해주세요" id="pass" autocomplete="off" value= "asdf1234">
+												<input type="password" name="pass" class="form-style" placeholder="비밀번호를 입력해주세요" id="pass" autocomplete="off" value= "usr12345">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<button type="button" class= "btn mt-4" id="btn">로그인</button>                            				
@@ -80,14 +80,14 @@
 	     			,cache: false
 	     			,type: "post"
 	     			// ,dataType:"json" //
-	     			,url: "/indexUsrLogin"
+	     			,url: "/indexUsrLogin1"
 	     			// ,data : $("#loginView").serialize() //
 	     			,data : { "id" : $("#id").val(),
 	     				"pass" : $("#pass").val()}
 	     			,success: function(response) {
 	     				if(response.rt == "success") {
 	     					alert(response.rtMember.name);
-	     					location.href = "/indexUsrV";
+	     					location.href = "/indexUsrView";
 	     				} else {
 	     					alert("그런 회원 없습니다.");
 	     					$("#pass").val("");

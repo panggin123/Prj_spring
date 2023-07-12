@@ -160,7 +160,7 @@ public class MemberController {
   }
 	 
 	  @ResponseBody
-	  @RequestMapping("/indexUsrLogin") 
+	  @RequestMapping("/indexUsrLogin1") 
 	  public Map<String,Object> indexUsrLogin(MemberVo vo) { 
 		       Map<String,Object> returnMap = new HashMap<String,Object>();
 		       Member rtMember = service.selectOne(vo);
