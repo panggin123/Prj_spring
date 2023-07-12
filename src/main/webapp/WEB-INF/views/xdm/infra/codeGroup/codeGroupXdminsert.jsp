@@ -141,13 +141,13 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
-        <script src="/resources/js/validation/validation.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
 <script type="text/javascript">
 
-var objName = $("#name").val();
+var objName = $("#name");
 
 $("#btninsertbtn").on("click",function(){
-	if(check($.trim($("#name").val())) == false) return false;
+	if(check(objName) == false) return false;
 			$("form[name=form]").attr("action","/codeGroupinsert").submit();
 });
 </script>

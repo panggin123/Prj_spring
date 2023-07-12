@@ -21,11 +21,10 @@
 		 }*/
 		 
  check = function(obj){
-		alert(obj);
-		
+				
 		myRe =  /^[ㄱ-ㅎ가-힣0-9_-]{2,10}$/;  // 이름
 		 if(myRe.test($.trim(obj.val())) == false){
-		 	alert("공백없는 숫자와 대소문자만 입력 가능합니다.");
+		 	alert("이름을 정확하게 입력해주세요");
 		 	obj.focus();
 		 	return false;
 		}else {
@@ -34,10 +33,9 @@
 		}
 
  checkid = function(obj){
-		alert("asdf");
-		alert(obj);
+
 		
-		myId =  /(?=.*[0-9])(?=.*[a-z])(?=.*\W)(?=\S+$).{8,20}/; // id
+		myId = /^[A-Za-z0-9]{8,20}$/; // id
 		
 		 if(myId.test($.trim(obj.val())) == false){
 		 	alert("아이디를 정확하게 입력해주세요.");
@@ -50,8 +48,8 @@
  checkpass = function(obj){
 		
 		
-		myPs = /(?=.*[0-9])(?=.*[a-z])(?=.*\W)(?=\S+$).{8,20}/; // 비밀번호
-		
+			myPs =		/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}$/;
+/*		myPs = /(?=.*[0-9])(?=.*[a-z])(?=.*\W)(?=\S+$).{8,20}/; // 비밀번호*/
 		 if(myPs.test($.trim(obj.val())) == false){
 		 	alert("비밀번호를 정확하게 입력해주세요.");
 		 	obj.focus();
@@ -74,8 +72,7 @@
 		}
 }
  checkadderss = function(obj){
-		alert("asdf");
-		alert(obj);
+
 		
 				myAd = /^[ㄱ-ㅎ가-힣A-Z0-9]*$/; // 주소		
 		
@@ -87,10 +84,9 @@
 		}
 }
  checktel = function(obj){
-		alert("asdf");
-		alert(obj);
+
 		
-		myTe = /\d{2,3}-\d{3,4}-\d{4}/g;  // 전화번호
+		myTe = /^\d{2,3}-?\d{3,4}-?\d{4}$/;  // 전화번호
 		
 		 if(myTe.test($.trim(obj.val())) == false){
 		 	alert("전화번호 정확하게 입력해주세요.");

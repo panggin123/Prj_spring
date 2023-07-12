@@ -112,7 +112,7 @@
 								<div class="mb-3">
 									<label for="exampleInputPassword1" class="form-label">codeGroup_seq</label>
 									<input type="text" class="form-control" id="codeGroup_seq"
-										name="codeGroup_seq"
+										name="codeGroup_seq" placeholder="codeGroup_seq값을 넣어주세요"
 										value="<c:out value= "${item.codeGroup_seq}"/>">
 								</div>
 								<button type="button" class="btn btn-primary" id="btninsertbtn">추가</button>
@@ -164,18 +164,15 @@
 
 	<!-- Template Javascript -->
 	<script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
 	<script type="text/javascript">
 
-
+var objname = $("#name");
 
 $("#btninsertbtn").on("click",function(){
-	
-	 if($.trim($("#name").val()) == "" || $.trim($("#name").val()) == null){
-		alert("값을 입력해 주세요.");
-		$("#name").focus();
-	} else {
+		if(check(objname) == false) return false;
 		$("form[name=form]").attr("action","/codeXdminsertbtn").submit();
-} 
+
 
 });
 

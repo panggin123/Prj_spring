@@ -1,7 +1,14 @@
 package com.mycompany.app.infra.index;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.mycompany.app.infra.member.Member;
+import com.mycompany.app.infra.member.MemberVo;
 
 @Controller
 public class IndexController {
@@ -11,13 +18,13 @@ public class IndexController {
 	public String biographyUsrView() {
 		return "/usr/infra/biography/biographyUsrView";
 	}
+
 	
 	
-	@RequestMapping(value="/loginView")
-	public String loginView() {
-		return "/usr/infra/biography/loginView";
-	}
-			
+	  @RequestMapping(value="/loginView") public String loginView() {
+	  return"/usr/infra/biography/loginView"; }
+	 
+	 
 	@RequestMapping(value="/indexUsrView")
 	public String indexUsrView() {
 		return "usr/infra/index/indexUsrView";
@@ -35,10 +42,6 @@ public String home() {
 	return "home";
 }
 
-@RequestMapping(value="/indexUsrLogin")
-public String indexUsrLogin() {
-	return "usr/infra/index/indexUsrLogin";
-}
 
 
 

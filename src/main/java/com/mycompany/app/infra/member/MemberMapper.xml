@@ -54,14 +54,26 @@
  
  
  
-<select id="selectOne" resultMap="resultMapObj">
-	SELECT * 
+<!-- <select id="selectOne" resultMap="resultMapObj">
+	SELECT *
 	FROM
 		memberShip
 	WHERE
 		seq = #{seq}
-				
-</select> 
+</select>  -->
+
+<!-- ajax 사용 -->
+<select id= "selectOne" resultMap="resultMapObj">
+SELECT
+	seq
+	,name
+	,id
+FROM
+	memberShip
+WHERE 1=1
+	AND id = #{id}
+	AND pass = #{pass}
+</select>
 
  <update id="update">
 UPDATE memberShip
@@ -117,6 +129,16 @@ SET
 	defaultNy = 0
 WHERE
 	name = #{name}
-</delete> 
+</delete>
+
+
+
+
+
+
+
+
+
+ 
 
 </mapper>    

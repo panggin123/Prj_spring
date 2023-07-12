@@ -144,13 +144,13 @@
     
 <script type="text/javascript">
 
-var objName = $("#name").val();
+var objname = $("#name");
 
 
 $("#btnUpdate").on("click",function(){
 	
 /* 	if(validationUpdt() == false) return false; */
-	if(check($.trim($("#name").val())) == false) return false;
+	if(check(objname) == false) return false;
 	
 	$("form[name=form]").attr("action","/codeGroupUpdate").submit();
 });

@@ -33,11 +33,11 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">로그인</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="이메일을 입력해주세요" id="logemail" autocomplete="off">
+												<input type="email" name="email" class="form-style" placeholder="이메일을 입력해주세요" id="email" autocomplete="off" value= "asdf1234@naver.com">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="비밀번호를 입력해주세요" id="logpass" autocomplete="off">
+												<input type="password" name="pass" class="form-style" placeholder="비밀번호를 입력해주세요" id="pass" autocomplete="off" value= "asdf1234">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<button type="button" class= "btn mt-4" id="btn">로그인</button>                            				
@@ -59,7 +59,7 @@
     <script src="/resources/js/adminXdm/main.js"></script>
     <script src="/resources/js/validation/validation.js"></script>
 	<script type="text/javascript">
-	var objemail = $("#email");
+/* 	var objemail = $("#email");
 	var objpass = $("#pass");
 	
 	validationinsert = function(){
@@ -69,7 +69,42 @@
  	$("#btn").on("click", function() {
  		if(validationinsert() == false) return false;
 				$("form[name=form]").attr("action","/indexUsrView").submit();
-		}); 
+		});  */
+		
+ 	 $("#btn").on("click", function(){
+	     		
+	     		if(validation() == false) return false;
+	     		
+	     		$.ajax({
+	     			async: true 
+	     			,cache: false
+	     			,type: "post"
+	     			// ,dataType:"json" //
+	     			,url: "/indexUsrLogin"
+	     			// ,data : $("#loginView").serialize() //
+	     			,data : { "id" : $("#id").val(),
+	     				"pass" : $("#pass").val()}
+	     			,success: function(response) {
+	     				if(response.rt == "success") {
+	     					alert(response.rtMember.name);
+	     					location.href = "/indexUsrV";
+	     				} else {
+	     					alert("그런 회원 없습니다.");
+	     					$("#pass").val("");
+	     					$("#pass").focus();
+	     				}
+	     			}
+	     			,error : function(jqXHR, textStatus, errorThrown){
+	     				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+	     			}
+	     		});
+	     	});
+
+
+	     	validation = function() {
+	     		// if(!checkNull($("#id"), $.trim($("#id").val()), "아이디를 입력해 주세요!")) return false;
+	     		// if(!checkNull($("#pass"), $.trim($("#pass").val()), "비밀번호를 입력해 주세요!")) return false;
+	     	} 
 
 	</script>
 </body>

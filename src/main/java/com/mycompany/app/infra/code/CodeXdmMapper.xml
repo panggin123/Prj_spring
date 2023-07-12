@@ -95,7 +95,6 @@ WHERE
 		,#{name}
 		,#{codeGroup_seq}
 	)
-
 </insert>
 
  <delete id="delete">

@@ -51,6 +51,7 @@
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <form name="form" method="post">
                     <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="index.html" class="">
@@ -59,11 +60,11 @@
                             <h3>Sign In</h3>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input type="email" class="form-control" id="id" placeholder="name@example.com" value="admin123">
+                            <label for="floatingInput">Id</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="pass" placeholder="Password" value="admin123">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -73,9 +74,10 @@
                             </div>
                             <a href="">Forgot Password</a>
                         </div>
-                        <a href="indexXdmView"><button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button></a>
+                       <button type="button" class="btn btn-primary py-3 w-100 mb-4" id="btn">Sign In</button>
                         <p class="text-center mb-0">Don't have an Account? <a href="">Sign Up</a></p>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -95,6 +97,56 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
+    	<script type="text/javascript">
+	/*   	var objid = $("#id");
+    	var objpass = $("#pass");
+    	validationinsert = function(){
+     		if(checkid(objid) == false) return false;
+     		if(checkpass(objpass) == false) return false;
+    	}	
+    	
+     	$("#btn").on("click", function() {
+     		if(validationinsert() == false) return false;
+    				$("form[name=form]").attr("action","/indexXdmView").submit();
+    		});  */
+     	
+     	// ajax 사용
+     	 $("#btn").on("click", function(){
+     		
+     		if(validation() == false) return false;
+     		
+     		$.ajax({
+     			async: true 
+     			,cache: false
+     			,type: "post"
+     			// ,dataType:"json" //
+     			,url: "/loginView1"
+     			// ,data : $("#loginView").serialize() //
+     			,data : { "id" : $("#id").val(),
+     				"pass" : $("#pass").val()}
+     			,success: function(response) {
+     				if(response.rt == "success") {
+     					alert(response.rtMember.name);
+     					location.href = "/indexXdmView";
+     				} else {
+     					alert("그런 회원 없습니다.");
+     					$("#pass").val("");
+     					$("#pass").focus();
+     				}
+     			}
+     			,error : function(jqXHR, textStatus, errorThrown){
+     				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+     			}
+     		});
+     	});
+
+
+     	validation = function() {
+     		// if(!checkNull($("#id"), $.trim($("#id").val()), "아이디를 입력해 주세요!")) return false;
+     		// if(!checkNull($("#pass"), $.trim($("#pass").val()), "비밀번호를 입력해 주세요!")) return false;
+     	}  
+    	</script>
 </body>
 
 </html>

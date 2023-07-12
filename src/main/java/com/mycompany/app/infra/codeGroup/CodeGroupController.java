@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 public class CodeGroupController {
 
@@ -129,6 +130,7 @@ public class CodeGroupController {
 
 		return "redirect:/codeGroupXdmList";
 	}
+
 	// redirect 보여줄 화면이 없을 때 사용
 
 //	@Controller

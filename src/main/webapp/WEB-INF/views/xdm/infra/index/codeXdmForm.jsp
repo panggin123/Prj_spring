@@ -146,12 +146,13 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+    <script src="/resources/js/validation/validation.js"></script>
 <script type="text/javascript">
 
-
+var objname = $("#name");
 
 $("#btnUpdate").on("click",function(){
-	
+	if(check(objname) == false) return false;
 	$("form[name=form]").attr("action","/codeXdmUpdate").submit();
 });
 

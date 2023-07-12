@@ -1,12 +1,15 @@
 package com.mycompany.app.infra.member;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -136,6 +139,43 @@ public class MemberController {
 		
 		return "redirect:/memberList";
 	}
+	
+	
+	//ajax 사용
+	
+	  @ResponseBody
+	  @RequestMapping("/loginView1") 
+	  public Map<String,Object> loginView(MemberVo vo) { 
+		       Map<String,Object> returnMap = new HashMap<String,Object>();
+		       Member rtMember = service.selectOne(vo);
+	  
+	  if(rtMember != null) { 
+		  returnMap.put("rtMember", rtMember);
+		  returnMap.put("rt","success"); 
+	  } else {
+		  returnMap.put("rt", "fail"); 
+	  }  
+	  	  return returnMap;
+	  	  
+  }
+	 
+	  @ResponseBody
+	  @RequestMapping("/indexUsrLogin") 
+	  public Map<String,Object> indexUsrLogin(MemberVo vo) { 
+		       Map<String,Object> returnMap = new HashMap<String,Object>();
+		       Member rtMember = service.selectOne(vo);
+	  
+	  if(rtMember != null) { 
+		  returnMap.put("rtMember", rtMember);
+		  returnMap.put("rt","success"); 
+	  } else {
+		  returnMap.put("rt", "fail"); 
+	  }  
+	  	  return returnMap;
+	  	  
+  }
+
+	
 	
 	
 		// redirect 보여줄 화면이 없을 때 사용
