@@ -82,7 +82,7 @@
                             <form name="form" method="post">
                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">seq</label>
-                                    <input type="email" class="form-control" id="seq" name="seq" aria-describedby="emailHelp"readonly value="<c:out value="${item.seq }"/>">
+                                    <input type="text" class="form-control" id="seq" name="seq" aria-describedby="emailHelp"readonly value="<c:out value="${item.seq }"/>">
                                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
                                     </div>
                                 </div>
