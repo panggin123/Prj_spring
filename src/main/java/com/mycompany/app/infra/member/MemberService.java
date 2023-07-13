@@ -7,6 +7,9 @@ public interface MemberService {
 	public List<Member> selectList(MemberVo vo);
 	
 	public Member selectOne(MemberVo vo);
+
+	public int selectOneCheckId(MemberVo vo);
+	
 	
 	public int selectOneCount(MemberVo vo);
 	

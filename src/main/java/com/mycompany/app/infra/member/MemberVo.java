@@ -11,9 +11,16 @@ public class MemberVo {
 	private String pass;
 	private String adderss;
 	private String email;
+	private String tel;
 	
 	
 
+public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 public String getDefaultNy() {
 		return defaultNy;
 	}

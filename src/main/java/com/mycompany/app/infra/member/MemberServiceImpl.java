@@ -23,6 +23,12 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
+	public int selectOneCheckId(MemberVo vo) {
+		return dao.selectOneCheckId(vo);
+	}
+
+
+	@Override
 	public int update(Member dto) {
 		return dao.update(dto);
 		}
@@ -43,6 +49,7 @@ public class MemberServiceImpl implements MemberService {
 	public int selectOneCount(MemberVo vo) {
 		return dao.selectOneCount(vo);
 	}
+
 
 
 	

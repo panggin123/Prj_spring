@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,7 @@ public class MemberController {
 
 	@Autowired
 	MemberServiceImpl service;
+	private Object rtMember;
 	
 	@RequestMapping("/memberList")
 	public String memberList(@ModelAttribute("vo") MemberVo vo, Model model) {
@@ -156,7 +159,6 @@ public class MemberController {
 		  returnMap.put("rt", "fail"); 
 	  }  
 	  	  return returnMap;
-	  	  
   }
 	 
 	  @ResponseBody
@@ -172,14 +174,42 @@ public class MemberController {
 		  returnMap.put("rt", "fail"); 
 	  }  
 	  	  return returnMap;
-	  	  
   }
 
 	
-	
+
+	 // 로그인
+	  @ResponseBody
+	  @RequestMapping("/loginProc")
+	  public Map<String, Object> loginProc(MemberVo vo, HttpSession httpSession){
+		  Map<String, Object> returnMap = new HashMap<String, Object>();
+
+		  Member rtMember = service.selectOne(vo);
+
+		  if(rtMember != null){
+
+		  	httpSession.setMaxInactiveInterval(60*60);
+		  	httpSession.setAttribute("sessionId", vo.getId());
+		  	
+		  	returnMap.put("rtMember", rtMember);
+		  	returnMap.put("rt", "success");
+		  }else {
+			  returnMap.put("rt","fail");
+		  }
+		  return returnMap;
+	  }
+		  @ResponseBody
+		  @RequestMapping("/logoutProc")
+		  public Map<String, Object> logoutProc(HttpSession httpSession){
+			  Map<String, Object> returnMap = new HashMap<String, Object>();
+
+				System.out.println(httpSession.getAttribute("sessionId"));
+				httpSession.invalidate();
+				returnMap.put("rt", "success");
+			  return returnMap;
+		  }
 	
 		// redirect 보여줄 화면이 없을 때 사용
-	
 //	@Controller
 //	public class CodeGroupController{
 //		

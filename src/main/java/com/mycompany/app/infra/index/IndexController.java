@@ -31,6 +31,9 @@ public class IndexController {
 		  return"/usr/infra/index/indexUsrLogin";
 	  }
 
+	 
+
+
 @RequestMapping(value= "/")
 public String home() {
 // 여기에서 서버단에서 필요한 작업을 수행한다.	

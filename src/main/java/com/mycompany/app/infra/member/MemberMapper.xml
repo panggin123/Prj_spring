@@ -53,27 +53,45 @@
    	
  
  
- 
-<!-- <select id="selectOne" resultMap="resultMapObj">
+
+<!-- <select id="selectTwo" resultMap="resultMapObj">
 	SELECT *
 	FROM
 		memberShip
 	WHERE
 		seq = #{seq}
-</select>  -->
+</select> -->
 
 <!-- ajax 사용 -->
 <select id= "selectOne" resultMap="resultMapObj">
-SELECT
+SELECT 
 	seq
 	,name
 	,id
+	,pass
+	,adderss
+	,tel
+	,defaultNy
 FROM
 	memberShip
 WHERE 1=1
-	AND id = #{id}
-	AND pass = #{pass}
+	<if test="seq != null and !seq.equals('')">	AND seq = #{seq} </if>
+	<if test="id != null and !id.equals('')">	AND id = #{id} </if>
+	<if test="pass != null and !pass.equals('')">AND pass = #{pass}</if>
+	<if test="name != null and !name.equals('')">AND name = #{name}</if>
+	<if test="adderss != null and !adderss.equals('')">AND adderss = #{adderss}</if>
+	<if test="tel != null and !tel.equals('')">AND tel = #{tel}</if>
+	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
 </select>
+
+<!-- <select id="selectOneCheckId" resultType="resultTypeObj">
+SELECT
+	id
+FORM
+	memberShip
+WHERE 1=1
+	AND id = #{id}
+</select> -->
 
  <update id="update">
 UPDATE memberShip
@@ -87,7 +105,6 @@ SET
 WHERE
 	seq= #{seq}
 </update> 
-
 
 
  
