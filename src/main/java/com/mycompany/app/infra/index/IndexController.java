@@ -29,7 +29,8 @@ public class IndexController {
 	public String indexUsrView() {
 		return "usr/infra/index/indexUsrView";
 	}
-
+	  @RequestMapping(value="/indexUsrLogin") public String indexUsrLogin() {
+	  return"/usr/infra/index/indexUsrLogin"; }
 
 @RequestMapping(value= "/")
 public String home() {
