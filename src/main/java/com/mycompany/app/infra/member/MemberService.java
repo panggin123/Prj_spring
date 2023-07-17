@@ -10,7 +10,6 @@ public interface MemberService {
 
 	public int selectOneCheckId(MemberVo vo);
 	
-	
 	public int selectOneCount(MemberVo vo);
 	
 	public int update(Member dto);

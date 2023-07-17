@@ -35,6 +35,7 @@
 	    	memberShip
 		WHERE 1=1
 			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="id != null and !id.equals('')">AND id = #{id}</if>
 </sql>
 
   	<select id="selectOneCount" resultType="Integer">
@@ -84,14 +85,14 @@ WHERE 1=1
 	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
 </select>
 
-<!-- <select id="selectOneCheckId" resultType="resultTypeObj">
-SELECT
-	id
-FORM
-	memberShip
-WHERE 1=1
-	AND id = #{id}
-</select> -->
+<!-- <select id="selectOneCheckId" resultType="resultTypeObj"> -->
+<!-- SELECT -->
+<!-- 	id -->
+<!-- FORM -->
+<!-- 	memberShip -->
+<!-- WHERE 1=1 -->
+<!--  	AND id = #{id} -->
+<!-- </select>  -->
 
  <update id="update">
 UPDATE memberShip

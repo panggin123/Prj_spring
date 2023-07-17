@@ -84,7 +84,7 @@
 
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="check">
+                                <input type="checkbox" class="form-check-input" id="checkpwd">
                                 <label class="form-check-label" for="exampleCheck1">비밀번호 확인</label>
                             </div>
                             <a href="">비밀번호 찾기</a>
@@ -134,10 +134,31 @@
  		if(validationinsert() == false) return false;
 				$("form[name=form]").attr("action","/memberinsertbtn").submit();
 		}); 
-
+ 	$("#id").on("focusout",function(){
+ 		$.ajax({
+ 			async: true 
+ 			,cache: false
+ 			,type: "post"
+ 			// ,dataType:"json" //
+ 			,url: "/checkid"
+ 			// ,data : $("#loginView").serialize() //
+ 			,data : { "id" : $("#id").val()}
+ 			,success: function(response) {
+ 				if(response.rt == "success") {
+ 					$("#id").siblings(".room").remove();
+ 					$("#id").parent().append('<input type="text" class="form-control room mt-1 " style=" vertical-align:top"  value="사용가능 합니다." >');
+ 				} else {
+ 					$("#id").siblings(".room").remove();
+ 					$("#id").parent().append('<input type="text" class="form-control room mt-1"  style=" vertical-align:top"  value="중복 아이디입니다." >');
+ 					$("#id").focus();
+ 				}
+ 			}
+ 			,error : function(jqXHR, textStatus, errorThrown){
+ 				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+ 			}
+ 		});
+ 	})
  	
- 	 
-
  	</script>
  	</body>
 </html>

@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
 @Controller
 public class MemberController {
 
 	@Autowired
 	MemberServiceImpl service;
-	private Object rtMember;
+//	private Object rtMember;
 	
 	@RequestMapping("/memberList")
 	public String memberList(@ModelAttribute("vo") MemberVo vo, Model model) {
@@ -74,9 +73,8 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/indexUsrSignup")
-	public String indexUsrSingup(MemberVo vo,Model model) {
+	public String indexUsrSingup() {
 		
-	model.addAttribute("item", service.selectOne(vo));
 	
 		return "usr/infra/index/indexUsrSignup";
 	}
@@ -160,21 +158,6 @@ public class MemberController {
 	  }  
 	  	  return returnMap;
   }
-	 
-	  @ResponseBody
-	  @RequestMapping("/indexUsrLogin1") 
-	  public Map<String,Object> indexUsrLogin(MemberVo vo) { 
-		       Map<String,Object> returnMap = new HashMap<String,Object>();
-		       Member rtMember = service.selectOne(vo);
-	  
-	  if(rtMember != null) { 
-		  returnMap.put("rtMember", rtMember);
-		  returnMap.put("rt","success"); 
-	  } else {
-		  returnMap.put("rt", "fail"); 
-	  }  
-	  	  return returnMap;
-  }
 
 	
 
@@ -193,6 +176,7 @@ public class MemberController {
 		  	
 		  	returnMap.put("rtMember", rtMember);
 		  	returnMap.put("rt", "success");
+		  	 System.out.println(httpSession.getAttribute("sessionId"));
 		  }else {
 			  returnMap.put("rt","fail");
 		  }
@@ -209,6 +193,22 @@ public class MemberController {
 			  return returnMap;
 		  }
 	
+		  @ResponseBody
+		  @RequestMapping("/checkid")
+		  public Map<String, Object> checkid(HttpSession httpSession, MemberVo vo){
+			  Map<String, Object> returnMap = new HashMap<String, Object>();
+			  int rtMember = service.selectOneCount(vo);
+				System.out.println(httpSession.getAttribute("sessionId"));
+				httpSession.invalidate();
+				if(rtMember != 0){
+				  	
+				  	returnMap.put("rtMember", rtMember);
+				  	returnMap.put("rt","fail");
+				  }else {
+					  returnMap.put("rt", "success");
+				  }
+			  return returnMap;
+		  }
 		// redirect 보여줄 화면이 없을 때 사용
 //	@Controller
 //	public class CodeGroupController{
