@@ -23,4 +23,40 @@
 	
 	<context:component-scan base-package="com.mycompany.app" />
 	
+	<!-- session interceptor s 2023.07.18 for logincheck  -->
+	<interceptors>
+		<interceptor>
+				<mapping path="/**"/>
+				<exclude-mapping path="/resources/**"/>
+				<exclude-mapping path="/"/>
+				<exclude-mapping path="/**Xdm**"/>
+				<exclude-mapping path="/**member**"/>
+				<exclude-mapping path="/biographyUsrView"/>
+				<exclude-mapping path="/loginView1"/>
+				<exclude-mapping path="/loginView"/>
+				<exclude-mapping path="/loginProc"/>
+				<exclude-mapping path="/logoutProc"/>
+				<exclude-mapping path="/checkid"/>
+				<exclude-mapping path="/indexUsrView"/>
+				<exclude-mapping path="/indexUsrLogin"/>
+				<exclude-mapping path="/indexUsrSignup"/>
+				<exclude-mapping path="/indexUsrCart"/>
+				<exclude-mapping path="/indexUsrShop"/>
+				<beans:bean id="checkLoginSessionInterception" class="com.mycompany.app.infra.common.interceptor.CheckLoginSessionInterception"></beans:bean>
+		</interceptor>
+		<interceptor>
+				<mapping path="/**"/> 
+				<exclude-mapping path="/resources/**"/>
+				<exclude-mapping path="/"/>
+				<exclude-mapping path="/**Usr**"/>
+				<exclude-mapping path="/loginView1"/>
+				<exclude-mapping path="/loginView"/>
+				<exclude-mapping path="/loginProc"/>
+				<exclude-mapping path="/logoutProc"/>
+				<exclude-mapping path="/checkid"/>
+				<beans:bean id="checkLoginXdmSessionInterception" class="com.mycompany.app.infra.common.interceptor.CheckLoginXdmSessionInterception"></beans:bean>
+		</interceptor> 
+	</interceptors>
+	<!-- session interceptor e 2023.07.18for logincheck -->
+
 </beans:beans>

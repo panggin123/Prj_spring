@@ -19,15 +19,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/css/style.css" type="text/css">
-    <link rel="stylesheet" href="../startbootstrap-agency-gh-pages/css/styles.css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/styles.css">
 
 </head>
 
@@ -41,10 +41,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/index.html">카테고리</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shop-grid.html">상품</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shoping-cart.html"><i class="bi bi-cart-fill"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/index_login.html">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="indexUsrView">카테고리</a></li>
+                    <li class="nav-item"><a class="nav-link" href="indexUsrShop">상품</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="indexUsrLogin">로그인</a></li>
                 </ul>
             </div>
         </div>
@@ -206,7 +206,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="/resources/js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

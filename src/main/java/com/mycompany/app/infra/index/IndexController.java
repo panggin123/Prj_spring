@@ -13,6 +13,16 @@ public class IndexController {
 		return "/usr/infra/biography/biographyUsrView";
 	}
 
+	@RequestMapping(value="/indexUsrShop")
+	public String indexShop() {
+		return "/usr/infra/index/indexUsrShop";
+	}
+
+	@RequestMapping(value="/indexUsrCart")
+	public String indexCart() {
+		return "/usr/infra/index/indexUsrCart";
+	}
+
 	
 	
 	  @RequestMapping(value="/loginView") 
@@ -34,16 +44,16 @@ public class IndexController {
 	 
 
 
-@RequestMapping(value= "/")
-public String home() {
-// 여기에서 서버단에서 필요한 작업을 수행한다.	
-	
-// href="/resources/xdm/v1/css/commonXdm.css"
-
-	
-// 아래의 jsp 파일 호출	
-	return "home";
-}
+//@RequestMapping(value= "/")
+//public String home() {
+//// 여기에서 서버단에서 필요한 작업을 수행한다.	
+//	
+//// href="/resources/xdm/v1/css/commonXdm.css"
+//
+//	
+//// 아래의 jsp 파일 호출	
+//	return "home";
+//}
 
 
 

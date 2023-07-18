@@ -85,7 +85,7 @@ WHERE 1=1
 	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
 </select>
 
-<!-- <select id="selectOneCheckId" resultType="resultTypeObj"> -->
+ <!-- <select id="selectOneCheckId" resultType="resultTypeObj"> -->
 <!-- SELECT -->
 <!-- 	id -->
 <!-- FORM -->
@@ -107,6 +107,15 @@ WHERE
 	seq= #{seq}
 </update> 
 
+<!-- <update id="updateEmail"> -->
+<!-- UPDATE memberEmail -->
+<!-- SET -->
+<!-- 	email = #{email} -->
+<!-- 	,memberShip_seq -->
+<!-- WHERE -->
+<!-- 	email= #{email} -->
+<!-- 	,seq = #{seq} -->
+<!-- </update> -->
 
  
  
@@ -149,14 +158,5 @@ WHERE
 	name = #{name}
 </delete>
 
-
-
-
-
-
-
-
-
- 
 
 </mapper>    

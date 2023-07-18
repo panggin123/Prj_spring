@@ -35,8 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#portfolio">카테고리</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shop-grid.html">상품</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shoping-cart.html"><i class="bi bi-cart-fill"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="indexUsrShop">상품</a></li>
+                        <li class="nav-item"><a class="nav-link" href="indexUsrCart"><i class="bi bi-cart-fill"></i></a></li>
                         <li class="nav-item"><a class="nav-link" href="indexUsrLogin">${sessionId }</a></li>
                         <c:choose>
                         	<c:when test="${not empty sessionId}">

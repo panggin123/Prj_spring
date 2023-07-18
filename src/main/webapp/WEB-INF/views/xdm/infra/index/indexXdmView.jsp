@@ -363,6 +363,26 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+    <script type="text/javascript">
+          $("#logout").on("click", function(){
+  		
+  		$.ajax({
+  			async: true 
+  			,cache: false
+  			,type: "post"
+  			// ,dataType:"json" //
+  			,url: "/logoutProc"
+  			// ,data : $("#loginView").serialize() //
+  			,data : {}
+  			,success: function(response) {
+  				location.href = "/indexXdmView";
+  			}
+  			,error : function(jqXHR, textStatus, errorThrown){
+  				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+  			}
+  		});
+  	});
+          </script>
 </body>
 
 </html>

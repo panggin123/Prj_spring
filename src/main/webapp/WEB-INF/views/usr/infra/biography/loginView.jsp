@@ -121,7 +121,7 @@
      			,cache: false
      			,type: "post"
      			// ,dataType:"json" //
-     			,url: "/loginView1"
+     			,url: "/loginProc"
      			// ,data : $("#loginView").serialize() //
      			,data : { "id" : $("#id").val(),
      				"pass" : $("#pass").val()}
