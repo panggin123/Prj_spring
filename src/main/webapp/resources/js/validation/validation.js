@@ -37,11 +37,15 @@
 		
 		myId = /^[A-Za-z0-9]{8,20}$/; // id
 		
-		 if(myId.test($.trim(obj.val())) == false){
-		 	alert("아이디를 정확하게 입력해주세요.");
-		 	obj.focus();
+		 if(myId.test(obj.val()) == false){
+ 					
+ 					obj.siblings(".room").remove();
+ 					obj.parent().append('<input type="text" class="form-control room mt-1"  style=" vertical-align:top"  value="중복 아이디입니다." >');
+ 					obj.focus();
 		 	return false;
 		}else {
+				 	obj.siblings(".room").remove();
+ 					obj.parent().append('<input type="text" class="form-control room mt-1 " style=" vertical-align:top"  value="사용가능 합니다." >');
 		// by pass
 		}
 }

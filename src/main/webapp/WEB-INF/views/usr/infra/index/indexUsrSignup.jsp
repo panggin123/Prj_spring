@@ -135,6 +135,7 @@
 				$("form[name=form]").attr("action","/memberinsertbtn").submit();
 		}); 
  	$("#id").on("focusout",function(){
+ 		if(checkid(objid) == false) return false;
  		$.ajax({
  			async: true 
  			,cache: false
