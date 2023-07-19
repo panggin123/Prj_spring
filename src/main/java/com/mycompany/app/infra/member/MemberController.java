@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.mycompany.app.infra.code.CodeXdmVo;
+
 @Controller
 public class MemberController {
 
@@ -64,13 +66,14 @@ public class MemberController {
 		return"xdm/infra/member/memberForm";
 	}
 	
-	@RequestMapping(value="/memberinsert")
+	@RequestMapping(value = "/memberinsert")
 	public String memberinsert(MemberVo vo, Model model) {
-		
-		model.addAttribute("item", service.selectOne(vo));
-		
-		return"xdm/infra/member/memberinsert";
+
+
+		return "xdm/infra/member/memberinsert";
 	}
+	
+	
 	
 	@RequestMapping(value="/indexUsrSignup")
 	public String indexUsrSingup() {
@@ -117,7 +120,6 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/memberinsertbtn")
-	
 	public String memberinsert(Member dto) {
 		System.out.println("memberinsert");
 		

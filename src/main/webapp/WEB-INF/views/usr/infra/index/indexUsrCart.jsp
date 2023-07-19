@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/resources/css/shop/cssShop/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/shop/cssShop/style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/shop/styles.css">
+    <link rel="stylesheet" href="/resources/css/shop/styles1.css">
 
 </head>
 
@@ -84,7 +85,7 @@
                             <tbody>
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="../startbootstrap-agency-gh-pages/assets/img/discount/car1.png" alt="">
+                                        <img src="/resources/img/assets/img/discount/car1.png" alt="">
                                         <h5>Vegetable’s Package</h5>
                                     </td>
                                     <td class="shoping__cart__price">
@@ -106,7 +107,7 @@
                                 </tr>
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="../startbootstrap-agency-gh-pages/assets/img/discount/car2.jpg" alt="">
+                                        <img src="/resources/img/assets/img/discount/car2.jpg" alt="">
                                         <h5>Fresh Garden Vegetable</h5>
                                     </td>
                                     <td class="shoping__cart__price">
@@ -128,7 +129,7 @@
                                 </tr>
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="../startbootstrap-agency-gh-pages/assets/img/discount/car3.jpg" alt="">
+                                        <img src="/resources/img/assets/img/discount/car3.jpg" alt="">
                                         <h5>Organic Bananas</h5>
                                     </td>
                                     <td class="shoping__cart__price">
@@ -156,7 +157,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="shoping__cart__btns">
-                        <a href="#" class="primary-btn cart-btn">계속 쇼핑하기</a>
+                        <a href="indexUsrShop" class="primary-btn cart-btn">계속 쇼핑하기</a>
                         <a href="#" class="primary-btn cart-btn cart-btn-right"><i class="bi bi-cart4" id="cart_01"></i></a>
                     </div>
                 </div>
@@ -206,16 +207,16 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="/resources/js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="resources/shop/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/shop/js/bootstrap.min.js"></script>
+    <script src="resources/shop/js/jquery.nice-select.min.js"></script>
+    <script src="resources/shop/js/jquery-ui.min.js"></script>
+    <script src="resources/shop/js/jquery.slicknav.js"></script>
+    <script src="resources/shop/js/mixitup.min.js"></script>
+    <script src="resources/shop/js/owl.carousel.min.js"></script>
+    <script src="resources/shop/js/main.js"></script>
 
-    <script src="../startbootstrap-agency-gh-pages/js/scripts.js"></script>
+    <script src="/resources/js/scripts.js"></script>
 </body>
 
 </html>

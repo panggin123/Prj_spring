@@ -130,9 +130,9 @@
 									</c:choose>
 								</tbody>
 							</table>
-							
 							<%@include file="../include/includepaging.jsp"%>
 							<br>
+							<button type="button" class="btn btn-primary" id="btninsert">추가</button>
 							<!-- <button type="button" class="btn btn-primary" id="btninsert">추가</button> -->
 						</form>
 					</div>
@@ -179,6 +179,11 @@
 	<!-- Template Javascript -->
 	<script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">
+	$("#btninsert").on("click", function() {
+		// 자기 자신을 다시 한번 호출 해 준다.
+		//alert("asdfasdf");
+		$("form[name=formList]").attr("action", "/memberinsert").submit();
+	});
 		$("#btn").on("click", function() {
 			// 자기 자신을 다시 한번 호출 해 준다.
 			//alert("asdfasdf");

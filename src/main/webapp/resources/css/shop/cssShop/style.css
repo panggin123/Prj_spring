@@ -89,15 +89,15 @@ img {
 
 #cart_01 {font-size: 20px;}
 
-#bg_1 {background-image: url("../../assets/img/discount/bg1.jpg");}
-#bg_2 {background-image: url("../../assets/img/discount/bg2.jpg");}
-#bg_3 {background-image: url("../../assets/img/discount/bg3.jpg");}
-#bg_4 {background-image: url("../../assets/img/discount/bg4.jpg");}
-#bg_5 {background-image: url("../../assets/img/discount/bg5.jpg");}
-#bg_6 {background-image: url("../../assets/img/discount/bg6.jpg");}
-#bg_7 {background-image: url("../../assets/img/discount/bg7.jpg");}
-#bg_8 {background-image: url("../../assets/img/discount/bg8.jpg");}
-#bg_9 {background-image: url("../../assets/img/discount/bg9.jpg");}
+#bg_1 {background-image: url("/resources/img/assets/img/discount/bg1.jpg");}
+#bg_2 {background-image: url("/resources/img/assets/img/discount/bg2.jpg");}
+#bg_3 {background-image: url("/resources/img/assets/img/discount/bg3.jpg");}
+#bg_4 {background-image: url("/resources/img/assets/img/discount/bg4.jpg");}
+#bg_5 {background-image: url("/resources/img/assets/img/discount/bg5.jpg");}
+#bg_6 {background-image: url("/resources/img/assets/img/discount/bg6.jpg");}
+#bg_7 {background-image: url("/resources/img/assets/img/discount/bg7.jpg");}
+#bg_8 {background-image: url("/resources/img/assets/img/discount/bg8.jpg");}
+#bg_9 {background-image: url("/resources/img/assets/img/discount/bg9.jpg");}
 
 /* #bg_1 {background-image: url("../../assets/img/discount/bg7.jpg");}
 #bg_1 {background-image: url("../../assets/img/discount/bg8.jpg");} */

@@ -54,6 +54,7 @@
 				<exclude-mapping path="/loginProc"/>
 				<exclude-mapping path="/logoutProc"/>
 				<exclude-mapping path="/checkid"/>
+				<exclude-mapping path="/memberinsertbtn"/>
 				<beans:bean id="checkLoginXdmSessionInterception" class="com.mycompany.app.infra.common.interceptor.CheckLoginXdmSessionInterception"></beans:bean>
 		</interceptor> 
 	</interceptors>

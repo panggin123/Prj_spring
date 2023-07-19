@@ -30,7 +30,9 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public int update(Member dto) {
-		return dao.update(dto);
+		dao.update(dto);
+		dao.updateEmail(dto);
+		return 1;
 		}
 	
 	@Override

@@ -61,6 +61,10 @@ public class MemberDao {
 		return sqlSession.insert(namespace + ".insert", dto);
 	}
 
+	public int updateEmail(Member dto) {
+		return sqlSession.update(namespace + ".updateEmail", dto);
+	}
+
 	// public List<CodeGroup> selectList(CodeGroupVo vo){
 	// return sqlSession.selectList(namespace+".selectList",vo)
 	// }

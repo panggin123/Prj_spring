@@ -27,6 +27,9 @@ public class CodeXdmDao {
 		return codeXdm;
 	}
 	
+//	for cache
+	public List<CodeXdm> selectListCachedCodeXdmArrayList(){ return sqlSession.selectList(namespace + ".selectListCachedCodeXdmArrayList", null); }
+	
 	public int selectOneCount(CodeXdmVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	
 	public int update(CodeXdm dto) { return sqlSession.update(namespace + ".update",dto);}

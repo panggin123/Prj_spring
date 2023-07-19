@@ -13,6 +13,7 @@
 								<!-- select 결과를 받을 객체 -->
   <resultMap id="resultMapObj" type="com.mycompany.app.infra.member.Member"></resultMap>
   
+  
   <sql id="abc">
   		seq
   		,name
@@ -107,15 +108,13 @@ WHERE
 	seq= #{seq}
 </update> 
 
-<!-- <update id="updateEmail"> -->
-<!-- UPDATE memberEmail -->
-<!-- SET -->
-<!-- 	email = #{email} -->
-<!-- 	,memberShip_seq -->
-<!-- WHERE -->
-<!-- 	email= #{email} -->
-<!-- 	,seq = #{seq} -->
-<!-- </update> -->
+<update id="updateEmail"> 
+UPDATE memberEmail
+SET
+	email = #{email}
+WHERE
+	memberShip_seq = #{seq}
+</update>
 
  
  

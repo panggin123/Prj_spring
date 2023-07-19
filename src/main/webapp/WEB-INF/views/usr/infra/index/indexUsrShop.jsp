@@ -18,51 +18,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- Css Styles -->
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/shop/cssShop/style.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/styles1.css">
+    <link href="/resources/css/shop/styles.css" rel="stylesheet" />
 </head>
 
 <body>
     <!-- Breadcrumb Section Begin -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="../startbootstrap-agency-gh-pages/index.html">start</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="indexShop">카테고리</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">상품</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/shoping-cart.html"><i class="bi bi-cart-fill"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="../startbootstrap-agency-gh-pages/index_login.html">로그인</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Organi Shop</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
-                            <span>Shop</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+   <!-- nav s -->
+   <%@include file="../usrinclude/shopnav.jsp"%>
+   <!-- nav e -->
+   
+    
     <!-- Breadcrumb Section End -->
 
     <!-- Product Section Begin -->
@@ -423,17 +397,36 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/resources/js/shop/jquery-3.3.1.min.js"></script>
+    <script src="/resources/js/shop/bootstrap.min.js"></script>
+    <script src="/resources/js/shop/jquery.nice-select.min.js"></script>
+    <script src="/resources/js/shop/jquery-ui.min.js"></script>
+    <script src="/resources/js/shop/jquery.slicknav.js"></script>
+    <script src="/resources/js/shop/mixitup.min.js"></script>
+    <script src="/resources/js/shop/owl.carousel.min.js"></script>
+    <script src="/resourcesjs/shop/main.js"></script>
 
-    <script src="js/scripts.js"></script>
-
+    <script src="/resources/js/scripts.js"></script>
+<script type="text/javascript">
+        $("#logout").on("click", function(){
+  		
+  		$.ajax({
+  			async: true 
+  			,cache: false
+  			,type: "post"
+  			// ,dataType:"json" //
+  			,url: "/logoutProc"
+  			// ,data : $("#loginView").serialize() //
+  			,data : {}
+  			,success: function(response) {
+  				location.href = "/indexUsrView";
+  			}
+  			,error : function(jqXHR, textStatus, errorThrown){
+  				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+  			}
+  		});
+  	});
+        </script>
 </body>
 
 </html>

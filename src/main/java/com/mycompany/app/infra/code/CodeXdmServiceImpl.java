@@ -1,6 +1,9 @@
 package com.mycompany.app.infra.code;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +40,15 @@ public class CodeXdmServiceImpl implements CodeXdmService {
 	@Override
 	public int selectOneCount(CodeXdmVo vo) {
 		return dao.selectOneCount(vo);
+	}
+
+	@PostConstruct
+	public void selectListCachedCodeXdmArrayList() throws Exception{
+		List<CodeXdm>codeListFromDb = (ArrayList<CodeXdm>) dao.selectListCachedCodeXdmArrayList();
+		codeListFromDb = (ArrayList<CodeXdm>) dao.selectListCachedCodeXdmArrayList();
+		CodeXdm.cachedCodeArrayList.clear();
+		CodeXdm.cachedCodeArrayList.addAll(codeListFromDb);
+		System.out.println("CachedCodeXdmArrayList" + CodeXdm.cachedCodeArrayList.size() + "cached");
 	}
 	
 

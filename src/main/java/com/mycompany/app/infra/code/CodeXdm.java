@@ -1,11 +1,18 @@
 package com.mycompany.app.infra.code;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CodeXdm {
 
 	private String seq;
 	private String name;
 	private String delNy;
 	private String codeGroup_seq;
+	
+	// for cache
+	public static List<CodeXdm> cachedCodeArrayList = new ArrayList<CodeXdm>(); 
+	
 	public String getSeq() {
 		return seq;
 	}

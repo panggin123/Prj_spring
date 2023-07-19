@@ -25,31 +25,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">start</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">카테고리</a></li>
-                        <li class="nav-item"><a class="nav-link" href="indexUsrShop">상품</a></li>
-                        <li class="nav-item"><a class="nav-link" href="indexUsrCart"><i class="bi bi-cart-fill"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="indexUsrLogin">${sessionId }</a></li>
-                        <c:choose>
-                        	<c:when test="${not empty sessionId}">
-                        		<li class="nav-item"><a class="nav-link" id="logout">로그아웃</a></li>
-                        	</c:when>
-                        	<c:otherwise>
-                        		<li class="nav-item"><a class="nav-link" href="indexUsrLogin">로그인</a></li>
-                        	</c:otherwise>
-                        </c:choose>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <%@include file="../usrinclude/shopnav.jsp"%>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
@@ -314,7 +290,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg1.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg1.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -335,7 +311,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg2.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg2.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -365,7 +341,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg3.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg3.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -385,7 +361,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg4.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg4.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -414,7 +390,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg5.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg5.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -434,7 +410,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg6.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg6.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -455,7 +431,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg7.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg7.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -483,7 +459,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="card-img-top" src="../startbootstrap-agency-gh-pages/assets/img/discount/bg8.jpg" alt="..." /></a>
+                            <a href="indexUsrShop"><img class="card-img-top" src="/resources/img/assets/img/discount/bg8.jpg" alt="..." /></a>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
