@@ -34,7 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/resources/css/adminXdm/style.css" rel="stylesheet">
-
+	<link href="/resources/css/adminXdm/footer_bot.css" rel="stylesheet">
 
 </head>
 

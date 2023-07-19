@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags"%>
+<jsp:useBean id="CodeXdmServiceImpl" class="com.mycompany.app.infra.code.CodeXdmServiceImpl"/>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -39,6 +41,7 @@
 </head>
 
 <body>
+
 	<div class="container-fluid position-relative d-flex p-0">
 		<!-- Spinner Start -->
 		<div id="spinner"
@@ -63,6 +66,7 @@
 			<!-- Navbar End -->
 
 
+
 			<!-- Sale & Revenue Start -->
 
 			<!-- Sale & Revenue End -->
@@ -76,9 +80,12 @@
 
 			<!-- Recent Sales Start -->
 			<div class="container-fluid pt-4 px-4">
+			
+
+			
 				<div class="bg-secondary text-center rounded p-4">
 					<div class="d-flex align-items-center justify-content-between mb-4">
-						<h6 class="mb-0">Basic Form</h6>
+						<h6 class="mb-0">Code</h6>
 						<a href="">Show All</a>
 					</div>
 					<div>
@@ -109,18 +116,27 @@
 										<c:otherwise>
 											<!-- ${list} 자바에서 넘겨준 객체 이름 -->
 											<!-- var="list" jstl 블럭에서 사용할 변수 이름 -->
+		<c:set var="ListCodeGender" value="${CodeXdmServiceImpl.selectListCachedCode('55') }"/>
 											<c:forEach items="${list}" var="list" varStatus="status">
 												<tr>
 													<td><input class="form-check-input" type="checkbox"></td>
 													<td><c:out value="${list.seq}"></c:out></td>
 													<td><a href="codeXdmForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
-													<td><c:out value="${list.delNy}"></c:out></td>
+													<td><c:forEach items="${ListCodeGender }" var="delNy" varStatus="status">
+																<c:if test="${list.delNy eq delNy.codeNum }"><c:out value="${delNy.name }"/></c:if>
+															</c:forEach>
+<%-- 													<c:out value="${list.delNy}"></c:out> --%>
+													</td>
 													<td><c:out value="${list.codeGroup_seq}"></c:out><br></td>
 												</tr>
 											</c:forEach>
 										</c:otherwise>
 									</c:choose>
 								</tbody>
+		
+		<c:forEach items="${ListCodeGender }" var="list" varStatus="status">
+			<c:out value="${list.name }"/>
+		</c:forEach>
 							</table>
 							
 							<%@include file="../include/includepaging.jsp"%>

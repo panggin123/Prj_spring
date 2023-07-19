@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -39,6 +40,8 @@
 </head>
 
 <body>
+
+
 	<div class="container-fluid position-relative d-flex p-0">
 		<!-- Spinner Start -->
 		<div id="spinner"
@@ -78,7 +81,7 @@
 			<div class="container-fluid pt-4 px-4">
 				<div class="bg-secondary text-center rounded p-4">
 					<div class="d-flex align-items-center justify-content-between mb-4">
-						<h6 class="mb-0">Basic Form</h6>
+						<h6 class="mb-0">Member</h6>
 						<a href="">Show All</a>
 					</div>
 					<div>
@@ -138,6 +141,9 @@
 					</div>
 				</div>
 			</div>
+
+
+		
 
 
 			<!-- Footer Start -->

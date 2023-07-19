@@ -9,7 +9,14 @@ public class CodeXdm {
 	private String name;
 	private String delNy;
 	private String codeGroup_seq;
+	private String codeNum;
 	
+	public String getCodeNum() {
+		return codeNum;
+	}
+	public void setCodeNum(String codeNum) {
+		this.codeNum = codeNum;
+	}
 	// for cache
 	public static List<CodeXdm> cachedCodeArrayList = new ArrayList<CodeXdm>(); 
 	
