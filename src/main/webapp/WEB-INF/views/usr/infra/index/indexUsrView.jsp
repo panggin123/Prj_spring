@@ -146,8 +146,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">수건</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/1.jpg" alt="..." /></a>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
+                                    <a href="indexUsrShop"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/1.jpg" alt="..." /></a>
+                                    <a href="indexUsrShop" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기
@@ -171,8 +171,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">신발</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/2.jpg" alt="" /></a>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
+                                    <a href="indexUsrShop" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/2.jpg" alt="" /></a>
+                                    <a href="indexUsrShop" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기
@@ -196,8 +196,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">치약</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/3.jpg" alt="..." /></a>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
+                                    <a href="indexUsrShop" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/3.jpg" alt="..." /></a>
+                                    <a href="indexUsrShop" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기
@@ -221,8 +221,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">슬리퍼</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/4.jpg" alt="..." /></a>                               
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
+                                    <a href="indexUsrShop" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/4.jpg" alt="..." /></a>                               
+                                    <a href="indexUsrShop" style="text-decoration: none;">홈페이지 이동</a><br><br>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기
@@ -246,8 +246,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">샴푸</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/5.jpg" alt="..." /></a>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br>  <br>                                  
+                                    <a href="indexUsrShop" style="text-decoration: none;"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/5.jpg" alt="..." /></a>
+                                    <a href="indexUsrShop" style="text-decoration: none;">홈페이지 이동</a><br>  <br>                                  
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기
@@ -271,8 +271,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">안녕하세요</h2>
                                     <p class="item-intro text-muted">옷</p>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/6.jpg" alt="..." /></a>
-                                    <a href="../startbootstrap-agency-gh-pages/shop-grid.html" style="text-decoration: none;">홈페이지 이동</a><br><br>
+                                    <a href="indexUsrShop"><img class="img-fluid d-block mx-auto" src="/resources/img/assets/img/portfolio/6.jpg" alt="..." /></a>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         나가기

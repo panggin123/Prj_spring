@@ -48,7 +48,7 @@
                         <div class="sidebar__item">
                             <h4>카테고리</h4>
                             <ul>
-                                <li><a href="#" style="text-decoration: none;">수건</a></li>
+                                <li><a href="#" style="text-decoration: none;" >수건</a></li>
                                 <li><a href="#" style="text-decoration: none;">신발</a></li>
                                 <li><a href="#" style="text-decoration: none;">음료수</a></li>
                                 <li><a href="#" style="text-decoration: none;">슬리퍼</a></li>
@@ -56,7 +56,6 @@
                                 <li><a href="#" style="text-decoration: none;">자동차</a></li>
                             </ul>
                         </div>
-                  
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-7">
