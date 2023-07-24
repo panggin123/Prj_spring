@@ -86,7 +86,6 @@
 	     				"pass" : $("#pass").val()}
 	     			,success: function(response) {
 	     				if(response.rt == "success") {
-	     					alert(response.rtMember.name);
 	     					location.href = "/indexUsrView";
 	     				} else {
 	     					alert("그런 회원 없습니다.");

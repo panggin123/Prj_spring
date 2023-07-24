@@ -97,13 +97,18 @@
 									<tr class="text-white">
 										<th scope="col"><input class="form-check-input" type="checkbox"></th>
 										<th scope="col">seq</th>
-										<th scope="col">name</th>
 										<th scope="col">defaultNy</th>
-										<th scope="col">email</th>
-										<th scope="col">id</th>
-										<th scope="col">pass</th>
-										<th scope="col">adderss</th>
-										<th scope="col">tel</th>
+										<th scope="col">category</th>
+										<th scope="col">productName</th>
+										<th scope="col">productNumber</th>
+										<th scope="col">productPrice</th>
+										<th scope="col">productStock</th>
+										<th scope="col">productDesc</th>
+										<th scope="col">productDate</th>
+										<th scope="col">productHits</th>
+										<th scope="col">favorites</th>
+										<th scope="col">sale</th>
+										<th scope="col">memberMembership_seq</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -120,13 +125,18 @@
 												<tr>
 													<td><input class="form-check-input" type="checkbox"></td>
 													<td><c:out value="${list.seq}"></c:out></td>
-													<td><a href="memberForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a></td>
 													<td><c:out value="${list.defaultNy}"></c:out></td>
-													<td><c:out value="${list.email}"></c:out></td>
-													<td><c:out value="${list.id}"></c:out><br></td>
-													<td><c:out value="${list.pass}"></c:out><br></td>
-													<td><c:out value="${list.adderss}"></c:out><br></td>
-													<td><c:out value="${list.tel}"></c:out><br></td>
+													<td><c:out value="${list.category}"></c:out></td>
+													<td><a href="productForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.productName}"></c:out></a></td>
+													<td><c:out value="${list.productNumber}"></c:out><br></td>
+													<td><c:out value="${list.productPrice}"></c:out><br></td>
+													<td><c:out value="${list.productStock}"></c:out><br></td>
+													<td><c:out value="${list.productDesc}"></c:out><br></td>
+													<td><c:out value="${list.productDate}"></c:out><br></td>
+													<td><c:out value="${list.productHits}"></c:out><br></td>
+													<td><c:out value="${list.favorites}"></c:out><br></td>
+													<td><c:out value="${list.sale}"></c:out><br></td>
+													<td><c:out value="${list.memberMembership_seq}"></c:out><br></td>
 												</tr>
 											</c:forEach>
 										</c:otherwise>
@@ -186,15 +196,15 @@
 	<script src="/resources/js/adminXdm/main.js"></script>
 	<script type="text/javascript">
 	$("#btninsert").on("click", function() {
-		$("form[name=formList]").attr("action", "/memberinsert").submit();
+		$("form[name=formList]").attr("action", "/productinsert").submit();
 	});
 		$("#btn").on("click", function() {
-			$("form[name=formList]").attr("action", "/memberList").submit();
+			$("form[name=formList]").attr("action", "/productList").submit();
 		});
 		
 		goList = function(thisPage) {
 			$("input:hidden[name=thisPage]").val(thisPage);
-			$("form[name=formList]").attr("action", "memberList").submit();
+			$("form[name=formList]").attr("action", "productList").submit();
 		} 
 	</script>
 </body>

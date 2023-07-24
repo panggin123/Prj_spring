@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<!-- 전체 메퍼중에서 유일한 값을 사용하여야 한다.
+	 해서 관계적으로 해당 파일의 패스와 파일이름(확장자 제외)
+	 그리고 dao 에서 namespace와 일치하여야 한다. -->
+	               
+<mapper namespace="com.mycompany.app.infra.product.ProductMapper"> 
+
+
+								<!-- select 결과를 받을 객체 -->
+  <resultMap id="resultMapObj" type="com.mycompany.app.infra.product.Product"></resultMap>
+  
+ 
+ 
+  <sql id="abc">
+  		seq
+  		,defaultNy
+		,category
+		,productName
+		,productNumber
+		,productPrice
+		,productStock
+		,productDesc
+		,productDate
+		,productHits
+		,favorites
+		,sale
+		,memberMembership_seq
+  </sql>
+  
+<sql id = "selectCommon">
+	FROM    
+	    	product
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND shKeyword LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="productNumber != null and !productNumber.equals('')">AND productNumber = #{productNumber}</if>
+</sql>
+
+  	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (   	
+	   		SELECT
+				<include refid="abc" />
+	   			<include refid="selectCommon" />
+		) aa
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>  
+   	
+ 
+ 
+
+<!-- <select id="selectTwo" resultMap="resultMapObj">
+	SELECT *
+	FROM
+		memberShip
+	WHERE
+		seq = #{seq}
+</select> -->
+
+<!-- ajax 사용 -->
+<select id= "selectOne" resultMap="resultMapObj">
+SELECT 
+	seq
+  		,defaultNy
+  		,category
+  		,productName
+  		,productNumber
+  		,productPrice
+  		,productStock
+  		,productDesc
+  		,productDate
+  		,productHits
+  		,favorites
+  		,sale
+  		,memberMembership_seq
+FROM
+	product
+WHERE 1=1
+	<if test="seq != null and !seq.equals('')">	AND seq = #{seq} </if>
+	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
+	<if test="category != null and !category.equals('')">	AND category = #{category} </if>
+	<if test="productName != null and !productName.equals('')">AND productName = #{productName}</if>
+	<if test="productNumber != null and !productNumber.equals('')">AND productNumber = #{productNumber}</if>
+	<if test="productPrice != null and !productPrice.equals('')">AND productPrice = #{productPrice}</if>
+	<if test="productStock != null and !productStock.equals('')">AND productStock = #{productStock}</if>
+	<if test="productDesc != null and !productDesc.equals('')">AND productDesc = #{productDesc}</if>
+	<if test="productDate != null and !productDate.equals('')">AND productDate = #{productDate}</if>
+	<if test="productHits != null and !productHits.equals('')">AND productHits = #{productHits}</if>
+	<if test="favorites != null and !favorites.equals('')">AND favorites = #{favorites}</if>
+	<if test="sale != null and !sale.equals('')">AND sale = #{sale}</if>
+	<if test="memberMembership_seq != null and !memberMembership_seq.equals('')">AND memberMembership_seq = #{memberMembership_seq}</if>
+</select>
+
+ <!-- <select id="selectOneCheckId" resultType="resultTypeObj"> -->
+<!-- SELECT -->
+<!-- 	id -->
+<!-- FORM -->
+<!-- 	memberShip -->
+<!-- WHERE 1=1 -->
+<!--  	AND id = #{id} -->
+<!-- </select>  -->
+
+ <update id="update">
+UPDATE product
+SET
+		defaultNy = #{defaultNy}
+  		,category = #{category}
+  		,productName = #{productName}
+  		,productNumber = #{productNumber}
+  		,productPrice = #{productPrice}
+  		,productStock = #{productStock}
+  		,productDesc = #{productDesc}
+  		,productDate = #{productDate}
+  		,productHits = #{productHits}
+  		,favorites = #{favorites}
+  		,sale = #{sale}
+  		,memberMembership_seq = #{memberMembership_seq}
+WHERE
+	seq= #{seq}
+</update> 
+ 
+<insert id="insert" >
+	insert into product (
+		defaultNy
+		,category
+		,productName
+		,productNumber
+		,productPrice
+		,productStock
+		,productDesc
+		,productDate
+		,productHits
+		,favorites
+		,sale
+		,memberMembership_seq
+	) values (
+		0
+		,#{category}
+		,#{productName}
+		,#{productNumber}
+		,#{productPrice}
+		,#{productStock}
+		,#{productDesc}
+		,#{productDate}
+		,#{productHits}
+		,#{favorites}
+		,#{sale}
+		,#{memberMembership_seq}
+	)
+	<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		 </selectKey>
+</insert>
+
+
+ <delete id="delete">
+UPDATE product
+SET
+	defaultNy = 0
+WHERE
+	productName = #{productName}
+</delete>
+
+
+</mapper>    

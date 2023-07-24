@@ -37,6 +37,7 @@
                             <a href="codeGroupXdmList" class="dropdown-item">codeGroup관리</a>
                             <a href="codeXdmList" class="dropdown-item"> code관리</a>
                             <a href="memberList" class="dropdown-item"> member관리</a>
+                            <a href="productList" class="dropdown-item"> product관리</a>
                        </div>
                      </div>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
