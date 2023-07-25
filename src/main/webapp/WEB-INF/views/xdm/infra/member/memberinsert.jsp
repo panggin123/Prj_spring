@@ -114,7 +114,8 @@
                                     <label for="exampleInputPassword1" class="form-label">tel</label>
                                     <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>">
                                    </div>
-								<button type="button" class="btn btn-primary"  id="btninsertbtn">추가</button>
+                                   <a href="memberList" class="btn btn-primary" id="btnList" style="float: left;"><i class="bi bi-list"></i></a>
+								<button type="button" class="btn btn-primary"  id="btninsertbtn" style="float: right; margin-right:50%">추가</button>
                             </form>
                         </div>
                     </div>

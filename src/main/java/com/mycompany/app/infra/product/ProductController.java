@@ -82,8 +82,8 @@ public class ProductController {
 		
 		return "redirect:/productList";
 	}
+
 	@RequestMapping("/productDelete")
-	
 	public String productDelete(Product dto) {
 		System.out.println("productDelete");
 		
@@ -96,7 +96,7 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/productinsertbtn")
-	public String productinsert(Product dto) {
+	public String productinsertbtn(Product dto) {
 		System.out.println("productinsertbtn");
 		
 		System.out.println("dto.getProductName(): " + dto.getProductName());
@@ -110,14 +110,24 @@ public class ProductController {
 
 		
 	@RequestMapping("/productuelete")
-	
 	public String productuelete(Product dto) {
-		
 
 		service.uelete(dto);
 		
 		return "redirect:/productList";
 	}
+	
+	
+//	usr
+	
+	@RequestMapping("/productUsrList")
+	public String productUsrList(Product dto) {
+		
+		
+		return "usr/infra/product/productUsrList";
+	}
+	
+	
 	
 //	
 //	//ajax 사용

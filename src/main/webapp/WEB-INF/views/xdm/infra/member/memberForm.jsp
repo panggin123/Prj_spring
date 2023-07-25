@@ -114,8 +114,9 @@
                                     <label for="exampleInputPassword1" class="form-label">tel</label>
                                     <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>">
                                 </div>
-                                <button type="button" class="btn btn-primary"  id="btnDelete">삭제</button>
-								<button type="button" class="btn btn-primary"  id="btnUpdate">수정</button>
+                                <a href="memberList" class="btn btn-primary" id="btnList" style="float: left;"><i class="bi bi-list"></i></a>
+                                <button type="button" class="btn btn-primary"  id="btnDelete" style="float: right;  margin-left:15px;">삭제</button>
+								<button type="button" class="btn btn-primary"  id="btnUpdate" style="float: right;">수정</button>
                             </form>
                         </div>
                     </div>

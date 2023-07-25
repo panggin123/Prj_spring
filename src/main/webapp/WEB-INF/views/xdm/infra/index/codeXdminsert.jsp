@@ -113,7 +113,8 @@
 										name="codeGroup_seq" placeholder="codeGroup_seq값을 넣어주세요"
 										value="<c:out value= "${item.codeGroup_seq}"/>">
 								</div>
-								<button type="button" class="btn btn-primary" id="btninsertbtn">추가</button>
+								<a href="codeXdmList" class="btn btn-primary" id="btnList" style="float: left;"><i class="bi bi-list"></i></a>
+								<button type="button" class="btn btn-primary" id="btninsertbtn" style="float: right; margin-right:50%">추가</button>
 							</form>
 						</div>
 					</div>

@@ -94,8 +94,9 @@
                                     <label for="exampleInputPassword1" class="form-label">delNy</label>
                                     <input type="text" class="form-control" id="dleNy" name="dleNy" value="<c:out value= "${item.delNy}"/>">
                                 </div>
-                                <button type="button" class="btn btn-primary"  id="btnDelete">삭제</button>
-								<button type="button" class="btn btn-primary"  id="btnUpdate">수정</button>
+                                <a href="codeGroupXdmList" class="btn btn-primary" id="btnList" style="float: left;"><i class="bi bi-list"></i></a>
+                                <button type="button" class="btn btn-primary"  id="btnDelete" style="float: right; margin-left:15px;">삭제</button>
+								<button type="button" class="btn btn-primary"  id="btnUpdate" style="float: right;">수정</button>
                             </form>
                         </div>
                     </div>
@@ -159,7 +160,6 @@ $("#btnDelete").on("click",function(){
 	
 	$("form[name=form]").attr("action","/codeGroupDelete").submit();
 });
-
 
 
 

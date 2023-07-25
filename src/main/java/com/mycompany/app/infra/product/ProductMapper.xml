@@ -35,8 +35,8 @@
 	FROM    
 	    	product
 		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND shKeyword LIKE CONCAT('%',#{shKeyword},'%')</if>
-			<if test="productNumber != null and !productNumber.equals('')">AND productNumber = #{productNumber}</if>
+			<if test="shKeyword != null and !shKeyword.equals('')">AND productNumber LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="productName != null and !productName.equals('')">AND productName = #{productNumber}</if>
 </sql>
 
   	<select id="selectOneCount" resultType="Integer">
@@ -141,7 +141,7 @@ WHERE
 		,sale
 		,memberMembership_seq
 	) values (
-		0
+		1
 		,#{category}
 		,#{productName}
 		,#{productNumber}

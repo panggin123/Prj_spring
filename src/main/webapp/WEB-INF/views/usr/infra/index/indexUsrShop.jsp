@@ -12,7 +12,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>hi</title>
+    <title>08</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -45,16 +45,33 @@
             <div class="row">
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
-                        <div class="sidebar__item">
+                        <div class="sidebar__item" >
                             <h4>카테고리</h4>
-                            <ul>
-                                <li><a href="#" style="text-decoration: none;" >수건</a></li>
-                                <li><a href="#" style="text-decoration: none;">신발</a></li>
-                                <li><a href="#" style="text-decoration: none;">음료수</a></li>
-                                <li><a href="#" style="text-decoration: none;">슬리퍼</a></li>
-                                <li><a href="#" style="text-decoration: none;">안경</a></li>
-                                <li><a href="#" style="text-decoration: none;">자동차</a></li>
-                            </ul>
+                           		<div id="sidebar">
+                           			<ul>
+                           				<li><a href="#">menu1</a>
+                           					<ul >
+                           						<li><a href="#">sub1</a>
+                           						<li><a href="#">sub2</a>
+                           						<li><a href="#">sub3</a>
+                           					</ul>
+                       					</li>
+                       					<li><a href="#">menu2</a>
+                           					<ul >
+                           						<li><a href="#">sub1</a>
+                           						<li><a href="#">sub2</a>
+                           						<li><a href="#">sub3</a>
+                           					</ul>
+                       					</li>
+                       					<li><a href="#">menu3</a>
+                           					<ul >
+                           						<li><a href="#">sub1</a>
+                           						<li><a href="#">sub2</a>
+                           						<li><a href="#">sub3</a>
+                           					</ul>
+                       					</li>
+                           			</ul>
+                           		</div>
                         </div>
                     </div>
                 </div>
@@ -175,10 +192,10 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    <span>Sort By</span>
+                                    <span>정렬</span>
                                     <select>
-                                        <option value="0">Default</option>
-                                        <option value="0">Default</option>
+                                        <option value="0">가격순</option>
+                                        <option value="0">조회순</option>
                                     </select>
                                 </div>
                             </div>
@@ -200,7 +217,7 @@
                                 <div class="product__item__pic set-bg" id="bg_7" >
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -214,7 +231,7 @@
                                 <div class="product__item__pic set-bg" id="bg_8">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -228,7 +245,7 @@
                                 <div class="product__item__pic set-bg" id="bg_9">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -242,7 +259,7 @@
                                 <div class="product__item__pic set-bg" id="bg_1">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -256,7 +273,7 @@
                                 <div class="product__item__pic set-bg" id="bg_2">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -270,7 +287,7 @@
                                 <div class="product__item__pic set-bg" id="bg_3">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -284,7 +301,7 @@
                                 <div class="product__item__pic set-bg" id="bg_4">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -298,7 +315,7 @@
                                 <div class="product__item__pic set-bg" id="bg_5">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -312,7 +329,7 @@
                                 <div class="product__item__pic set-bg" id="bg_6">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -326,7 +343,7 @@
                                 <div class="product__item__pic set-bg" id="bg_7">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -340,7 +357,7 @@
                                 <div class="product__item__pic set-bg" id="bg_8">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -354,7 +371,7 @@
                                 <div class="product__item__pic set-bg" id="bg_9">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-cart4"></i></a></li>
+                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">

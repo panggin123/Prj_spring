@@ -29,13 +29,13 @@ public class ProductServiceImpl implements ProductService {
 
 
 	@Override
-	public int update(Product dto) {return dao.delete(dto);}
+	public int update(Product dto) {return dao.update(dto);}
 	
 	@Override
 	public int delete(Product dto) {return dao.delete(dto);}
 	
 	@Override
-	public int insert(Product dto) {return dao.delete(dto);}
+	public int insert(Product dto) {return dao.insert(dto);}
 	
 	@Override
 	public int uelete(Product dto) {return dao.uelete(dto);}

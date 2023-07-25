@@ -17,7 +17,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+ 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/shop/cssShop/elegant-icons.css" type="text/css">
@@ -158,12 +158,12 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="shoping__checkout">
-                        <h5>Cart Total</h5>
+                        <h5>총 결제 금액</h5>
                         <ul>
-                            <li>Subtotal <span>$454.98</span></li>
-                            <li>Total <span>$454.98</span></li>
+                            <li>소계 <span>$454.98</span></li>
+                            <li>총 금액 <span>$454.98</span></li>
                         </ul>
-                        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="#" class="primary-btn">결제하기</a>
                     </div>
                 </div>
             </div>

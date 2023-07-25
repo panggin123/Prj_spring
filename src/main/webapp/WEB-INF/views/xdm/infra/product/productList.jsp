@@ -44,8 +44,7 @@
 
 	<div class="container-fluid position-relative d-flex p-0">
 		<!-- Spinner Start -->
-		<div id="spinner"
-			class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+		<div id="spinner"class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
 			<div class="spinner-border text-primary"
 				style="width: 3rem; height: 3rem;" role="status">
 				<span class="sr-only">Loading...</span>
@@ -75,13 +74,11 @@
 
 			<!-- Sales Chart End -->
 
-
-
 			<!-- Recent Sales Start -->
 			<div class="container-fluid pt-4 px-4">
 				<div class="bg-secondary text-center rounded p-4">
 					<div class="d-flex align-items-center justify-content-between mb-4">
-						<h6 class="mb-0">Member</h6>
+						<h6 class="mb-0">product</h6>
 						<a href="">Show All</a>
 					</div>
 					<div>
@@ -151,6 +148,7 @@
 					</div>
 				</div>
 			</div>
+
 
 
 		
