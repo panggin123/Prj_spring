@@ -31,6 +31,25 @@ public class ProductController {
 		}
 		
 		return "xdm/infra/product/productList";
+	}
+	
+	@RequestMapping("/indexUsrShop")
+	public String indexUsrShop(@ModelAttribute("vo") ProductVo vo, Model model) {
+		
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	
+		vo.setParamsPaging(service.selectOneCount(vo));
+		
+		if(vo.getTotalRows() > 0) {
+			List<Product> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
+		
+		return "usr/infra/index/indexUsrShop";
+	}
 //		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {
 		// jsp로 바로 던져주는 것
 		
@@ -47,7 +66,7 @@ public class ProductController {
 //		}
 		
 //		return "/xdm/infra/codeGroup/codeGroupXdmList";
-	}
+
 	
 	
 	

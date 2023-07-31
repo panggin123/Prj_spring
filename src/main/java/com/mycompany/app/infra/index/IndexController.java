@@ -13,10 +13,10 @@ public class IndexController {
 		return "/usr/infra/biography/biographyUsrView";
 	}
 
-	@RequestMapping(value="/indexUsrShop")
-	public String indexShop() {
-		return "/usr/infra/index/indexUsrShop";
-	}
+//	@RequestMapping(value="/indexUsrShop")
+//	public String indexShop() {
+//		return "/usr/infra/index/indexUsrShop";
+//	}
 
 	@RequestMapping(value="/indexUsrCart")
 	public String indexCart() {
