@@ -16,6 +16,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
@@ -127,11 +128,10 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg" style="background-image:url(/resources/img/assets/img/shoes/shoes1.jpg)">
                             <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -144,9 +144,8 @@
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
                             <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -159,9 +158,8 @@
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
                             <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -174,9 +172,8 @@
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
                             <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
