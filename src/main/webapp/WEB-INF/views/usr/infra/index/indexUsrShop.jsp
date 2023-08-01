@@ -420,7 +420,7 @@
     <script src="/resources/js/shop/jquery.slicknav.js"></script>
     <script src="/resources/js/shop/mixitup.min.js"></script>
     <script src="/resources/js/shop/owl.carousel.min.js"></script>
-    <script src="/resourcesjs/shop/main.js"></script>
+    <script src="/resources/js/shop/main.js"></script>
 
     <script src="/resources/js/scripts.js"></script>
 <script type="text/javascript">

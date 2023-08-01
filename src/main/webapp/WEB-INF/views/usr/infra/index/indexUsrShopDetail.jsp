@@ -18,14 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/shop/cssShop/style.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/shop/styles1.css">
+	<link href="/resources/css/shop/styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -36,7 +38,9 @@
    
 
     <!-- Breadcrumb Section Begin -->
-    <div style="background-color: red; width: 100%; height: 300px;;"></div>
+    <div style="background-image:url(/resources/img/assets/img/discount/bg10.jpg);width:100%;height:400px;">
+    <!-- 슬라이드 들어갈 예정 -->
+    </div>
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->
@@ -44,7 +48,7 @@
     <section class="product-details spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6" style="background-image:url(/resources/img/assets/img/shoes/shoes3.jpg);background-size: cover; ">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
@@ -74,9 +78,9 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">$50.00</div>
-                        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                            vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                            quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+<!--                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam -->
+<!--                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet -->
+<!--                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p> -->
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -191,16 +195,16 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/resources/js/shop/jquery-3.3.1.min.js"></script>
+    <script src="/resources/js/shop/bootstrap.min.js"></script>
+    <script src="/resources/js/shop/jquery.nice-select.min.js"></script>
+    <script src="/resources/js/shop/jquery-ui.min.js"></script>
+    <script src="/resources/js/shop/jquery.slicknav.js"></script>
+    <script src="/resources/js/shop/mixitup.min.js"></script>
+    <script src="/resources/js/shop/owl.carousel.min.js"></script>
+    <script src="/resources/js/shop/main.js"></script>
 
-
+	<script src="/resources/js/scripts.js"></script>
 </body>
 
 </html>
