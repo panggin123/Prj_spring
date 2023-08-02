@@ -205,8 +205,8 @@
 	                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
 	                                    </ul>
 	                                </div> 
-	                                <div class="product__item__text">
-	                                    <h6><a href="productForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.productName}"></c:out></a></h6>
+	                                <div class="product__item__text" >
+	                                    <h6><a href="indexUsrShopDetail" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h6>
 	                                    <h5><c:out value="${list.productPrice}"></c:out></h5>
 	                                </div>
 	                            </div>
@@ -420,7 +420,7 @@
     <script src="/resources/js/shop/jquery.slicknav.js"></script>
     <script src="/resources/js/shop/mixitup.min.js"></script>
     <script src="/resources/js/shop/owl.carousel.min.js"></script>
-    <script src="/resources/js/shop/main.js"></script>
+<!--     <script src="/resources/js/shop/main.js"></script> -->
 
     <script src="/resources/js/scripts.js"></script>
 <script type="text/javascript">

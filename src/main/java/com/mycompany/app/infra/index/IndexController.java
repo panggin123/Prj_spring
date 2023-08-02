@@ -12,9 +12,12 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mycompany.app.infra.product.Product;
+import com.mycompany.app.infra.product.ProductVo;
 
 @Controller
 public class IndexController {
@@ -52,11 +55,8 @@ public class IndexController {
 		public String indexUsrLogin() {
 		  return"/usr/infra/index/indexUsrLogin";
 	  }
+	 
 
-	 @RequestMapping(value="/indexUsrShopDetail") 
-		public String indexUsrShopDetail() {
-		  return"/usr/infra/index/indexUsrShopDetail";
-	  }
 
 	 @RequestMapping(value="/publicCorona1List")    // 가공 하는 법 중요!!
 		public String publicCorona1List(Model model) throws Exception{

@@ -50,6 +50,25 @@ public class ProductController {
 		
 		return "usr/infra/index/indexUsrShop";
 	}
+	
+	@RequestMapping("/indexUsrShopDetail")
+	public String indexUsrShopDetail(@ModelAttribute("vo") ProductVo vo, Model model) {
+		
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	
+		vo.setParamsPaging(service.selectOneCount(vo));
+		
+		if(vo.getTotalRows() > 0) {
+			List<Product> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
+		
+		return "usr/infra/index/indexUsrShopDetail";
+	}
+	
 //		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {
 		// jsp로 바로 던져주는 것
 		

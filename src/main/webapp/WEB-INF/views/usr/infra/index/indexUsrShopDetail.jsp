@@ -45,71 +45,57 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->
-
-    <section class="product-details spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6" style="background-image:url(/resources/img/assets/img/shoes/shoes3.jpg);background-size: cover; ">
-                    <div class="product__details__pic">
-                        <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large"
-                                src="img/product/details/product-details-1.jpg" alt="">
-                        </div>
-                        <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                                src="img/product/details/thumb-1.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                                src="img/product/details/thumb-2.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                                src="img/product/details/thumb-3.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                                src="img/product/details/thumb-4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="product__details__text">
-                        <h3>Vetgetable’s Package</h3>
-                        <div class="product__details__rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <span>(18 reviews)</span>
-                        </div>
-                        <div class="product__details__price">$50.00</div>
-<!--                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam -->
-<!--                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet -->
-<!--                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p> -->
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                        <ul>
-                            <li><b>Availability</b> <span>In Stock</span></li>
-                            <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                            <li><b>Weight</b> <span>0.5 kg</span></li>
-                            <li><b>Share on</b>
-                                <div class="share">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+<c:forEach items="${list}" var="list" varStatus="status" end="0">
+	    <section class="product-details spad">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-6 col-md-6" style="background-image:url(/resources/img/assets/img/shoes/shoes3.jpg);background-size: cover; ">
+	                    <div class="product__details__pic">
+	                    </div>
+	                </div>
+	                <div class="col-lg-6 col-md-6">
+	                    <div class="product__details__text"  style="margin-left: 100px;">
+	                        <h3><a href="productForm?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3>
+	                        <div class="product__details__rating">
+	                            <i class="bi bi-star-fill"></i>
+	                            <i class="bi bi-star-fill"></i>
+	                            <i class="bi bi-star-fill"></i>
+	                            <i class="bi bi-star-fill-half-o"></i>
+	                            <i class="bi bi-star-fill-half-o"></i>
+	                            <span>(<c:out value="${list.productHits}"></c:out>)</span>
+	                        </div>
+	                        <div class="product__details__price"><c:out value="${list.productPrice}"></c:out>원</div>
+	<!--                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam -->
+	<!--                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet -->
+	<!--                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p> -->
+	                        <div class="product__details__quantity">
+	                            <div class="quantity">
+	                                <div class="pro-qty">
+	                                    <input type="text" value="1">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <a href="#" class="primary-btn" style="text-decoration: none;">장바구니 담기</a>
+	<!--                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
+	                        <ul>
+	                            <li><b>상품명</b><c:out value="${list.productName}"></c:out></li>
+	                            <li><b>카테고리</b><c:out value="${list.category}"></c:out></li>
+	                            <li><b>상품가격</b><c:out value="${list.productPrice}"></c:out>원</li>
+	<!--                             <li><b></b> -->
+	<!--                                 <div class="share"> -->
+	<!--                                     <a href="#"><i class="fa fa-facebook"></i></a> -->
+	<!--                                     <a href="#"><i class="fa fa-twitter"></i></a> -->
+	<!--                                     <a href="#"><i class="fa fa-instagram"></i></a> -->
+	<!--                                     <a href="#"><i class="fa fa-pinterest"></i></a> -->
+	<!--                                 </div> -->
+	<!--                             </li> -->
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+    </c:forEach>
     <!-- Product Details Section End -->
     <div style="background-color: aqua; width: 80%; height: 300px; margin: auto;"></div>
 
@@ -128,7 +114,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image:url(/resources/img/assets/img/shoes/shoes1.jpg)">
+                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes1.jpg);background-size:260px 270px;">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
@@ -142,7 +128,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes2.jpg);background-size:260px 270px;">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
@@ -156,7 +142,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes4.jpg);background-size:260px 270px;">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
@@ -170,7 +156,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
+                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes5.jpg);background-size:260px 270px;">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
