@@ -44,6 +44,9 @@
 				<exclude-mapping path="/indexUsrShop"/>
 				<exclude-mapping path="/indexUsrShopDetail"/>
 				<exclude-mapping path="/publicCorona1List"/>
+				<exclude-mapping path="/rest/member"/>
+				<exclude-mapping path="/rest/product"/>
+				
 				<beans:bean id="checkLoginSessionInterception" class="com.mycompany.app.infra.common.interceptor.CheckLoginSessionInterception"></beans:bean>
 		</interceptor>
 		<interceptor>
@@ -58,6 +61,8 @@
 				<exclude-mapping path="/checkid"/>
 				<exclude-mapping path="/memberinsertbtn"/>
 				<exclude-mapping path="/publicCorona1List"/>
+				<exclude-mapping path="/rest/member"/>
+				<exclude-mapping path="/rest/product"/>
 				<beans:bean id="checkLoginXdmSessionInterception" class="com.mycompany.app.infra.common.interceptor.CheckLoginXdmSessionInterception"></beans:bean>
 		</interceptor> 
 	</interceptors>
