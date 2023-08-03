@@ -206,7 +206,7 @@
 	                                    </ul>
 	                                </div> 
 	                                <div class="product__item__text" >
-	                                    <h6><a href="indexUsrShopDetail" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h6>
+	                                    <h6><a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3></h6>
 	                                    <h5><c:out value="${list.productPrice}"></c:out></h5>
 	                                </div>
 	                            </div>
