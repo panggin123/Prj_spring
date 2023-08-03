@@ -55,7 +55,7 @@
 	                </div>
 	                <div class="col-lg-6 col-md-6">
 	                    <div class="product__details__text"  style="margin-left: 100px;">
-	                        <h3><a href="indexUsrShopDetail?seq=" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3>
+	                        <h3><a href="indexUsrShopDetail?seq=${list.seq}" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3>
 	                        <div class="product__details__rating">
 	                            <i class="bi bi-star-fill"></i>
 	                            <i class="bi bi-star-fill"></i>
