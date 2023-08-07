@@ -30,7 +30,7 @@
 	<link rel="stylesheet" href="/resources/css/shop/styles1.css">
 	<link href="/resources/css/shop/styles.css" rel="stylesheet" />
 </head>
-
+  
 <body>
     <!-- Page Preloder -->
     
