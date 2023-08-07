@@ -57,7 +57,10 @@ public class ProductDao {
 		return sqlSession.insert(namespace + ".insert", dto);
 	}
 
-
+	public Product selectBySeq(ProductVo vo) {
+		return sqlSession.selectOne(namespace + ".selectOne", vo);
+	}
+	
 	// public List<CodeGroup> selectList(CodeGroupVo vo){
 	// return sqlSession.selectList(namespace+".selectList",vo)
 	// }

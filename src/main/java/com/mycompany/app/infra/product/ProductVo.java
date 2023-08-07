@@ -252,7 +252,8 @@ public void setParamsPaging(int totalRows) {
 		System.out.println("getEndRnumForOracle():" + getEndRnumForOracle());
 		System.out.println("getStartRnumForMysql(): " + getStartRnumForMysql());
 		
-	}
+	
+}
 
 
 }

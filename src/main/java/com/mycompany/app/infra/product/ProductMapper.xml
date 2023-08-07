@@ -53,6 +53,15 @@
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>  
    	
+   	
+   	
+   	<select id= "selectBySeq" resultMap="resultMapObj">
+   		select * from 
+   			product 
+   				WHERE 
+   					seq= #{seq};
+   	</select>
+   	
  
  
 

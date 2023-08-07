@@ -27,6 +27,11 @@ public class ProductServiceImpl implements ProductService {
 		return dao.selectOneCheckId(vo);
 	}
 
+	@Override
+	public Product selectBySeq(ProductVo vo){
+		return dao.selectBySeq(vo);
+	}
+	
 
 	@Override
 	public int update(Product dto) {return dao.update(dto);}

@@ -18,8 +18,9 @@ public interface ProductService {
 	
 	public int insert(Product dto);
 	
-	
 	public int uelete(Product dto);
+	
+	public Product selectBySeq(ProductVo vo);
 	
 	
 //	public List<CodeGroup> selectOne(CodeGroupVo vo);

@@ -52,12 +52,15 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/indexUsrShopDetail")
-	public String indexUsrShopDetail(@ModelAttribute("vo") ProductVo vo, Model model) {
+	public String indexUsrShopDetail(@ModelAttribute("vo") ProductVo vo, Model model) {		
 		
+		System.out.println("indexUsrShopDetail - vo.getSeq(): " + vo.getSeq());
 		
-		
+		Product product = service.selectBySeq(vo);
+		 
 		return "usr/infra/index/indexUsrShopDetail";
 	}
+	
 	
 //		public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo vo,Model model) {
 		// jsp로 바로 던져주는 것
