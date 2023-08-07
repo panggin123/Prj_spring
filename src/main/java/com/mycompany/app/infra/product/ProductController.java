@@ -57,7 +57,10 @@ public class ProductController {
 		System.out.println("indexUsrShopDetail - vo.getSeq(): " + vo.getSeq());
 		
 		Product product = service.selectBySeq(vo);
-		 
+		
+		model.addAttribute("product",product);
+		
+		System.out.println("product.toString()"+ product.toString());
 		return "usr/infra/index/indexUsrShopDetail";
 	}
 	

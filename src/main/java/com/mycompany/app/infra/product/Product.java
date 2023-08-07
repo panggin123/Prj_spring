@@ -98,6 +98,15 @@ public class Product {
 		this.sale = sale;
 	}
 	
-
+	@Override
+	public String toString() {
+		return "Product [seq=" + seq + ", defaultNy=" + defaultNy + ", category=" + category + ", productName="
+				+ productName + ", productNumber=" + productNumber + ", productPrice=" + productPrice
+				+ ", productStock=" + productStock + ", productDesc=" + productDesc + ", productDate=" + productDate
+				+ ", productHits=" + productHits + ", favorites=" + favorites + ", sale=" + sale
+				+ ", memberMembership_seq=" + memberMembership_seq + "]";
+	}
+	
+	
 
 }

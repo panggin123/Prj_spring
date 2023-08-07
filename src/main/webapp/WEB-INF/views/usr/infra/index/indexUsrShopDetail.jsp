@@ -45,7 +45,6 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->
-<c:forEach items="${list}" var="list" varStatus="status" end="0">
 	    <section class="product-details spad">
 	        <div class="container">
 	            <div class="row">
@@ -55,16 +54,16 @@
 	                </div>
 	                <div class="col-lg-6 col-md-6">
 	                    <div class="product__details__text"  style="margin-left: 100px;">
-	                        <h3><a href="indexUsrShopDetail?seq=${list.seq}" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3>
+	                        <h3><a href="indexUsrShopDetail?seq=${product.seq}" style="text-decoration: none;"><c:out value="${product.productName}"></c:out></a></h3>
 	                        <div class="product__details__rating">
 	                            <i class="bi bi-star-fill"></i>
 	                            <i class="bi bi-star-fill"></i>
 	                            <i class="bi bi-star-fill"></i>
 	                            <i class="bi bi-star-fill-half-o"></i>
 	                            <i class="bi bi-star-fill-half-o"></i>
-	                            <span>(<c:out value="${list.productHits}"></c:out>)</span>
+	                            <span>(<c:out value="${product.productHits}"></c:out>)</span>
 	                        </div>
-	                        <div class="product__details__price"><c:out value="${list.productPrice}"></c:out>원</div>
+	                        <div class="product__details__price"><c:out value="${product.productPrice}"></c:out>원</div>
 	<!--                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam -->
 	<!--                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet -->
 	<!--                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p> -->
@@ -78,9 +77,9 @@
 	                        <a href="#" class="primary-btn" style="text-decoration: none;">장바구니 담기</a>
 	<!--                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
 	                        <ul>
-	                            <li><b>상품명</b><c:out value="${list.productName}"></c:out></li>
-	                            <li><b>카테고리</b><c:out value="${list.category}"></c:out></li>
-	                            <li><b>상품가격</b><c:out value="${list.productPrice}"></c:out>원</li>
+	                            <li><b>상품명</b><c:out value="${product.productName}"></c:out></li>
+	                            <li><b>카테고리</b><c:out value="${product.category}"></c:out></li>
+	                            <li><b>상품가격</b><c:out value="${product.productPrice}"></c:out>원</li>
 	<!--                             <li><b></b> -->
 	<!--                                 <div class="share"> -->
 	<!--                                     <a href="#"><i class="fa fa-facebook"></i></a> -->
@@ -95,7 +94,6 @@
 	            </div>
 	        </div>
 	    </section>
-    </c:forEach>
     <!-- Product Details Section End -->
     <div style="background-color: aqua; width: 80%; height: 300px; margin: auto;"></div>
 
