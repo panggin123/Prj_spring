@@ -61,12 +61,11 @@ public class ProductDao {
 		return sqlSession.selectOne(namespace + ".selectOne", vo);
 	}
 	
-	// public List<CodeGroup> selectList(CodeGroupVo vo){
-	// return sqlSession.selectList(namespace+".selectList",vo)
-	// }
+	public int insertUploaded(Product dto) { 
+		return sqlSession.insert(namespace + ".insertUploaded", dto); 
+		}
 
-//	public List<CodeGroup> selectList(){ 
-//		return sqlSession.selectList(namespace + ".selectList", ""); 
-//	}
-	// @ 언어테이션
+	public List<Product> selectImg(ProductVo vo) {
+		return sqlSession.selectList(namespace + ".selectImg", vo);
+	}
 }

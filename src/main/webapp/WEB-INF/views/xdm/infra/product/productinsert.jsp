@@ -79,7 +79,7 @@
                     <!-- <div class="col-sm-12 col-xl-6"> -->
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Basic Form</h6>
-                            <form name="form" method="post">
+                            <form name="form" method="post"autocomplete="off" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">seq</label>
                                     <input type="email" class="form-control" id="seq" name="seq" aria-describedby="emailHelp"readonly value="<c:out value="${item.seq }"/>">
@@ -225,6 +225,8 @@
 
     <!-- Template Javascript -->
     <script src="/resources/js/adminXdm/main.js"></script>
+	<script src="/resources/js/constants/ConstantsXdm.js"></script>    
+	<script src="/resources/js/constants/commonXdm.js"></script>    
 <script type="text/javascript">
 
 

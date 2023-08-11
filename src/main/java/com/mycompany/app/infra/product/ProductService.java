@@ -12,15 +12,17 @@ public interface ProductService {
 	
 	public int selectOneCount(ProductVo vo);
 	
-	public int update(Product dto);
+	public int update(Product dto) throws Exception;
 	
 	public int delete(Product dto);
 	
-	public int insert(Product dto);
+	public int insert(Product dto) throws Exception;
 	
 	public int uelete(Product dto);
 	
 	public Product selectBySeq(ProductVo vo);
+	
+	public List<Product> selectUploaded(ProductVo vo);
 	
 	
 //	public List<CodeGroup> selectOne(CodeGroupVo vo);

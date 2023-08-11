@@ -89,13 +89,16 @@ public class ProductController {
 	public String productForm(ProductVo vo, Model model) {
 		
 		model.addAttribute("item", service.selectOne(vo));
+		model.addAttribute("listUploaded", service.selectUploaded(vo));
 		
 		return"xdm/infra/product/productForm";
 	}
 	
 	@RequestMapping(value = "/productinsert")
 	public String productinsert(ProductVo vo, Model model) {
-
+		
+		model.addAttribute("item", service.selectOne(vo));
+		model.addAttribute("listUploaded", service.selectUploaded(vo));
 
 		return "xdm/infra/product/productinsert";
 	}
@@ -104,7 +107,7 @@ public class ProductController {
 	
 	@RequestMapping("/productUpdate")
 	
-	public String productUpdate(Product dto) {
+	public String productUpdate(Product dto) throws Exception {
 		
 		System.out.println("productUpdate");
 		
@@ -130,7 +133,7 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/productinsertbtn")
-	public String productinsertbtn(Product dto) {
+	public String productinsertbtn(Product dto) throws Exception {
 		System.out.println("productinsertbtn");
 		
 		System.out.println("dto.getProductName(): " + dto.getProductName());
@@ -160,6 +163,7 @@ public class ProductController {
 		
 		return "usr/infra/product/productUsrList";
 	}
+	
 	
 	
 	

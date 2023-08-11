@@ -56,13 +56,14 @@
    	
    	
    	<select id= "selectBySeq" resultMap="resultMapObj">
-   		select * from 
-   			product 
-   				WHERE 
-   					seq= #{seq};
+select * from 
+	product 
+WHERE 
+	seq= #{seq}
+	,category = #{category};
    	</select>
    	
- 
+ 	
  
 
 <!-- <select id="selectTwo" resultMap="resultMapObj">
@@ -92,7 +93,7 @@ SELECT
 FROM
 	product
 WHERE 1=1
-	<if test="seq != null and !seq.equals('')">	AND seq = #{seq} </if>
+	AND seq = #{seq}
 	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
 	<if test="category != null and !category.equals('')">	AND category = #{category} </if>
 	<if test="productName != null and !productName.equals('')">AND productName = #{productName}</if>
@@ -176,6 +177,42 @@ SET
 WHERE
 	productName = #{productName}
 </delete>
+
+
+<select id="selectImg" resultMap="resultMapObj">
+	select * from proudctUploaded
+</select>
+
+
+
+<!-- uploaded s -->
+	<insert id="insertUploaded">
+		INSERT INTO ${tableName} (
+			type
+			,defaultNy
+			,sort
+			,path
+			,originalName
+			,uuidName
+			,ext
+			,size
+			,delNy
+			,pseq
+		) values (
+			#{type}
+			,#{defaultNy}
+			,#{sort}
+			,#{path}
+			,#{originalName}
+			,#{uuidName}
+			,#{ext}
+			,#{size}
+			,1
+			,#{seq}
+		)
+	</insert>
+
+
 
 
 </mapper>    

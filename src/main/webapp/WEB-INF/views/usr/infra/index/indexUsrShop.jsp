@@ -48,11 +48,11 @@
                         <div class="sidebar__item" style="margin-top:170px;">
                             <h4>카테고리</h4>
                             <ul>
-                                <li><a href="#" style="text-decoration: none;">수건</a></li>
                                 <li><a href="#" style="text-decoration: none;">신발</a></li>
-                                <li><a href="#" style="text-decoration: none;">음료수</a></li>
-                                <li><a href="#" style="text-decoration: none;">슬리퍼</a></li>
-                                <li><a href="#" style="text-decoration: none;">안경</a></li>
+                                <li><a href="#" style="text-decoration: none;">가전제품</a></li>
+                                <li><a href="#" style="text-decoration: none;">의류</a></li>
+                                <li><a href="#" style="text-decoration: none;">완구</a></li>
+                                <li><a href="#" style="text-decoration: none;">주방용품</a></li>
                                 <li><a href="#" style="text-decoration: none;">자동차</a></li>
                             </ul>
                         </div>

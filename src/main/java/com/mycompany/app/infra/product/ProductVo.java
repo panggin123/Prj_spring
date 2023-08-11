@@ -20,7 +20,7 @@ public class ProductVo {
 	private String memberMembership_seq;
 
 	
-	
+
 	public String getMemberMembership_seq() {
 		return memberMembership_seq;
 	}

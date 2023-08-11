@@ -48,10 +48,10 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="/resources/img/assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src="/resources/img/assets/img/portfolio/2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">수건</div>
+                                <div class="portfolio-caption-heading">신발</div>
                                 <div class="portfolio-caption-subheading text-muted">Illustration</div>
                             </div>
                         </div>
@@ -63,10 +63,10 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="/resources/img/assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="/resources/img/assets/img/portfolio/1.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">신발</div>
+                                <div class="portfolio-caption-heading">가전제품</div>
                                 <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                 <img class="img-fluid" src="/resources/img/assets/img/portfolio/3.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">치약</div>
+                                <div class="portfolio-caption-heading">의류</div>
                                 <div class="portfolio-caption-subheading text-muted">Identity</div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                 <img class="img-fluid" src="/resources/img/assets/img/portfolio/4.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">슬리퍼</div>
+                                <div class="portfolio-caption-heading">완구</div>
                                 <div class="portfolio-caption-subheading text-muted">Branding</div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                                 <img class="img-fluid" src="/resources/img/assets/img/portfolio/5.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">샴푸</div>
+                                <div class="portfolio-caption-heading">주방용품</div>
                                 <div class="portfolio-caption-subheading text-muted">Website Design</div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                                 <img class="img-fluid" src="/resources/img/assets/img/portfolio/6.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">옷</div>
+                                <div class="portfolio-caption-heading">자동차</div>
                                 <div class="portfolio-caption-subheading text-muted">Photography</div>
                             </div>
                         </div>
