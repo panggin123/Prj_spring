@@ -45,24 +45,21 @@
             <div class="row">
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
-                        <div class="sidebar__item" style="margin-top:170px;">
+                        <div class="sidebar__item" id="side" style="margin-top:64px;">
                             <h4>카테고리</h4>
                             <ul>
-                                <li><a href="#" style="text-decoration: none;">신발</a></li>
-                                <li><a href="#" style="text-decoration: none;">가전제품</a></li>
-                                <li><a href="#" style="text-decoration: none;">의류</a></li>
-                                <li><a href="#" style="text-decoration: none;">완구</a></li>
-                                <li><a href="#" style="text-decoration: none;">주방용품</a></li>
-                                <li><a href="#" style="text-decoration: none;">자동차</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">신발</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">가전제품</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">의류</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">완구</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">주방용품</a></li>
+                                <li><a href="indexUsrShop?category" style="text-decoration: none;">자동차</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-7">
                     <div class="product__discount">
-                        <div class="section-title product__discount__title">
-                            <h2>Sale Off</h2>
-                        </div>
                         <div class="row">
                             <div class="product__discount__slider owl-carousel">
                                 <div class="col-lg-4">
@@ -197,16 +194,17 @@
                     <div class="row">
                     
                        <c:forEach items="${list}" var="list" varStatus="status">
-							<div class="col-lg-4 col-md-6 col-sm-6">
-	                            <div class="product__item">
-	                                <div class="product__item__pic set-bg" style="background-image:url(/resources/img/assets/img/shoes/shoes3.jpg)">
+							<div class="col-lg-4 col-md-6 col-sm-6 ">
+	                            <div class="product__item rankList">
+	                               <div class="product__item__pic set-bg">
+	                               <a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>"><img alt="" src="/resources/img/assets/img/shoes/shoes3.jpg" style="width: 100%;height:  100%"></a>
 	                                    <ul class="product__item__pic__hover">
 	                                        <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
 	                                    </ul>
-	                                </div> 
+	                                </div>
 	                                <div class="product__item__text" >
-	                                    <h6><a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h3></h6>
+	                                    <h6><a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h6>
 	                                    <h5><c:out value="${list.productPrice}"></c:out></h5>
 	                                </div>
 	                            </div>
@@ -442,6 +440,17 @@
   			}
   		});
   	});
+        
+        $("#side a").on("click", function(){
+			var target = "";
+			target = $(this).prop('class');
+			targetHref = target.slice(-6);
+			$(".rankList").addClass("d-none");
+			$(targetHref).removeClass("d-none");
+			$("#side a").parent().removeClass("text-primary");
+			$(this).parent().addClass("text-primary");
+			
+		})
         </script>
 </body>
 

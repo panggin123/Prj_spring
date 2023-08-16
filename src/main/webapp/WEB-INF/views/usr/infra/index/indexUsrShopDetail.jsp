@@ -39,7 +39,7 @@
    
 
     <!-- Breadcrumb Section Begin -->
-    <div style="background-image:url(/resources/img/assets/img/discount/bg10.jpg);width:100%;height:400px;">
+    <div style="background-image:url(/resources/img/assets/img/discount/bg10.jpg);width:100%;height:400px;background-size: cover;">
     <!-- 슬라이드 들어갈 예정 -->
     </div>
     <!-- Breadcrumb Section End -->
@@ -63,39 +63,33 @@
 	                            <i class="bi bi-star-fill-half-o"></i>
 	                            <span>(<c:out value="${product.productHits}"></c:out>)</span>
 	                        </div>
-	                        <div class="product__details__price"><c:out value="${product.productPrice}"></c:out>원</div>
-	<!--                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam -->
-	<!--                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet -->
-	<!--                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p> -->
-	                        <div class="product__details__quantity">
-	                            <div class="quantity">
-	                                <div class="pro-qty">
-	                                    <input type="text" value="1">
+	                        <div class="product__details__price sum" ><c:out value="${product.productPrice}" ></c:out>원</div>
+	                        <div class="product__details__quantity subdiv">
+	                            <div class="quantity num">
+	                                <div class="pro-qty updown">
+	                                	<span class ="dec qtybtn down" onclick="javascript:basket.changePNum(1);">-</span>
+	                                    <input type="text" value="1" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" onkeyup="javascript:basket.changePNum(1);">
+										<span class ="inc qtybtn up" onclick="javascript:basket.changePNum(1);">+</span>
 	                                </div>
 	                            </div>
 	                        </div>
-	                        <a href="#" class="primary-btn" style="text-decoration: none;">장바구니 담기</a>
+	                        <a href="indexUsrCart" class="primary-btn" style="text-decoration: none;">결제하기</a>
 	<!--                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
 	                        <ul>
 	                            <li><b>상품명</b><c:out value="${product.productName}"></c:out></li>
-	                            <li><b>카테고리</b><c:out value="${product.category}"></c:out></li>
+	                            <li><b>상품정보</b><c:out value="${product.productDesc}"></c:out></li>
 	                            <li><b>상품가격</b><c:out value="${product.productPrice}"></c:out>원</li>
-	<!--                             <li><b></b> -->
-	<!--                                 <div class="share"> -->
-	<!--                                     <a href="#"><i class="fa fa-facebook"></i></a> -->
-	<!--                                     <a href="#"><i class="fa fa-twitter"></i></a> -->
-	<!--                                     <a href="#"><i class="fa fa-instagram"></i></a> -->
-	<!--                                     <a href="#"><i class="fa fa-pinterest"></i></a> -->
-	<!--                                 </div> -->
-	<!--                             </li> -->
-	                        </ul>
+	                            <li><b></b></li>
+                            </ul>
 	                    </div>
 	                </div>
 	            </div>
 	        </div>
 	    </section>
     <!-- Product Details Section End -->
-    <div style="background-color: aqua; width: 80%; height: 300px; margin: auto;"></div>
+    <div style="width: 80%; hegith:1000px; margin: auto;text-align:center">
+    <img alt="" src="resources/img/assets/img/shoes/detail1.jpg" >
+    </div>
 
 
 
@@ -112,7 +106,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes1.jpg);background-size:260px 270px;">
+                        <div class="product__item__pic " style="background-image: url(/resources/img/assets/img/shoes/shoes1.jpg);background-size:260px 270px; ">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                            <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
