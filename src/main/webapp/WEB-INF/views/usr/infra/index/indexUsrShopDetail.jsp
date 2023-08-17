@@ -63,24 +63,27 @@
 	                            <i class="bi bi-star-fill-half-o"></i>
 	                            <span>(<c:out value="${product.productHits}"></c:out>)</span>
 	                        </div>
-	                        <div class="product__details__price sum" ><c:out value="${product.productPrice}" ></c:out>원</div>
-	                        <div class="product__details__quantity subdiv">
-	                            <div class="quantity num">
-	                                <div class="pro-qty updown">
-	                                	<span class ="dec qtybtn down" onclick="javascript:basket.changePNum(1);">-</span>
-	                                    <input type="text" value="1" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" onkeyup="javascript:basket.changePNum(1);">
-										<span class ="inc qtybtn up" onclick="javascript:basket.changePNum(1);">+</span>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <a href="indexUsrCart" class="primary-btn" style="text-decoration: none;">결제하기</a>
+	                        <div class="product__details__price" id="price"><c:out value="${product.productPrice}" ></c:out>원</div>
+	                        
+	                        
 	<!--                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
 	                        <ul>
 	                            <li><b>상품명</b><c:out value="${product.productName}"></c:out></li>
 	                            <li><b>상품정보</b><c:out value="${product.productDesc}"></c:out></li>
-	                            <li><b>상품가격</b><c:out value="${product.productPrice}"></c:out>원</li>
+	                            <li ><b id="price">상품가격</b><c:out  value="${product.productPrice}"></c:out>원</li>
 	                            <li><b></b></li>
                             </ul>
+                            	<span id="totalPrice"><c:out value="${product.productPrice}" ></c:out>원</span>
+				                    <div class="product__details__quantity">
+				                            <div class="quantity ">
+				                                <div class="pro-qty product" style="padding: 0;">
+				                                	<span class ="dec qtybtn" id="decrease" >-</span>
+				                                    <input type="text" value="1" id="quantity">
+													<span class ="inc qtybtn" id="increase">+</span>
+				                                </div>
+				                            </div>
+		                        </div>
+		                        <a href="indexUsrCart" class="primary-btn" style="text-decoration: none;">결제하기</a>
 	                    </div>
 	                </div>
 	            </div>
@@ -178,6 +181,8 @@
     <script src="/resources/js/shop/mixitup.min.js"></script>
     <script src="/resources/js/shop/owl.carousel.min.js"></script>
     <script src="/resources/js/shop/main.js"></script>
+    <script src="/resources/js/shop/productIncrease.js"></script>
+
 
 	<script src="/resources/js/scripts.js"></script>
 </body>

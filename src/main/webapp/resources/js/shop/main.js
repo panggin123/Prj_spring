@@ -201,26 +201,4 @@
 
 })(jQuery);
 
-   let basket = { 
- changePNum: function (pos) {
-        var item = document.querySelector('input[name=p_num'+pos+']');
-        var p_num = parseInt(item.getAttribute('value'));
-        var newval = event.target.classList.contains('up') ? p_num+1 : event.target.classList.contains('down') ? 
-        
-p_num-1 : event.target.value;
-        if (parseInt(newval) < 1 || parseInt(newval) > 99) { return false; }
-        item.setAttribute('value', newval);
-        item.value = newval;
-        var price = item.parentElement.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
-        item.parentElement.parentElement.nextElementSibling.textContent = (newval * price).formatNumber()+"원";
-        //AJAX 업데이트 전송
-
-        //전송 처리 결과가 성공이면    
-
-        this.reCalc();
-
-        this.updateUI();
-         },
- 
-};
 
