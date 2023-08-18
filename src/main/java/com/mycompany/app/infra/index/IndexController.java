@@ -33,10 +33,7 @@ public class IndexController {
 //		return "/usr/infra/index/indexUsrShop";
 //	}
 
-	@RequestMapping(value="/indexUsrCart")
-	public String indexCart() {
-		return "/usr/infra/index/indexUsrCart";
-	}
+	
 
 	
 	

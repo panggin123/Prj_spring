@@ -63,7 +63,13 @@ WHERE
 	,category = #{category};
    	</select>
    	
- 	
+ 	   	<select id= "selectCartSeq" resultMap="resultMapObj">
+select * 
+from 
+	product 
+WHERE 
+	seq= #{seq}
+   	</select>
  
 
 <!-- <select id="selectTwo" resultMap="resultMapObj">
@@ -182,7 +188,6 @@ WHERE
 <select id="selectImg" resultMap="resultMapObj">
 	select * from proudctUploaded
 </select>
-
 
 
 <!-- uploaded s -->

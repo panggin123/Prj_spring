@@ -164,7 +164,15 @@ public class ProductController {
 		return "usr/infra/product/productUsrList";
 	}
 	
-	
+	@RequestMapping(value="/indexUsrCart")
+	public String indexUsrCart(@ModelAttribute("vo") ProductVo vo, Model model) {
+		
+		Product product = service.selectCartSeq(vo);
+		
+		model.addAttribute("product",product);
+		
+		return "/usr/infra/index/indexUsrCart";
+	}
 	
 	
 //	
@@ -251,4 +259,7 @@ public class ProductController {
 ////			return"codeGroupList;
 ////		}
 ////	}
+	
+	
+	
 }

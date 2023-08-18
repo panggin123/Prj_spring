@@ -17,6 +17,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/shop/cssShop/font-awesome.min.css" type="text/css">
@@ -200,12 +201,12 @@
 	                               <a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>"><img alt="" src="/resources/img/assets/img/shoes/shoes3.jpg" style="width: 100%;height:  100%"></a>
 	                                    <ul class="product__item__pic__hover">
 	                                        <li><a href="#"><i class="bi bi-heart"></i></a></li>
-	                                        <li><a href="indexUsrCart"><i class="bi bi-cart4"></i></a></li>
+	                                        <li><a href="indexUsrCart?seq=<c:out value="${list.seq}"/>"><i class="bi bi-cart4"></i></a></li>
 	                                    </ul>
 	                                </div>
 	                                <div class="product__item__text" >
-	                                    <h6><a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;"><c:out value="${list.productName}"></c:out></a></h6>
-	                                    <h5><c:out value="${list.productPrice}"></c:out></h5>
+	                                    <h6 ><a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>" style="text-decoration: none;color: #bfb200"><c:out value="${list.productName}"></c:out></a></h6>
+	                                    <div class="price"  style="font-size: 30px;font-weight: 500;color: burlywood;"><c:out value="${list.productPrice}"></c:out></div>
 	                                </div>
 	                            </div>
 	                        </div>                                   
@@ -388,21 +389,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      <%@include file="../usrinclude/footer.jsp"%>
     </section>
     <!-- Product Section End -->
 
@@ -451,6 +438,21 @@
 			$(this).parent().addClass("text-primary");
 			
 		})
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const priceElements = document.querySelectorAll(".price");
+            
+            function addCommasToPrice(price) {
+                return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            priceElements.forEach(function(priceElement) {
+                const productPrice = parseFloat(priceElement.textContent.replace("원", "").replace(/,/g, ""));
+                priceElement.textContent = addCommasToPrice(productPrice) + "원";
+            });
+        });
+		
+
         </script>
 </body>
 

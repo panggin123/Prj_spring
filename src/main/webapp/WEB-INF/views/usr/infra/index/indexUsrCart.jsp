@@ -34,6 +34,7 @@
 
 <body>
    <%@include file="../usrinclude/shopnav.jsp"%>
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" id="visual_subHeader">
         <div class="container">
@@ -59,81 +60,42 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="shoping__product">상품들</th>
+                                    <th class="shoping__product" style="width:14%;">상품들</th>
+                                    <th>상품명</th>
                                     <th>가격</th>
                                     <th>수량</th>
                                     <th>합계</th>
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="/resources/img/assets/img/discount/car1.png" alt="">
-                                        <h5>Vegetable’s Package</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $55.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $110.00
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span ><i class="bi bi-x-circle"></i></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="/resources/img/assets/img/discount/car2.jpg" alt="">
-                                        <h5>Fresh Garden Vegetable</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $39.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $39.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span ><i class="bi bi-x-circle"></i></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="/resources/img/assets/img/discount/car3.jpg" alt="">
-                                        <h5>Organic Bananas</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $69.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $69.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span ><i class="bi bi-x-circle"></i></span>
-                                    </td>
-                                </tr>
-                            </tbody>
+                           <tbody>
+							    <tr>
+							        <td class="shoping__cart__item">
+							            <img src="/resources/img/assets/img/discount/car1.png" alt="">
+							        </td>
+							        <td class="shoping__cart__productName">
+							            <h3><c:out value="${product.productName}"></c:out></h3>
+							        </td>
+							        <td class="shoping__cart__price" id="price">
+							            <h3><span id="formattedPrice"><c:out value="${product.productPrice}"></c:out></span></h3>
+							        </td>
+							        <td class="shoping__cart__quantity">
+							            <div class="quantity">
+							                <div class="pro-qty product" style="padding: 0;">
+				                                	<span class ="dec qtybtn" id="decrease" >-</span>
+				                                    <input type="text" value="1" id="quantity">
+													<span class ="inc qtybtn" id="increase">+</span>
+			                                </div>
+							            </div>
+							        </td>
+							        <td class="shoping__cart__total" id="totalPrice">
+							            <span id="formattedTotalPrice"><c:out value="${product.productPrice * 2}"></c:out></span>
+							        </td>
+							        <td class="shoping__cart__item__close">
+							            <span ><i class="bi bi-x-circle"></i></span>
+							        </td>
+							    </tr>
+							</tbody>
                         </table>
                     </div>
                 </div>
@@ -148,10 +110,10 @@
                 <div class="col-lg-6">
                     <div class="shoping__continue">
                         <div class="shoping__discount">
-                            <h5>Discount Codes</h5>
+                            <h5>우편물 주소</h5>
                             <form action="#">
-                                <input type="text" placeholder="Enter your coupon code">
-                                <button type="submit" class="site-btn">APPLY COUPON</button>
+                                <input type="text" placeholder="배송지를 입력해주세요">
+                                <button type="button" class="site-btn">확인</button>
                             </form>
                         </div>
                     </div>
@@ -168,21 +130,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+         <%@include file="../usrinclude/footer.jsp"%>
     </section>
     <!-- Shoping Cart Section End -->
 
@@ -191,16 +139,74 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="resources/shop/js/jquery-3.3.1.min.js"></script>
-    <script src="resources/shop/js/bootstrap.min.js"></script>
-    <script src="resources/shop/js/jquery.nice-select.min.js"></script>
-    <script src="resources/shop/js/jquery-ui.min.js"></script>
-    <script src="resources/shop/js/jquery.slicknav.js"></script>
-    <script src="resources/shop/js/mixitup.min.js"></script>
-    <script src="resources/shop/js/owl.carousel.min.js"></script>
-    <script src="resources/shop/js/main.js"></script>
+    <script src="/resources/js/shop/jquery-3.3.1.min.js"></script>
+    <script src="/resources/js/shop/bootstrap.min.js"></script>
+    <script src="/resources/js/shop/jquery.nice-select.min.js"></script>
+    <script src="/resources/js/shop/jquery-ui.min.js"></script>
+    <script src="/resources/js/shop/jquery.slicknav.js"></script>
+    <script src="/resources/js/shop/mixitup.min.js"></script>
+    <script src="/resources/js/shop/owl.carousel.min.js"></script>
+    <script src="/resources/js/shop/main.js"></script>
 
     <script src="/resources/js/scripts.js"></script>
+    
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        const decreaseButton = document.getElementById("decrease");  // 수량 감소
+        const increaseButton = document.getElementById("increase"); //  수량 증가
+        const quantityInput = document.getElementById("quantity"); // 수량 갯수
+        const priceElement = document.getElementById("price"); // 가격
+        const totalPriceElement = document.getElementById("totalPrice"); //토탈금액
+
+        const productPrice = parseFloat(priceElement.textContent.replace("원", "").replace(",", "")); // 상품 가격
+
+        let quantity = 1; // 초기 수량
+        updateTotalPrice();
+
+        decreaseButton.addEventListener("click", function() {
+            if (quantity > 1) {
+                quantity--;
+                quantityInput.value = quantity;
+                updateTotalPrice();
+            }
+        });
+
+        increaseButton.addEventListener("click", function() {
+            quantity++;
+            quantityInput.value = quantity;
+            updateTotalPrice();
+        });
+
+        function updateTotalPrice() {
+            totalPriceElement.textContent = numberWithCommas(productPrice * quantity) + "원";
+        }
+
+        // 숫자에 쉼표 추가하는 함수
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    });
+ //------------------------------------------------ 단위마다 쉼표 추가하는 함수------------------------------------------------
+    // 페이지 로딩 후 실행
+    document.addEventListener("DOMContentLoaded", function() {
+        const formattedPriceElement = document.getElementById("formattedPrice");
+        const formattedTotalPriceElement = document.getElementById("formattedTotalPrice");
+        
+        // 천 단위 쉼표 추가하는 함수
+        function addCommasToPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        
+        // 가격 엘리먼트에 천 단위 쉼표 추가
+        const originalPrice = parseFloat(formattedPriceElement.textContent.replace(/,/g, ""));
+        formattedPriceElement.textContent = addCommasToPrice(originalPrice);
+        
+        // 총 가격 엘리먼트에 천 단위 쉼표 추가
+        const totalPrice = parseFloat(formattedTotalPriceElement.textContent.replace(/,/g, ""));
+        formattedTotalPriceElement.textContent = addCommasToPrice(totalPrice);
+    });
+  
+	</script>
 </body>
 
 </html>

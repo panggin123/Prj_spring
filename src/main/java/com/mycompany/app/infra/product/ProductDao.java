@@ -68,4 +68,8 @@ public class ProductDao {
 	public List<Product> selectImg(ProductVo vo) {
 		return sqlSession.selectList(namespace + ".selectImg", vo);
 	}
+	
+	public Product selectCartSeq(ProductVo vo) {
+		return sqlSession.selectOne(namespace + ".selectOne",vo);
+	}
 }

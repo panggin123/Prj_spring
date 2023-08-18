@@ -39,6 +39,10 @@ public class ProductServiceImpl implements ProductService {
 		return dao.selectBySeq(vo);
 	}
 	
+	@Override
+	public Product selectCartSeq(ProductVo vo) {
+		return dao.selectCartSeq(vo);
+	}
 
 	@Override
 	public int update(Product dto) throws Exception {

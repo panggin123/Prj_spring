@@ -17,6 +17,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/shop/cssShop/bootstrap.min.css" type="text/css">
@@ -63,17 +64,17 @@
 	                            <i class="bi bi-star-fill-half-o"></i>
 	                            <span>(<c:out value="${product.productHits}"></c:out>)</span>
 	                        </div>
-	                        <div class="product__details__price" id="price"><c:out value="${product.productPrice}" ></c:out>원</div>
+	                        <div class="product__details__price" id="price"><c:out value="${product.productPrice}" ></c:out></div>
 	                        
 	                        
 	<!--                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
 	                        <ul>
 	                            <li><b>상품명</b><c:out value="${product.productName}"></c:out></li>
 	                            <li><b>상품정보</b><c:out value="${product.productDesc}"></c:out></li>
-	                            <li ><b id="price">상품가격</b><c:out  value="${product.productPrice}"></c:out>원</li>
+	                            <li><b>상품가격</b><span id="formattedPrice"><c:out value="${product.productPrice}"></c:out></span>원</li>
 	                            <li><b></b></li>
                             </ul>
-                            	<span id="totalPrice"><c:out value="${product.productPrice}" ></c:out>원</span>
+                            	<div class="product__details__price" id="totalPrice"><c:out value="${product.productPrice}" ></c:out></div>
 				                    <div class="product__details__quantity">
 				                            <div class="quantity ">
 				                                <div class="pro-qty product" style="padding: 0;">
@@ -83,7 +84,7 @@
 				                                </div>
 				                            </div>
 		                        </div>
-		                        <a href="indexUsrCart" class="primary-btn" style="text-decoration: none;">결제하기</a>
+		                        <a href="indexUsrCart?seq=<c:out value="${product.seq}"/>" class="primary-btn" style="text-decoration: none;">결제하기</a>
 	                    </div>
 	                </div>
 	            </div>
@@ -165,6 +166,7 @@
                 </div>
             </div>
         </div>
+        <%@include file="../usrinclude/footer.jsp"%>
     </section>
     <!-- Related Product Section End -->
 
@@ -181,10 +183,72 @@
     <script src="/resources/js/shop/mixitup.min.js"></script>
     <script src="/resources/js/shop/owl.carousel.min.js"></script>
     <script src="/resources/js/shop/main.js"></script>
-    <script src="/resources/js/shop/productIncrease.js"></script>
 
 
 	<script src="/resources/js/scripts.js"></script>
+	<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        const decreaseButton = document.getElementById("decrease");  // 수량 감소
+        const increaseButton = document.getElementById("increase"); //  수량 증가
+        const quantityInput = document.getElementById("quantity"); // 수량 갯수
+        const priceElement = document.getElementById("price"); // 가격
+        const totalPriceElement = document.getElementById("totalPrice"); //토탈금액
+
+        const productPrice = parseFloat(priceElement.textContent.replace("원", "").replace(",", "")); // 상품 가격
+
+        let quantity = 1; // 초기 수량
+        updateTotalPrice();
+
+        decreaseButton.addEventListener("click", function() {
+            if (quantity > 1) {
+                quantity--;
+                quantityInput.value = quantity;
+                updateTotalPrice();
+            }
+        });
+
+        increaseButton.addEventListener("click", function() {
+            quantity++;
+            quantityInput.value = quantity;
+            updateTotalPrice();
+        });
+
+        function updateTotalPrice() {
+            totalPriceElement.textContent = numberWithCommas(productPrice * quantity) + "원";
+        }
+
+        // 숫자에 쉼표 추가하는 함수
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    });
+    
+    // 단위마다 쉼표 추가하는 함수 ---------------------------------
+    document.addEventListener("DOMContentLoaded", function() {
+        const priceElement = document.getElementById("price");
+        const productPrice = parseFloat(priceElement.textContent.replace("원", "").replace(/,/g, "")); // 가격에서 쉼표 제거
+
+        // 천 단위마다 쉼표 추가하는 함수  맨위 메인 가격
+        function addCommasToPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        priceElement.textContent = addCommasToPrice(productPrice) + "원";
+    });
+    
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const formattedPriceElement = document.getElementById("formattedPrice");
+        const productPrice = parseFloat(formattedPriceElement.textContent.replace(/,/g, "")); // 쉼표 제거
+
+        // 천 단위마다 쉼표 추가하는 함수	서브 가격
+        function addCommasToPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        formattedPriceElement.textContent = addCommasToPrice(productPrice);
+    });
+	</script>
 </body>
 
 </html>

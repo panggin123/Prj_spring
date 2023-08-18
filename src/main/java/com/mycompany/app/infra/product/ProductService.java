@@ -24,6 +24,7 @@ public interface ProductService {
 	
 	public List<Product> selectUploaded(ProductVo vo);
 	
+	public Product selectCartSeq(ProductVo vo);
 	
 //	public List<CodeGroup> selectOne(CodeGroupVo vo);
 	
