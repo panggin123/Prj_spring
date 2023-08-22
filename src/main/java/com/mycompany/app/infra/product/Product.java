@@ -17,7 +17,7 @@ public class Product {
 	private String productHits;
 	private String favorites;
 	private String sale;
-	private String memberMembership_seq;
+	private Integer memberMembership_seq;
 
 	
 //	uploaded
@@ -185,10 +185,10 @@ public class Product {
 	
 	
 	
-	public String getMemberMembership_seq() {
+	public Integer getMemberMembership_seq() {
 		return memberMembership_seq;
 	}
-	public void setMemberMembership_seq(String memberMembership_seq) {
+	public void setMemberMembership_seq(Integer memberMembership_seq) {
 		this.memberMembership_seq = memberMembership_seq;
 	}
 	public String getSeq() {

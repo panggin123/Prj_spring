@@ -46,7 +46,7 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->
-	    <section class="product-details spad">
+	    <section class="product-details spad" style="margin-top: 80px;">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-lg-6 col-md-6" style="background-image:url(/resources/img/assets/img/shoes/shoes3.jpg);background-size: cover; ">
@@ -54,7 +54,7 @@
 	                    </div>
 	                </div>
 	                <div class="col-lg-6 col-md-6">
-	                    <div class="product__details__text"  style="margin-left: 100px;">
+	                    <div class="product__details__text">
 	                        <h3><a href="indexUsrShopDetail?seq=${product.seq}" style="text-decoration: none;"><c:out value="${product.productName}"></c:out></a></h3>
 	                        <div class="product__details__rating">
 	                            <i class="bi bi-star-fill"></i>
@@ -166,8 +166,8 @@
                 </div>
             </div>
         </div>
-        <%@include file="../usrinclude/footer.jsp"%>
     </section>
+        <%@include file="../usrinclude/footer.jsp"%>
     <!-- Related Product Section End -->
 
     <!-- Footer Section Begin -->

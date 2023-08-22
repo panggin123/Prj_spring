@@ -111,6 +111,10 @@
                                     <input type="text" class="form-control" id="adderss" name="adderss" value="<c:out value= "${item.adderss}"/>">
                                     </div>
                                 <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">adderssDetail</label>
+                                    <input type="text" class="form-control" id="adderssDetail" name="adderssDetail" value="<c:out value= "${item.adderssDetail}"/>">
+                                    </div>
+                                <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">tel</label>
                                     <input type="text" class="form-control" id="tel" name="tel" value="<c:out value= "${item.tel}"/>">
                                    </div>

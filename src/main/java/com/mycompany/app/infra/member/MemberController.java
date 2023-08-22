@@ -128,7 +128,7 @@ public class MemberController {
 		
 		service.insert(dto);
 		
-		return "redirect:/indexUsrView";
+		return "redirect:/memberList";
 	}
 	
 

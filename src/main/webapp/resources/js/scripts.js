@@ -50,5 +50,11 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+    
+/*    // ScrollSpy 초기화
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbarExample' // 스크롤 감시할 대상 요소 선택자
+});*/
+
 
 });

@@ -60,11 +60,11 @@
                             <h3>Sign In</h3>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="id" placeholder="name@example.com" value="admin123">
+                            <input type="email" class="form-control" id="id" placeholder="name@example.com" value="admin1234">
                             <label for="floatingInput">Id</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="pass" placeholder="Password" value="admin123">
+                            <input type="password" class="form-control" id="pass" placeholder="Password" value="admin1234">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">

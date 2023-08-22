@@ -21,6 +21,7 @@
   		,pass
   		,defaultNy
   		,adderss
+  		,adderssDetail
   		,tel
 	  		,(select 
 	  			email
@@ -72,6 +73,7 @@ SELECT
 	,id
 	,pass
 	,adderss
+	,adderssDetail
 	,tel
 	,defaultNy
 FROM
@@ -82,6 +84,7 @@ WHERE 1=1
 	<if test="pass != null and !pass.equals('')">AND pass = #{pass}</if>
 	<if test="name != null and !name.equals('')">AND name = #{name}</if>
 	<if test="adderss != null and !adderss.equals('')">AND adderss = #{adderss}</if>
+	<if test="adderssDetail != null and !adderssDetail.equals('')">AND adderssDetail = #{adderssDetail}</if>
 	<if test="tel != null and !tel.equals('')">AND tel = #{tel}</if>
 	<if test="defaultNy != null and !defaultNy.equals('')">AND defaultNy = #{defaultNy}</if>
 </select>
@@ -102,6 +105,7 @@ SET
 	,name = #{name}
 	,tel = #{tel}
 	,adderss = #{adderss}
+	,adderssDetail = #{adderssDetail}
 	,id = #{id}
 	,pass = #{pass}
 WHERE
@@ -126,6 +130,7 @@ WHERE
 		,id
 		,pass
 		,adderss
+		,adderssDetail
 	) values (
 		1
 		,#{name}
@@ -133,6 +138,7 @@ WHERE
 		,#{id}
 		,#{pass}
 		,#{adderss}
+		,#{adderssDetail}
 	)
 	<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()

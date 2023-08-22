@@ -32,7 +32,7 @@
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <div class="nav-item dropdown">
-                    <a href="codeGroupXdmList" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="codeGroupXdmList" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>관리</a>
                     <div class="dropdown-menu bg-transparent border-0">
                             <a href="codeGroupXdmList" class="dropdown-item">codeGroup관리</a>
                             <a href="codeXdmList" class="dropdown-item"> code관리</a>

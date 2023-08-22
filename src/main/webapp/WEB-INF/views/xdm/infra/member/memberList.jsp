@@ -103,6 +103,7 @@
 										<th scope="col">id</th>
 										<th scope="col">pass</th>
 										<th scope="col">adderss</th>
+										<th scope="col">adderssDetail</th>
 										<th scope="col">tel</th>
 									</tr>
 								</thead>
@@ -126,6 +127,7 @@
 													<td><c:out value="${list.id}"></c:out><br></td>
 													<td><c:out value="${list.pass}"></c:out><br></td>
 													<td><c:out value="${list.adderss}"></c:out><br></td>
+													<td><c:out value="${list.adderssDetail}"></c:out><br></td>
 													<td><c:out value="${list.tel}"></c:out><br></td>
 												</tr>
 											</c:forEach>

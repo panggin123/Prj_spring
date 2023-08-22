@@ -8,13 +8,25 @@ public class Member {
 	private String defaultNy;
 	private String tel;
 	private String adderss;
+	private String adderssDetail;
 	private String pass;
 	private String id;
 	private String email;
-
-
+	private Integer memberShip_seq;
 
 	
+	public Integer getMemberShip_seq() {
+		return memberShip_seq;
+	}
+	public void setMemberShip_seq(Integer memberShip_seq) {
+		this.memberShip_seq = memberShip_seq;
+	}
+	public String getAdderssDetail() {
+		return adderssDetail;
+	}
+	public void setAdderssDetail(String adderssDetail) {
+		this.adderssDetail = adderssDetail;
+	}
 	public String getEmail() {
 		return email;
 	}

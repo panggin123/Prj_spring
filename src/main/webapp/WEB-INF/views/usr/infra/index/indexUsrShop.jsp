@@ -41,7 +41,7 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Section Begin -->
-    <section class="product spad">
+    <section class="product spad" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5">
@@ -389,8 +389,8 @@
                 </div>
             </div>
         </div>
-      <%@include file="../usrinclude/footer.jsp"%>
     </section>
+      <%@include file="../usrinclude/footer.jsp"%>
     <!-- Product Section End -->
 
     <!-- Footer Section Begin -->

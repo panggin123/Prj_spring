@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="/resources/css/shop/cssShop/style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/shop/styles.css">
     <link rel="stylesheet" href="/resources/css/shop/styles1.css">
+    
+    
+    
 
 </head>
 
@@ -92,7 +95,7 @@
 							            <span id="formattedTotalPrice"><c:out value="${product.productPrice * 2}"></c:out></span>
 							        </td>
 							        <td class="shoping__cart__item__close">
-							            <span ><i class="bi bi-x-circle"></i></span>
+							            <span id="cancelButton"><i class="bi bi-x-circle"></i></span>
 							        </td>
 							    </tr>
 							</tbody>
@@ -110,10 +113,11 @@
                 <div class="col-lg-6">
                     <div class="shoping__continue">
                         <div class="shoping__discount">
-                            <h5>우편물 주소</h5>
+                            <a style="font-size: 20px;font-weight: bold;" >우편물 주소</a>
                             <form action="#">
-                                <input type="text" placeholder="배송지를 입력해주세요">
-                                <button type="button" class="site-btn">확인</button>
+                                <input id="address_kakao" name="address" type="text" placeholder="배송지를 입력해주세요" style="float: left;width: 50%;margin-bottom: 10px;margin-top: 10px;color: black;" >
+                                <input type="text"  name="address_detail" placeholder="상세주소를 입력해주세요"style="float: left;width: 50%">
+                                <button type="button" class="site-btn" style="margin-top: 10px;">확인</button>
                             </form>
                         </div>
                     </div>
@@ -121,17 +125,16 @@
                 <div class="col-lg-6">
                     <div class="shoping__checkout">
                         <h5>총 결제 금액</h5>
-                        <ul>
-                            <li>소계 <span>$454.98</span></li>
-                            <li>총 금액 <span>$454.98</span></li>
+                        <ul id="totalPrice">
+                            <li>총 금액 <span id="formattedTotalPrice2"><c:out value="${product.productPrice}"></c:out></span></li>
                         </ul>
-                        <a href="#" class="primary-btn">결제하기</a>
+                        <a href="#" class="primary-btn" style="background-color: black;" id="payButton">결제하기</a>
                     </div>
                 </div>
             </div>
         </div>
-         <%@include file="../usrinclude/footer.jsp"%>
     </section>
+         <%@include file="../usrinclude/footer.jsp"%>
     <!-- Shoping Cart Section End -->
 
     <!-- Footer Section Begin -->
@@ -149,6 +152,9 @@
     <script src="/resources/js/shop/main.js"></script>
 
     <script src="/resources/js/scripts.js"></script>
+    <!--                          kakaoapi S                          -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <!--                          kakaoapi E                          -->
     
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
@@ -157,6 +163,7 @@
         const quantityInput = document.getElementById("quantity"); // 수량 갯수
         const priceElement = document.getElementById("price"); // 가격
         const totalPriceElement = document.getElementById("totalPrice"); //토탈금액
+        const totalPriceElement2 = document.getElementById("formattedTotalPrice2"); //토탈금액
 
         const productPrice = parseFloat(priceElement.textContent.replace("원", "").replace(",", "")); // 상품 가격
 
@@ -179,6 +186,7 @@
 
         function updateTotalPrice() {
             totalPriceElement.textContent = numberWithCommas(productPrice * quantity) + "원";
+            totalPriceElement2.textContent = numberWithCommas(productPrice * quantity) + "원";
         }
 
         // 숫자에 쉼표 추가하는 함수
@@ -191,6 +199,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const formattedPriceElement = document.getElementById("formattedPrice");
         const formattedTotalPriceElement = document.getElementById("formattedTotalPrice");
+        const formattedTotalPriceElement2 = document.getElementById("formattedTotalPrice2");
         
         // 천 단위 쉼표 추가하는 함수
         function addCommasToPrice(price) {
@@ -204,8 +213,41 @@
         // 총 가격 엘리먼트에 천 단위 쉼표 추가
         const totalPrice = parseFloat(formattedTotalPriceElement.textContent.replace(/,/g, ""));
         formattedTotalPriceElement.textContent = addCommasToPrice(totalPrice);
+        
+        const totalPrice2 = parseFloat(formattedTotalPriceElement2.textContent.replace(/,/g, ""));
+        formattedTotalPriceElement2.textContent = addCommasToPrice(totalPrice2);
     });
-  
+    //------------------------------------------------ 결제 ------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function () {
+    const payButton = document.getElementById('payButton');
+    const formattedTotalPriceElement = document.getElementById('formattedTotalPrice');
+    
+    // 결제 버튼 클릭 시
+    payButton.addEventListener('click', function () {
+        const totalPrice = parseFloat(formattedTotalPriceElement.textContent);
+        // 여기서 실제 결제 처리를 수행하는 코드를 추가해야 합니다.
+        // 결제 성공 또는 실패에 따른 처리 로직을 구현해야 합니다.
+        // 외부 결제 서비스 API를 호출하거나, 테스트용으로 가상의 결제 과정을 시뮬레이션할 수 있습니다.
+        // 예시: 실제 결제 서비스를 사용하는 경우, 해당 서비스의 API 문서를 참고하여 구현
+        if (Math.random() < 0.5) {
+            alert('결제가 완료되었습니다.');
+        } else {
+            alert('결제가 실패했습니다.');
+        }
+    });
+});
+//------------------------------------------------ 카카오api 주소 ------------------------------------------------    
+    window.onload = function(){
+        document.getElementById("address_kakao").addEventListener("click", function(){ //주소입력칸을 클릭하면
+            //카카오 지도 발생
+            new daum.Postcode({
+                oncomplete: function(data) { //선택시 입력값 세팅
+                    document.getElementById("address_kakao").value = data.address; // 주소 넣기
+                    document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱
+                }
+            }).open();
+        });
+    }
 	</script>
 </body>
 
