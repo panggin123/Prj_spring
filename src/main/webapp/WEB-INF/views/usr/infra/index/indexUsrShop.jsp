@@ -198,7 +198,13 @@
 							<div class="col-lg-4 col-md-6 col-sm-6 ">
 	                            <div class="product__item rankList">
 	                               <div class="product__item__pic set-bg">
-	                               <a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>"><img alt="" src="/resources/img/assets/img/shoes/shoes3.jpg" style="width: 100%;height:  100%"></a>
+	                               <a href="indexUsrShopDetail?seq=<c:out value="${list.seq}"/>">
+	                               <c:set var="type" value="1"/>
+										    <c:forEach items="${listUploaded}" var="listUploaded" varStatus="statusUploaded">
+										        <c:if test="${list.seq eq listUploaded.pseq && listUploaded.type eq 1}">
+											            <img src="${listUploaded.path}${listUploaded.uuidName}" style="width:100%;heigth:100%;">
+									             </c:if>
+										    </c:forEach></a>
 	                                    <ul class="product__item__pic__hover">
 	                                        <li><a href="#"><i class="bi bi-heart"></i></a></li>
 	                                        <li><a href="indexUsrCart?seq=<c:out value="${list.seq}"/>"><i class="bi bi-cart4"></i></a></li>

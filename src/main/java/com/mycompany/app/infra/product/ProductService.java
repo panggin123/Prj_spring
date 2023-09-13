@@ -10,7 +10,9 @@ public interface ProductService {
 
 	public int selectOneCheckId(ProductVo vo);
 	
-	public int selectOneCount(ProductVo vo);
+	public int selectOneCount(ProductVo vo)
+	;
+	public List<Product> listUploaded(ProductVo vo);
 	
 	public int update(Product dto) throws Exception;
 	

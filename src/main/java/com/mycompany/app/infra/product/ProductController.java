@@ -42,7 +42,9 @@ public class ProductController {
 		
 		if(vo.getTotalRows() > 0) {
 			List<Product> list = service.selectList(vo);
+			List<Product> listUploaded = service.listUploaded(vo);
 			model.addAttribute("list", list);
+			model.addAttribute("listUploade", listUploaded);
 //			model.addAttribute("vo", vo);
 		} else {
 //			by pass

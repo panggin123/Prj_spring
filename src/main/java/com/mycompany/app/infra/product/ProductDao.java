@@ -31,10 +31,15 @@ public class ProductDao {
 		Product product = sqlSession.selectOne(namespace + ".selectTwo", vo);
 		return product;
 	}
+	
+	
+	public List<Product> listUploaded(ProductVo vo) {
+		return sqlSession.selectList(namespace + ".listUploaded", vo);
+	}
 
 	  public int selectOneCheckId(ProductVo vo) {
 		  return sqlSession.selectOne(namespace + ".selectOneCheckId",vo);
-				  }
+	 }
 	
 
 	public int selectOneCount(ProductVo vo) {
